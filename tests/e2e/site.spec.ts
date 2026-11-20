@@ -1,5 +1,15 @@
 import { expect, test } from '@playwright/test';
 
+// Most tests run as a "returning visitor in this session" → 0.6 s intro version.
+test.beforeEach(async ({ page }, info) => {
+  if (info.title.startsWith('intro:')) return;
+  await page.addInitScript(() => {
+    try {
+      sessionStorage.setItem('qh-intro-seen', '1');
+    } catch {}
+  });
+});
+
 const PAGES = {
   sq: ['/sq', '/sq/rreth-meje', '/sq/sherbimet', '/sq/klinikat', '/sq/rezultatet', '/sq/deshmite', '/sq/pyetjet', '/sq/kontakti', '/sq/rezervo-termin', '/sq/privatesia', '/sq/informacione-ligjore'],
   en: ['/en', '/en/about', '/en/treatments', '/en/locations', '/en/results', '/en/testimonials', '/en/faq', '/en/contact', '/en/book-appointment', '/en/privacy', '/en/legal'],
@@ -176,4 +186,44 @@ test.describe('reduced transparency & increased contrast', () => {
     expect(bg).toBe('rgb(247, 244, 238)');
     await ctx.close();
   });
+});
+
+test('intro: first visit plays fully, counts to 100, then hands over to the hero', async ({ page }) => {
+  const counts: number[] = [];
+  await page.exposeFunction('__count', (v: string) => counts.push(Number(v)));
+  await page.addInitScript(() => {
+    const iv = setInterval(() => {
+      const c = document.querySelector('[data-intro-count]');
+      if (c) (window as unknown as { __count: (v: string) => void }).__count(c.textContent || '0');
+      else if (document.readyState === 'complete') clearInterval(iv);
+    }, 50);
+  });
+  await page.goto('/sq');
+  await expect(page.locator('html')).toHaveClass(/intro-pending/);
+  await expect(page.locator('.qh-intro')).toBeVisible();
+  await expect(page.locator('[data-label="acl"]')).toHaveText(/Ligamenti i kryqëzuar|LKA/);
+  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 9000 });
+  await expect(page.locator('html')).not.toHaveClass(/intro-pending/);
+  await expect(page.locator('#main-content')).toBeFocused();
+  await expect(page.locator('#site-header')).toHaveCSS('opacity', '1');
+  await expect(page.locator('#hero-title')).toBeVisible();
+  expect(Math.max(...counts)).toBe(100);
+  for (let i = 1; i < counts.length; i++) expect(counts[i]!).toBeGreaterThanOrEqual(counts[i - 1]!);
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement).overflow)).not.toBe('hidden');
+});
+
+test('intro: second visit in the same session gets the short version', async ({ page }) => {
+  await page.goto('/en');
+  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 9000 });
+  const t0 = Date.now();
+  await page.reload();
+  await expect(page.locator('html')).toHaveClass(/intro-short/);
+  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 3000 });
+  expect(Date.now() - t0).toBeLessThan(3000);
+});
+
+test('intro: deep links never show the intro', async ({ page }) => {
+  await page.goto('/en/treatments/acl-injuries');
+  await expect(page.locator('html')).not.toHaveClass(/intro-pending/);
+  await expect(page.locator('.qh-intro')).toHaveCount(0);
 });

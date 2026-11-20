@@ -347,5 +347,11 @@
   "cursor": {
     "drag": "Drag",
     "view": "View"
+  },
+  "intro": {
+    "acl": "Cruciate ligament",
+    "aclShort": "ACL",
+    "meniscus": "Meniscus",
+    "cartilage": "Cartilage"
   }
 }

@@ -216,6 +216,8 @@ export function MotionProvider() {
     const lenis = new Lenis({ duration: 1.05, smoothWheel: true });
     lenisRef.current = lenis;
     window.__lenis = lenis;
+    // intro still playing → keep smooth scroll locked until it releases it
+    if (document.documentElement.classList.contains('intro-pending')) lenis.stop();
     document.documentElement.classList.add('lenis');
     lenis.on('scroll', ScrollTrigger.update);
     const raf = (time: number) => lenis.raf(time * 1000);
@@ -235,18 +237,26 @@ export function MotionProvider() {
       return;
     }
     document.documentElement.classList.add('motion');
-    const ctx = gsap.context(() => {
-      initReveals(document);
-      initParallax(document);
-      initScrubLines(document);
-    });
+    let ctx: gsap.Context | null = null;
+    const run = () => {
+      ctx = gsap.context(() => {
+        initReveals(document);
+        initParallax(document);
+        initScrubLines(document);
+      });
+    };
+    // While the home intro plays, hero reveals wait until the stage opens.
+    const waiting = document.documentElement.classList.contains('intro-pending');
+    if (waiting) window.addEventListener('qh:intro-reveal', run, { once: true });
+    else run();
     // layout may shift after fonts/images load
     const refresh = () => ScrollTrigger.refresh();
     document.fonts?.ready.then(refresh).catch(() => {});
     window.addEventListener('load', refresh);
     return () => {
       window.removeEventListener('load', refresh);
-      ctx.revert();
+      window.removeEventListener('qh:intro-reveal', run);
+      ctx?.revert();
       document.querySelectorAll('[data-revealed]').forEach((el) => el.removeAttribute('data-revealed'));
     };
   }, [pathname]);

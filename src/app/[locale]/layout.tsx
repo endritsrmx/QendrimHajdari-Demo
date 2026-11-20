@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 const CLIENT_NAMESPACES = ['nav', 'common', 'cursor', 'booking', 'contact'] as const;
 
 // Runs before paint: enables reveal states only when motion is allowed (content stays visible without JS).
-const MOTION_SCRIPT = `try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion')}}catch(e){}`;
+const MOTION_SCRIPT = `try{var d=document.documentElement,r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r){d.classList.add('motion')}if(/^\\/(sq|en)\\/?$/.test(location.pathname)){d.classList.add('intro-pending');var s=null;try{s=sessionStorage.getItem('qh-intro-seen')}catch(e){}if(r){d.classList.add('intro-reduced')}else if(s==='1'){d.classList.add('intro-short')}}}catch(e){}`;
 
 export default async function LocaleLayout({
   children,
@@ -56,7 +56,7 @@ export default async function LocaleLayout({
   const t = await getTranslations('nav');
 
   return (
-    <html lang={locale} dir="ltr">
+    <html lang={locale} dir="ltr" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: MOTION_SCRIPT }} />
         <link rel="preload" href="/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

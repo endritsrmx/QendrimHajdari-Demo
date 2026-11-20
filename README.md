@@ -72,6 +72,13 @@ Presets in `components/animations/presets.ts`, angewendet über Data-Attribute:
 - Seitenübergänge: React `<ViewTransition>` + View Transitions API (Exit 0,35 s, Enter 0,5 s, leichter Blur gegen Doppelbild beim Crossfade); ohne Browser-Support normale Navigation.
 - UI-Interaktionen nach Design-Engineering-Prinzipien: kräftige Custom-Easing-Kurven (`--ease-out: cubic-bezier(.23,1,.32,1)`), `scale(.97)` beim Drücken, Exits schneller als Enters, keine `transition: all`, Hover nur auf Hover-fähigen Geräten (Tailwind 4).
 
+### Intro / Preloader (Startseite)
+`src/components/intro/IntroLoader.tsx` – Knie-Zeichnung (Seitenansicht) mit Labels SQ/EN, Ladelinie + Zähler (an Fonts und Hero-Bild gekoppelt, monoton, endet exakt bei 100, min. 3,2 s, max. ≈ 5 s), danach öffnet sich die Bühne entlang der Linie in den bestehenden Hero.
+- Nur beim Einstieg über `/sq` oder `/en`; Deeplinks (z. B. aus Google) zeigen kein Intro.
+- Zweiter Besuch in derselben Session: 0,6-s-Kurzversion. Reduced Motion: kurzer Fade. Ohne JS: kein Overlay.
+- Tempo/Dauern: `CONFIG` oben in der Datei (`drawSpeed`, `minLoad`, `maxLoad`, `holdAtFull`). Labels: `intro.*` in `messages/*.json`. Farben: Klassen `.qh-intro*` in `globals.css`.
+- Aktivierung vor dem ersten Paint über das Inline-Script in `app/[locale]/layout.tsx`; der `MotionProvider` startet die Hero-Reveals erst beim Event `qh:intro-reveal`.
+
 ### Referenz medwest.plus
 Die Referenz wurde **nicht** im Detail analysiert. Umgesetzt wurde ausschliesslich anhand der Briefing-Beschreibung (Editorial-Layout, Masken-Reveals, Fullscreen-Menü, Carousel, Parallax). Keine fremden Assets, Texte oder Codes übernommen.
 

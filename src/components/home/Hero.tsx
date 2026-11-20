@@ -9,7 +9,7 @@ export async function Hero() {
   const locale = (await getLocale()) as Locale;
 
   return (
-    <section aria-labelledby="hero-title" className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <section aria-labelledby="hero-title" data-intro-hero className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-36 lg:pb-24">
       <div className="container-x grid-12 min-h-[calc(90svh-9rem)] items-center gap-y-12">
         <div className="col-span-4 lg:col-span-7 lg:pr-8">
           <p className="text-label flex items-center gap-4 text-grey" data-reveal="fade">

@@ -347,5 +347,11 @@
   "cursor": {
     "drag": "Tërhiq",
     "view": "Shiko"
+  },
+  "intro": {
+    "acl": "Ligamenti i kryqëzuar",
+    "aclShort": "LKA",
+    "meniscus": "Menisku",
+    "cartilage": "Kërci"
   }
 }

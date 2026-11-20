@@ -588,3 +588,134 @@ a:active:not(.pressable) {
   opacity: 0.6;
   transition: opacity 0s;
 }
+
+/* ───────────────────────── Intro / preloader (home, first entry) ─────────────────────────
+   Visible only while html.intro-pending is set (inline script, pre-paint). Without JS it never shows. */
+.qh-intro {
+  display: none;
+}
+html.intro-pending .qh-intro {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  --split: 86%;
+}
+html.intro-pending #site-header {
+  opacity: 0;
+}
+.qh-intro__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden; /* grain stays inside its half – no denser band at the seam */
+  background: var(--color-ivory);
+  will-change: transform;
+}
+.qh-intro__panel--top {
+  top: 0;
+  height: var(--split);
+}
+.qh-intro__panel--bottom {
+  top: var(--split);
+  bottom: 0;
+}
+.qh-intro__panel::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .15 0 0 0 0 .21 0 0 0 0 .2 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  animation: qh-grain 0.9s steps(5) infinite;
+}
+@keyframes qh-grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+  100% { transform: translate(0, 0); }
+}
+.qh-intro__stage {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--split) / 2);
+  height: min(54vh, 470px);
+  aspect-ratio: 250 / 520;
+  transform: translate(-50%, -50%);
+}
+.qh-intro__knee {
+  position: absolute;
+  inset: 0;
+  will-change: transform, filter, opacity;
+}
+.qh-intro__knee svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.qh-intro .k-bone { fill: none; stroke: var(--color-slate); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.qh-intro .k-bone--soft { opacity: 0.5; }
+.qh-intro .k-acl { fill: none; stroke: var(--color-bronze-deep); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.qh-intro .k-glow { fill: none; stroke: var(--color-bronze); stroke-width: 7; stroke-linecap: round; opacity: 0; filter: url(#qh-glow); }
+.qh-intro .k-men { fill: var(--color-sand); fill-opacity: 0; stroke: var(--color-grey); stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.qh-intro .k-cart { fill: none; stroke: var(--color-bronze); stroke-width: 1.25; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.qh-intro .k-leader { fill: none; stroke: var(--color-grey); stroke-opacity: 0.55; stroke-width: 0.75; vector-effect: non-scaling-stroke; }
+
+.qh-intro__label {
+  position: absolute;
+  margin-top: -6px;
+  font: 500 11px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-grey);
+  opacity: 0;
+}
+.qh-intro__label--acl { left: 96%; top: 59.2%; margin-left: 10px; color: var(--color-bronze-deep); }
+.qh-intro__label--men { left: 96%; top: 88.1%; margin-left: 10px; }
+.qh-intro__label--cart { right: 97.6%; top: 61.5%; margin-right: 10px; }
+.qh-intro__short { display: none; }
+
+.qh-intro__line {
+  position: absolute;
+  left: 50%;
+  top: var(--split);
+  width: 220px;
+  height: 1px;
+  margin: -0.5px 0 0 -110px;
+  background: var(--color-slate);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  will-change: transform;
+}
+.qh-intro__count {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--split) + 16px);
+  transform: translateX(-50%);
+  font: 500 12px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-grey);
+}
+@media (max-width: 640px) {
+  html.intro-pending .qh-intro { --split: 84%; }
+  .qh-intro__stage { height: min(40vh, 300px); }
+  .qh-intro__label--minor,
+  .qh-intro .k-leader--minor { display: none; }
+  .qh-intro__long { display: none; }
+  .qh-intro__short { display: inline; }
+}
+/* short / reduced variants: nothing to draw */
+html.intro-short .qh-intro__stage,
+html.intro-short .qh-intro__count,
+html.intro-reduced .qh-intro__stage,
+html.intro-reduced .qh-intro__count,
+html.intro-reduced .qh-intro__line {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .qh-intro__panel::after { animation: none; }
+}

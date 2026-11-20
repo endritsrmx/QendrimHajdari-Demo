@@ -14,6 +14,7 @@ import { PatientJourney } from '@/components/home/PatientJourney';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { EducationSection } from '@/components/home/EducationSection';
 import { BookingCta } from '@/components/home/BookingCta';
+import { IntroLoader } from '@/components/intro/IntroLoader';
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -26,8 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const ti = await getTranslations('intro');
   return (
     <>
+      <IntroLoader labels={{ acl: ti('acl'), aclShort: ti('aclShort'), meniscus: ti('meniscus'), cartilage: ti('cartilage') }} />
       <JsonLd data={[physicianSchema(locale, absoluteUrl(locale, '/')), ...clinicSchemas(locale)]} />
       <Hero />
       <TrustIntro />
