@@ -422,9 +422,6 @@ html.motion [data-reveal='divider']:not([data-revealed]) {
     clip-path: inset(0 0 0 0);
   }
 }
-::view-transition-group(site-header) {
-  animation: none;
-}
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(.page) {
     animation: fade-out 0.2s ease both;
@@ -522,4 +519,72 @@ html.motion .qh-wordmark {
     opacity: 0;
     transform: translateY(8px);
   }
+}
+
+
+/* ───────────────────────── Materials (translucent chrome) ─────────────────────────
+   Header: a floating layer content scrolls under. The edge to the content is a soft
+   fade, not a hard divider. Respects reduced transparency and increased contrast. */
+.header-material::before,
+.header-material::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.header-material::before {
+  inset-block: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--color-ivory) 72%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+}
+.header-material::after {
+  top: 100%;
+  height: 24px;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--color-slate) 6%, transparent), transparent);
+}
+.header-material.is-raised::before,
+.header-material.is-raised::after {
+  opacity: 1;
+}
+.bar-material {
+  background: color-mix(in srgb, var(--color-ivory) 80%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 -12px 24px -16px color-mix(in srgb, var(--color-slate) 18%, transparent);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .header-material::before,
+  .bar-material {
+    background: var(--color-ivory);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Increased contrast: solid surfaces, defined borders, secondary text at full strength */
+@media (prefers-contrast: more) {
+  :root {
+    --color-grey: #2f3833;
+    --color-line: #8d877c;
+  }
+  .header-material::before,
+  .bar-material {
+    background: var(--color-ivory);
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--color-slate);
+  }
+  .header-material::after {
+    display: none;
+  }
+}
+
+/* Response on pointer-down: links dim instantly while pressed (no transition on the press). */
+a:active:not(.pressable) {
+  opacity: 0.6;
+  transition: opacity 0s;
 }

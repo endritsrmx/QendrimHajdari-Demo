@@ -149,3 +149,31 @@ test('contact API enforces validation server-side', async ({ request }) => {
   const res = await request.post('/api/contact', { data: { name: 'x' } });
   expect(res.status()).toBe(422);
 });
+
+test('menu can be interrupted: reopening mid-close continues without restarting', async ({ page }) => {
+  await page.goto('/en');
+  const toggle = page.locator('button[aria-controls="site-menu"]');
+  await toggle.click();
+  await page.waitForTimeout(700);
+  await toggle.click(); // start closing…
+  await page.waitForTimeout(80);
+  await toggle.click(); // …and grab it again mid-flight
+  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  await page.waitForTimeout(600);
+  const clip = await page.locator('#site-menu').evaluate((el) => getComputedStyle(el).clipPath);
+  expect(clip).toMatch(/inset\(0(px|%)?\)|inset\(0% 0% 0% 0%\)|none/);
+  await expect(page.locator('#site-menu a').first()).toBeVisible();
+});
+
+test.describe('reduced transparency & increased contrast', () => {
+  test('header becomes a solid surface', async ({ browser }) => {
+    const ctx = await browser.newContext({ contrast: 'more' });
+    const page = await ctx.newPage();
+    await page.goto('/en');
+    await page.mouse.wheel(0, 600);
+    await page.waitForTimeout(500);
+    const bg = await page.locator('.header-material').evaluate((el) => getComputedStyle(el, '::before').backgroundColor);
+    expect(bg).toBe('rgb(247, 244, 238)');
+    await ctx.close();
+  });
+});

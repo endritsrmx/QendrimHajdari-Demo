@@ -42,18 +42,31 @@ export function MenuOverlay({
     const reduced = prefersReducedMotion();
     gsap.killTweensOf([root, items]);
     if (open) {
+      // Interrupted close? Continue from the on-screen value instead of restarting (no jump).
+      const fromHidden = root.hidden;
       root.hidden = false;
       if (reduced) {
         gsap.set(root, { clipPath: 'inset(0% 0% 0% 0%)' });
         gsap.set(items, { y: 0 });
         gsap.fromTo(root, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power2.out' });
       } else {
-        gsap.fromTo(root, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: motionPresets.menu.overlay, ease: 'expo.inOut' });
-        gsap.fromTo(
-          items,
-          { y: 48, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, ease: motionPresets.menu.ease, stagger: motionPresets.menu.stagger, delay: 0.2 },
-        );
+        if (fromHidden) {
+          gsap.set(root, { clipPath: 'inset(0% 0% 100% 0%)' });
+          gsap.set(items, { y: 48, opacity: 0 });
+        }
+        gsap.to(root, {
+          clipPath: 'inset(0% 0% 0% 0%)',
+          duration: fromHidden ? motionPresets.menu.overlay : 0.3,
+          ease: fromHidden ? 'expo.inOut' : 'power3.out',
+        });
+        gsap.to(items, {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: motionPresets.menu.ease,
+          stagger: fromHidden ? motionPresets.menu.stagger : 0,
+          delay: fromHidden ? 0.2 : 0,
+        });
       }
       // focus first link
       requestAnimationFrame(() => root.querySelector<HTMLElement>('[data-menu-item] a')?.focus());

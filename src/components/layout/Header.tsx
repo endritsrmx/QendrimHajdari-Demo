@@ -52,11 +52,11 @@ export function Header() {
   const compact = scrolled && !open;
 
   return (
-    <header id="site-header" className="fixed inset-x-0 top-0 z-50" style={{ viewTransitionName: 'site-header' }}>
+    <header id="site-header" className="fixed inset-x-0 top-0 z-50">
       <div
         className={cn(
-          'relative z-50 before:absolute before:inset-0 before:-z-10 before:bg-ivory/92 before:shadow-[0_1px_0_var(--color-line)] before:backdrop-blur-md before:transition-opacity before:duration-200 before:ease-[ease]',
-          compact ? 'before:opacity-100' : 'before:opacity-0',
+          'header-material relative z-50',
+          compact && 'is-raised',
         )}
       >
         <div
