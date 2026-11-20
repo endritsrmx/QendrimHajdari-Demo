@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "siteName": "Dr. Qendrim Hajdari – Ortopedi dhe Traumatologji",
+    "home": {
+      "title": "Dr. Qendrim Hajdari | Ortopedi dhe Traumatologji | Prishtinë dhe Gjilan",
+      "description": "Kujdes ortopedik dhe traumatologjik, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive. Konsulta në Royal Medical, Prishtinë dhe Ordinanca Dora, Gjilan."
+    },
+    "about": {
+      "title": "Rreth meje | Dr. Qendrim Hajdari | Kujdes ortopedik",
+      "description": "Njihuni me Dr. Qendrim Hajdari – ortopedi dhe traumatologji, me vendime të përqendruara te pacienti."
+    },
+    "treatments": {
+      "title": "Shërbimet | Dr. Qendrim Hajdari | Kujdes ortopedik",
+      "description": "Përmbledhje e fushave ortopedike: dëmtimet e ACL dhe të meniskut, zëvendësimi i nyjeve, mjekësia sportive, traumatologjia dhe sëmundjet e gjurit."
+    },
+    "treatmentSuffix": "Dr. Qendrim Hajdari | Kujdes ortopedik",
+    "locations": {
+      "title": "Klinikat | Dr. Qendrim Hajdari | Prishtinë dhe Gjilan",
+      "description": "Konsulta ortopedike në dy lokacione: Royal Medical në Prishtinë dhe Ordinanca Dora në Gjilan."
+    },
+    "results": {
+      "title": "Rezultatet | Dr. Qendrim Hajdari",
+      "description": "Informacione për raste – ende të papublikuara."
+    },
+    "testimonials": {
+      "title": "Përvojat e pacientëve | Dr. Qendrim Hajdari",
+      "description": "Përvojat e pacientëve – publikohen vetëm me pëlqim të dokumentuar."
+    },
+    "faq": {
+      "title": "Pyetjet e shpeshta | Dr. Qendrim Hajdari",
+      "description": "Pyetje të shpeshta për konsultat ortopedike, rezervimin dhe përgatitjen."
+    },
+    "contact": {
+      "title": "Kontakt | Dr. Qendrim Hajdari",
+      "description": "Na kontaktoni për një konsultë ortopedike në Prishtinë ose Gjilan."
+    },
+    "book": {
+      "title": "Rezervo termin | Dr. Qendrim Hajdari",
+      "description": "Rezervoni një konsultë ortopedike në Royal Medical, Prishtinë ose Ordinanca Dora, Gjilan."
+    },
+    "privacy": {
+      "title": "Politika e privatësisë | Dr. Qendrim Hajdari",
+      "description": "Informacion mbi përpunimin e të dhënave personale në këtë faqe."
+    },
+    "legal": {
+      "title": "Informacione ligjore | Dr. Qendrim Hajdari",
+      "description": "Informacione ligjore dhe shënim mjekësor."
+    },
+    "notFound": {
+      "title": "Faqja nuk u gjet | Dr. Qendrim Hajdari"
+    }
+  },
+  "nav": {
+    "home": "Ballina",
+    "about": "Rreth meje",
+    "treatments": "Shërbimet",
+    "locations": "Klinikat",
+    "results": "Rezultatet",
+    "testimonials": "Përvojat e pacientëve",
+    "faq": "Pyetjet e shpeshta",
+    "contact": "Kontakt",
+    "book": "Rezervo termin",
+    "privacy": "Privatësia",
+    "legal": "Informacione ligjore",
+    "menu": "Menyja",
+    "close": "Mbyll",
+    "openMenu": "Hap menynë",
+    "closeMenu": "Mbyll menynë",
+    "mainNav": "Navigimi kryesor",
+    "footerNav": "Navigimi në fund të faqes",
+    "language": "Gjuha",
+    "switchTo": "Ndrysho gjuhën në {language}",
+    "skip": "Kalo te përmbajtja",
+    "breadcrumb": "Shtegu i navigimit",
+    "homeLink": "Qendrim Hajdari – ballina"
+  },
+  "common": {
+    "bookConsultation": "Rezervo një konsultë",
+    "bookAppointment": "Rezervo një termin",
+    "exploreTreatments": "Shiko shërbimet",
+    "exploreTreatment": "Shiko shërbimin",
+    "learnMore": "Mëso më shumë",
+    "readArticle": "Lexo artikullin",
+    "getDirections": "Udhëzimet për të ardhur",
+    "bookAtLocation": "Rezervo në këtë klinikë",
+    "meetDoctor": "Njihuni me mjekun",
+    "minRead": "{minutes} min lexim",
+    "imagePlaceholder": "Vend për fotografi",
+    "illustration": "Ilustrim skematik",
+    "statusDraft": "Draft",
+    "statusReview": "Kërkohet rishikim mjekësor",
+    "statusApproved": "Miratuar",
+    "contentInReview": "Kjo përmbajtje është duke u rishikuar nga një profesionist mjekësor dhe do të publikohet pas miratimit.",
+    "medicalDisclaimer": "Informacionet në këtë faqe nuk zëvendësojnë një ekzaminim apo këshillim individual mjekësor.",
+    "emergencyNotice": "Kjo faqe nuk është menduar për urgjenca mjekësore. Në rast urgjence, ju lutemi kontaktoni shërbimet lokale të urgjencës ose shkoni në repartin më të afërt të urgjencës.",
+    "toBeConfirmed": "Do të konfirmohet",
+    "address": "Adresa",
+    "hours": "Orari i konsultave",
+    "phone": "Telefoni",
+    "email": "Email",
+    "accessibility": "Qasshmëria",
+    "opensInNewTab": "(hapet në skedë të re)",
+    "previous": "Para",
+    "next": "Pas",
+    "slideOf": "{current} nga {total}",
+    "drag": "Tërhiq",
+    "view": "Shiko",
+    "dragHint": "Tërhiqni ose përdorni shigjetat e tastierës",
+    "backToTop": "Kthehu lart",
+    "notPublished": "E papublikuar",
+    "kosovo": "Kosovë"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Ortopedi dhe Traumatologji",
+      "line1": "Kujdes me përkushtim.",
+      "line2": "Lëvizje me besim.",
+      "sub": "Kujdes ortopedik dhe traumatologjik, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive.",
+      "primary": "Rezervo një konsultë",
+      "secondary": "Shiko shërbimet",
+      "locations": "Prishtinë · Gjilan",
+      "scroll": "Lëviz poshtë"
+    },
+    "trust": {
+      "eyebrow": "Qasje personale ndaj kujdesit ortopedik",
+      "title": "Në fokus: lëvizshmëria dhe mirëqenia juaj.",
+      "text": "Çdo pyetje ortopedike meriton kohë dhe një shpjegim të qartë. Qëllimi është të kuptojmë saktë ankesat tuaja, të shpjegojmë me transparencë mundësitë dhe të marrim së bashku vendime që i përshtaten jetës, aktivitetit dhe qëllimeve tuaja."
+    },
+    "about": {
+      "eyebrow": "Rreth mjekut",
+      "title": "Njihuni me Dr. Qendrim Hajdari",
+      "subtitle": "I përkushtuar ndaj kujdesit ortopedik dhe vendimeve të përqendruara te pacienti."
+    },
+    "treatments": {
+      "eyebrow": "Fushat e trajtimit",
+      "title": "Kujdes i specializuar për çdo hap përpara.",
+      "lead": "Fusha tematike në ortopedi, traumatologji dhe mjekësi sportive. Gama konkrete e trajtimeve konfirmohet individualisht.",
+      "all": "Të gjitha shërbimet",
+      "carouselLabel": "Fushat e trajtimit"
+    },
+    "philosophy": {
+      "eyebrow": "Filozofia mjekësore",
+      "title": "Çdo pacient. Çdo lëvizje. Çdo vendim ka rëndësi."
+    },
+    "locations": {
+      "eyebrow": "Klinikat",
+      "title": "Kujdes në dy lokacione.",
+      "lead": "Konsulta në Prishtinë dhe Gjilan. Zgjidhni lokacionin që ju përshtatet më mirë."
+    },
+    "journey": {
+      "eyebrow": "Rruga e pacientit",
+      "title": "Rruga juaj drejt kujdesit ortopedik të personalizuar.",
+      "note": "Një shembull se si organizohet zakonisht konsulta e parë – jo një zotim për një trajtim të caktuar.",
+      "steps": {
+        "1": { "title": "Zgjidhni klinikën", "text": "Prishtinë apo Gjilan – zgjidhni klinikën më të përshtatshme për ju." },
+        "2": { "title": "Rezervoni konsultën", "text": "Rezervoni online sapo të jetë e mundur, ose na shkruani përmes formularit të kontaktit." },
+        "3": { "title": "Vlerësimi mjekësor", "text": "Anamneza, ekzaminimi klinik dhe, kur është e indikuar, imazheria." },
+        "4": { "title": "Diskutimi i planit të trajtimit", "text": "Mundësitë, përfitimet dhe rreziqet shpjegohen qartë – vendimi merret së bashku." }
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Përvojat e pacientëve",
+      "title": "Me fjalët e tyre."
+    },
+    "education": {
+      "eyebrow": "Informim për pacientët",
+      "title": "Të kuptojmë shëndetin tuaj ortopedik."
+    },
+    "cta": {
+      "title": "Hapi juaj i radhës fillon me një bisedë.",
+      "sub": "Rezervoni një konsultë ortopedike në klinikën që preferoni.",
+      "button": "Rezervo një termin"
+    }
+  },
+  "about": {
+    "eyebrow": "Rreth meje",
+    "title": "Dr. Qendrim Hajdari",
+    "lead": "Ortopedi dhe traumatologji, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive.",
+    "introTitle": "Prezantim personal",
+    "careerTitle": "Rruga profesionale",
+    "educationTitle": "Arsimimi",
+    "qualificationsTitle": "Kualifikimet",
+    "trainingTitle": "Trajnimet e mëtejshme",
+    "membershipsTitle": "Anëtarësimet",
+    "philosophyTitle": "Filozofia mjekësore",
+    "locationsTitle": "Ku i pres pacientët",
+    "pendingVerification": "Do të shtohet pas verifikimit.",
+    "placeholderNote": "Vend i rezervuar – përmbajtja publikohet vetëm pas verifikimit nga klienti."
+  },
+  "treatments": {
+    "eyebrow": "Shërbimet",
+    "title": "Kujdes ortopedik, i shpjeguar qartë.",
+    "lead": "Një përmbledhje e fushave kryesore. Çdo faqe ofron informacion të përgjithshëm – vlerësimi individual vjen gjithmonë i pari.",
+    "spectrumNote": "Këto janë fusha tematike. Shërbimet konkrete kirurgjikale konfirmohen para publikimit.",
+    "sections": {
+      "intro": "Hyrje",
+      "anatomy": "Anatomia",
+      "symptoms": "Simptomat e zakonshme",
+      "diagnostics": "Diagnostikimi",
+      "conservative": "Trajtimi i mundshëm konservativ",
+      "operative": "Trajtimi i mundshëm kirurgjikal",
+      "aftercare": "Kujdesi pas trajtimit",
+      "risks": "Rreziqet dhe komplikimet e mundshme",
+      "faq": "Pyetje të shpeshta",
+      "related": "Tema të ngjashme"
+    },
+    "operativeNote": "Procedurat konkrete kirurgjikale që ofrohen konfirmohen nga mjeku.",
+    "aftercareNote": "Kohëzgjatjet ndryshojnë individualisht dhe nuk janë vlera të garantuara.",
+    "onThisPage": "Në këtë faqe"
+  },
+  "locations": {
+    "eyebrow": "Klinikat",
+    "title": "Dy klinika. Një standard kujdesi.",
+    "lead": "Çdo lokacion konfigurohet veçmas – adresat, oraret dhe rezervimi online shfaqen pasi të konfirmohen.",
+    "mapNote": "Hartat hapen në një shërbim të jashtëm. Asnjë e dhënë harte nuk ngarkohet në këtë faqe para se të klikoni.",
+    "contactLocation": "Kontaktoni këtë klinikë"
+  },
+  "results": {
+    "eyebrow": "Rezultatet",
+    "title": "Informacione për raste",
+    "lead": "Kjo faqe është përgatitur, por ende nuk është publikuar.",
+    "notice": "Shembujt e rasteve publikohen vetëm me pëlqim të dokumentuar të pacientit dhe pas miratimit mjekësor, ligjor dhe të mbrojtjes së të dhënave. Rezultatet individuale ndryshojnë; asnjë shembull nuk nënkupton një rezultat standard.",
+    "empty": "Nuk ka informacione të miratuara për raste."
+  },
+  "testimonials": {
+    "eyebrow": "Përvojat e pacientëve",
+    "title": "Përvojat e pacientëve",
+    "lead": "Zërat e pacientëve publikohen vetëm me pëlqim të dokumentuar dhe kur lejohet ligjërisht.",
+    "empty": "Ende nuk ka përvoja të miratuara të pacientëve."
+  },
+  "faq": {
+    "eyebrow": "Pyetjet e shpeshta",
+    "title": "Pyetjet e shpeshta",
+    "lead": "Përgjigje të përgjithshme për konsultat dhe rezervimin. Pyetjet mjekësore sqarohen më mirë personalisht.",
+    "general": "Të përgjithshme",
+    "byTreatment": "Sipas temës"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Na kontaktoni.",
+    "lead": "Për pyetje rreth konsultave dhe termineve. Ju lutemi mos dërgoni informacione të detajuara mjekësore apo dokumente përmes këtij formulari.",
+    "direct": "Kontakt i drejtpërdrejtë",
+    "form": {
+      "name": "Emri dhe mbiemri",
+      "email": "Email",
+      "phone": "Telefoni (opsional)",
+      "location": "Klinika e preferuar",
+      "locationPlaceholder": "Ju lutemi zgjidhni",
+      "noPreference": "Pa preferencë",
+      "message": "Mesazhi",
+      "messageHint": "Ju lutemi shkruani vetëm informacione organizative, pa histori të detajuar mjekësore.",
+      "privacy": "E kam lexuar njoftimin për privatësinë dhe pajtohem që të dhënat e mia të përpunohen për t’iu përgjigjur kërkesës sime.",
+      "privacyLink": "Njoftimi për privatësinë",
+      "submit": "Dërgo mesazhin",
+      "sending": "Duke u dërguar…",
+      "success": "Faleminderit. Mesazhi juaj u dërgua. Do t’ju përgjigjemi sa më shpejt të jetë e mundur.",
+      "error": "Mesazhi nuk mund të dërgohej. Ju lutemi provoni përsëri më vonë.",
+      "notConfigured": "Formulari i kontaktit ende nuk është i lidhur me një shërbim emaili. Mesazhi juaj NUK është dërguar. Ju lutemi përdorni një mënyrë tjetër kontakti.",
+      "rateLimited": "Shumë kërkesa. Ju lutemi prisni pak dhe provoni përsëri.",
+      "required": "E detyrueshme"
+    },
+    "validation": {
+      "nameRequired": "Ju lutemi shkruani emrin tuaj.",
+      "nameTooLong": "Emri është shumë i gjatë.",
+      "emailInvalid": "Ju lutemi shkruani një adresë emaili të vlefshme.",
+      "phoneInvalid": "Ju lutemi shkruani një numër telefoni të vlefshëm.",
+      "messageTooShort": "Ju lutemi shkruani të paktën 10 karaktere.",
+      "messageTooLong": "Mesazhi mund të ketë më së shumti 2000 karaktere.",
+      "locationInvalid": "Ju lutemi zgjidhni një klinikë.",
+      "privacyRequired": "Ju lutemi konfirmoni njoftimin për privatësinë."
+    }
+  },
+  "booking": {
+    "eyebrow": "Rezervim online",
+    "title": "Rezervo termin",
+    "lead": "Zgjidhni klinikën dhe llojin e terminit. Oraret e lira vijnë drejtpërdrejt nga kalendari i klinikës.",
+    "step": "Hapi {current} nga {total}",
+    "steps": {
+      "location": "Klinika",
+      "type": "Lloji i terminit",
+      "time": "Data dhe ora"
+    },
+    "chooseLocation": "Zgjidhni klinikën",
+    "chooseType": "Zgjidhni llojin e terminit",
+    "consultation": "Konsultë ortopedike",
+    "consultationText": "Konsultë e parë ose mendim i dytë për një çështje ortopedike.",
+    "change": "Ndrysho",
+    "continue": "Vazhdo",
+    "back": "Kthehu",
+    "privacyTitle": "Para se të vazhdoni",
+    "privacyText": "Terminet menaxhohen përmes shërbimit të planifikimit Cal.com. Kur ngarkoni kalendarin, disa të dhëna (p.sh. adresa IP, të dhënat e rezervimit) i transmetohen këtij ofruesi. Ju lutemi shkruani vetëm të dhënat e nevojshme për terminin – pa informacione të detajuara mjekësore.",
+    "privacyAccept": "Ngarko kalendarin",
+    "privacyLink": "Lexoni njoftimin për privatësinë",
+    "loading": "Duke ngarkuar oraret e lira…",
+    "loadError": "Kalendari nuk mund të ngarkohej. Ju lutemi provoni më vonë ose na kontaktoni.",
+    "retry": "Provo përsëri",
+    "notConfiguredTitle": "Rezervimi online ende nuk është i lidhur",
+    "notConfiguredText": "Kalendari online për {location} është duke u konfiguruar. Për momentin nuk mund të rezervohen termine online – nuk shfaqen orare derisa të lidhet kalendari i klinikës.",
+    "alternative": "Alternativë: dërgoni një kërkesë",
+    "successTitle": "Rezervimi juaj u pranua",
+    "successText": "Konfirmimi dhe ftesa në kalendar dërgohen me email nga shërbimi i rezervimeve.",
+    "timezoneNote": "Të gjitha oraret shfaqen në zonën tuaj kohore; klinika punon sipas orës së Kosovës (CET/CEST).",
+    "selected": "E zgjedhur"
+  },
+  "privacy": {
+    "eyebrow": "Privatësia",
+    "title": "Politika e privatësisë",
+    "draft": "Shabllon draft – duhet të rishikohet dhe plotësohet nga një jurist (ligji i Kosovës për mbrojtjen e të dhënave; GDPR aty ku zbatohet) para publikimit."
+  },
+  "legal": {
+    "eyebrow": "Ligjore",
+    "title": "Informacione ligjore",
+    "draft": "Shabllon draft – duhet të rishikohet dhe plotësohet nga një jurist para publikimit."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Kjo faqe nuk u gjet.",
+    "text": "Faqja mund të jetë zhvendosur ose nuk ekziston më.",
+    "home": "Kthehu në ballinë"
+  },
+  "footer": {
+    "description": "Ortopedi dhe traumatologji, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive.",
+    "locations": "Klinikat",
+    "navigation": "Navigimi",
+    "contact": "Kontakt",
+    "follow": "Na ndiqni",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "instagram": "Instagram"
+  },
+  "cursor": {
+    "drag": "Tërhiq",
+    "view": "Shiko"
+  }
+}

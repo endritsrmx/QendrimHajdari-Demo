@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "siteName": "Dr. Qendrim Hajdari – Orthopaedic & Trauma Surgery",
+    "home": {
+      "title": "Dr. Qendrim Hajdari | Orthopaedic & Trauma Surgery | Prishtina & Gjilan",
+      "description": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine. Consultations at Royal Medical, Prishtina and Ordinanca Dora, Gjilan."
+    },
+    "about": {
+      "title": "About | Dr. Qendrim Hajdari | Orthopaedic Care",
+      "description": "Meet Dr. Qendrim Hajdari – orthopaedic and trauma surgery, dedicated to patient-centred decisions."
+    },
+    "treatments": {
+      "title": "Treatments | Dr. Qendrim Hajdari | Orthopaedic Care",
+      "description": "Overview of orthopaedic topics: ACL and meniscus injuries, joint replacement, sports medicine, orthopaedic trauma and knee and joint conditions."
+    },
+    "treatmentSuffix": "Dr. Qendrim Hajdari | Orthopaedic Care",
+    "locations": {
+      "title": "Locations | Dr. Qendrim Hajdari | Prishtina & Gjilan",
+      "description": "Orthopaedic consultations at two locations: Royal Medical in Prishtina and Ordinanca Dora in Gjilan, Kosovo."
+    },
+    "results": {
+      "title": "Results | Dr. Qendrim Hajdari",
+      "description": "Case information – not yet published."
+    },
+    "testimonials": {
+      "title": "Patient Experiences | Dr. Qendrim Hajdari",
+      "description": "Patient experiences – published only with documented consent."
+    },
+    "faq": {
+      "title": "FAQ | Dr. Qendrim Hajdari | Orthopaedic Care",
+      "description": "Frequently asked questions about orthopaedic consultations, booking and preparation."
+    },
+    "contact": {
+      "title": "Contact | Dr. Qendrim Hajdari",
+      "description": "Get in touch about an orthopaedic consultation in Prishtina or Gjilan."
+    },
+    "book": {
+      "title": "Book an Appointment | Dr. Qendrim Hajdari",
+      "description": "Book an orthopaedic consultation at Royal Medical, Prishtina or Ordinanca Dora, Gjilan."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Dr. Qendrim Hajdari",
+      "description": "Information on how personal data is processed on this website."
+    },
+    "legal": {
+      "title": "Legal Information | Dr. Qendrim Hajdari",
+      "description": "Legal information and medical disclaimer."
+    },
+    "notFound": {
+      "title": "Page not found | Dr. Qendrim Hajdari"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "treatments": "Treatments",
+    "locations": "Locations",
+    "results": "Results",
+    "testimonials": "Patient Experiences",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book Appointment",
+    "privacy": "Privacy",
+    "legal": "Legal Information",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "language": "Language",
+    "switchTo": "Switch language to {language}",
+    "skip": "Skip to content",
+    "breadcrumb": "Breadcrumb",
+    "homeLink": "Qendrim Hajdari – home"
+  },
+  "common": {
+    "bookConsultation": "Book a Consultation",
+    "bookAppointment": "Book an Appointment",
+    "exploreTreatments": "Explore Treatments",
+    "exploreTreatment": "Explore Treatment",
+    "learnMore": "Learn more",
+    "readArticle": "Read article",
+    "getDirections": "Get Directions",
+    "bookAtLocation": "Book at This Location",
+    "meetDoctor": "Meet the Doctor",
+    "minRead": "{minutes} min read",
+    "imagePlaceholder": "Image placeholder",
+    "illustration": "Schematic illustration",
+    "statusDraft": "Draft",
+    "statusReview": "Medical review required",
+    "statusApproved": "Approved",
+    "contentInReview": "This content is currently being reviewed by a medical professional and will be published after approval.",
+    "medicalDisclaimer": "The information on this website does not replace an individual medical examination or consultation.",
+    "emergencyNotice": "This website is not intended for medical emergencies. In an emergency, please contact your local emergency services or go to the nearest emergency department.",
+    "toBeConfirmed": "To be confirmed",
+    "address": "Address",
+    "hours": "Consultation hours",
+    "phone": "Phone",
+    "email": "Email",
+    "accessibility": "Accessibility",
+    "opensInNewTab": "(opens in a new tab)",
+    "previous": "Previous",
+    "next": "Next",
+    "slideOf": "{current} of {total}",
+    "drag": "Drag",
+    "view": "View",
+    "dragHint": "Drag or use the arrow keys",
+    "backToTop": "Back to top",
+    "notPublished": "Not published",
+    "kosovo": "Kosovo"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Orthopaedic & Trauma Surgery",
+      "line1": "Precision in care.",
+      "line2": "Confidence in movement.",
+      "sub": "Orthopaedic and trauma surgery, with a focus on knee injuries, joint care and sports medicine.",
+      "primary": "Book a Consultation",
+      "secondary": "Explore Treatments",
+      "locations": "Prishtina · Gjilan",
+      "scroll": "Scroll"
+    },
+    "trust": {
+      "eyebrow": "A personal approach to orthopaedic care",
+      "title": "Focused on your mobility and wellbeing.",
+      "text": "Every orthopaedic question deserves time and a clear explanation. The aim is to understand your symptoms precisely, explain the possible options transparently and reach decisions together that fit your everyday life, your activity and your goals."
+    },
+    "about": {
+      "eyebrow": "About the doctor",
+      "title": "Meet Dr. Qendrim Hajdari",
+      "subtitle": "Dedicated to orthopaedic care and patient-centred decisions."
+    },
+    "treatments": {
+      "eyebrow": "Treatment expertise",
+      "title": "Specialised Care for Every Step Forward.",
+      "lead": "Topic areas within orthopaedics, trauma surgery and sports medicine. The specific treatment spectrum is confirmed individually.",
+      "all": "All treatments",
+      "carouselLabel": "Treatment areas"
+    },
+    "philosophy": {
+      "eyebrow": "Medical philosophy",
+      "title": "Every Patient. Every Movement. Every Decision Matters."
+    },
+    "locations": {
+      "eyebrow": "Locations",
+      "title": "Care Across Two Locations.",
+      "lead": "Consultations in Prishtina and Gjilan. Choose the location that suits you best."
+    },
+    "journey": {
+      "eyebrow": "Patient journey",
+      "title": "Your Path to Personalised Orthopaedic Care.",
+      "note": "An example of how a first consultation is typically organised – not a commitment to a specific treatment.",
+      "steps": {
+        "1": { "title": "Choose Your Location", "text": "Prishtina or Gjilan – select the practice that is most convenient for you." },
+        "2": { "title": "Schedule a Consultation", "text": "Book online once available, or get in touch via the contact form." },
+        "3": { "title": "Medical Assessment", "text": "History, clinical examination and, where indicated, imaging." },
+        "4": { "title": "Discuss Your Treatment Plan", "text": "Options, benefits and risks explained clearly – the decision is made together." }
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Patient experiences",
+      "title": "In their own words."
+    },
+    "education": {
+      "eyebrow": "Patient education",
+      "title": "Understanding Your Orthopaedic Health."
+    },
+    "cta": {
+      "title": "Your Next Step Starts with a Conversation.",
+      "sub": "Schedule an orthopaedic consultation at your preferred location.",
+      "button": "Book an Appointment"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Dr. Qendrim Hajdari",
+    "lead": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine.",
+    "introTitle": "Personal introduction",
+    "careerTitle": "Medical career",
+    "educationTitle": "Education",
+    "qualificationsTitle": "Qualifications",
+    "trainingTitle": "Further training",
+    "membershipsTitle": "Memberships",
+    "philosophyTitle": "Medical philosophy",
+    "locationsTitle": "Where I see patients",
+    "pendingVerification": "Will be added after verification.",
+    "placeholderNote": "Placeholder – content is only published after verification by the client."
+  },
+  "treatments": {
+    "eyebrow": "Treatments",
+    "title": "Orthopaedic care, explained clearly.",
+    "lead": "An overview of the main topic areas. Each page offers general information – an individual assessment always comes first.",
+    "spectrumNote": "These are topic areas. The specific surgical services offered are confirmed before publication.",
+    "sections": {
+      "intro": "Introduction",
+      "anatomy": "Anatomy",
+      "symptoms": "Typical symptoms",
+      "diagnostics": "Diagnosis",
+      "conservative": "Possible conservative treatment",
+      "operative": "Possible surgical treatment",
+      "aftercare": "Aftercare",
+      "risks": "Possible risks and complications",
+      "faq": "Frequently asked questions",
+      "related": "Related topics"
+    },
+    "operativeNote": "The specific surgical procedures offered are confirmed by the doctor.",
+    "aftercareNote": "Durations vary individually and are not guaranteed values.",
+    "onThisPage": "On this page"
+  },
+  "locations": {
+    "eyebrow": "Locations",
+    "title": "Two practices. One standard of care.",
+    "lead": "Each location is configured independently – addresses, hours and online booking are shown once confirmed.",
+    "mapNote": "Maps open in an external service. No map data is loaded on this website before you click.",
+    "contactLocation": "Contact this location"
+  },
+  "results": {
+    "eyebrow": "Results",
+    "title": "Case information",
+    "lead": "This page is prepared but not yet published.",
+    "notice": "Case examples are only published with documented patient consent and after medical, legal and data-protection approval. Individual results vary; no example implies a standard outcome.",
+    "empty": "No approved case information available."
+  },
+  "testimonials": {
+    "eyebrow": "Patient experiences",
+    "title": "Patient experiences",
+    "lead": "Patient voices are only published with documented consent and where legally permissible.",
+    "empty": "No approved patient experiences are published yet."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "lead": "General answers about consultations and booking. Medical questions are always best clarified in person.",
+    "general": "General",
+    "byTreatment": "By topic"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch.",
+    "lead": "For questions about consultations and appointments. Please do not send detailed medical information or documents via this form.",
+    "direct": "Direct contact",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "location": "Preferred location",
+      "locationPlaceholder": "Please choose",
+      "noPreference": "No preference",
+      "message": "Message",
+      "messageHint": "Please share only organisational information, no detailed medical history.",
+      "privacy": "I have read the privacy notice and agree that my details will be processed to answer my enquiry.",
+      "privacyLink": "Privacy notice",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you. Your message has been sent. We will get back to you as soon as possible.",
+      "error": "Your message could not be sent. Please try again later.",
+      "notConfigured": "The contact form is not yet connected to an email service. Your message has NOT been sent. Please use another contact option.",
+      "rateLimited": "Too many requests. Please wait a moment and try again.",
+      "required": "Required"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "nameTooLong": "The name is too long.",
+      "emailInvalid": "Please enter a valid email address.",
+      "phoneInvalid": "Please enter a valid phone number.",
+      "messageTooShort": "Please write at least 10 characters.",
+      "messageTooLong": "The message may contain at most 2000 characters.",
+      "locationInvalid": "Please choose a location.",
+      "privacyRequired": "Please confirm the privacy notice."
+    }
+  },
+  "booking": {
+    "eyebrow": "Online booking",
+    "title": "Book an Appointment",
+    "lead": "Choose a location and appointment type. Available times come directly from the practice calendar.",
+    "step": "Step {current} of {total}",
+    "steps": {
+      "location": "Location",
+      "type": "Appointment type",
+      "time": "Date & time"
+    },
+    "chooseLocation": "Choose your location",
+    "chooseType": "Choose an appointment type",
+    "consultation": "Orthopaedic Consultation",
+    "consultationText": "First consultation or second opinion on an orthopaedic question.",
+    "change": "Change",
+    "continue": "Continue",
+    "back": "Back",
+    "privacyTitle": "Before you continue",
+    "privacyText": "Appointments are managed via the scheduling service Cal.com. When you load the calendar, data (e.g. IP address, booking details) is transmitted to this provider. Please only enter the details needed for the appointment – no detailed medical information.",
+    "privacyAccept": "Load calendar",
+    "privacyLink": "Read the privacy notice",
+    "loading": "Loading available times…",
+    "loadError": "The calendar could not be loaded. Please try again later or contact us.",
+    "retry": "Try again",
+    "notConfiguredTitle": "Online booking is not yet connected",
+    "notConfiguredText": "The online calendar for {location} is being set up. No appointments can be booked online at the moment – no times are shown until the practice calendar is connected.",
+    "alternative": "Alternative: send an enquiry",
+    "successTitle": "Your booking has been received",
+    "successText": "The confirmation and calendar invitation are sent by email from the booking service.",
+    "timezoneNote": "All times are shown in your time zone; the practice operates on Kosovo time (CET/CEST).",
+    "selected": "Selected"
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Privacy Policy",
+    "draft": "Draft template – must be reviewed and completed by a legal professional (Kosovo data protection law; GDPR where applicable) before publication."
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Legal Information",
+    "draft": "Draft template – must be reviewed and completed by a legal professional before publication."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page could not be found.",
+    "text": "The page may have moved or no longer exists.",
+    "home": "Back to home"
+  },
+  "footer": {
+    "description": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine.",
+    "locations": "Locations",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "All rights reserved.",
+    "instagram": "Instagram"
+  },
+  "cursor": {
+    "drag": "Drag",
+    "view": "View"
+  }
+}
