@@ -59,7 +59,7 @@ export const locations: PracticeLocation[] = [
       process.env.NEXT_PUBLIC_DORA_MAPS_URL ||
       'https://www.google.com/maps/search/?api=1&query=Ordinanca+Dora+Gjilan+Kosovo',
     verified: false,
-    image: null,
+    image: media.doraEntrance,
     imagePlaceholder: '[DORA_PHOTO]',
   },
 ];

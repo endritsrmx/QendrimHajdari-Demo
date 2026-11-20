@@ -94,4 +94,14 @@ export const media = {
     },
     position: '50% 30%',
   },
+  doraEntrance: {
+    src: '/images/doctor/dora-gjilan-entrance.jpg',
+    width: 960,
+    height: 1200,
+    alt: {
+      sq: 'Hyrja e ordinancës ortopedike Dora në Gjilan, me tabelën e ndriçuar',
+      en: 'Entrance of the Dora orthopaedic practice in Gjilan with its illuminated sign',
+    },
+    position: '50% 28%',
+  },
 } satisfies Record<string, Photo>;

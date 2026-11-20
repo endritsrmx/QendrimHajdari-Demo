@@ -27,7 +27,8 @@ Alle Punkte erscheinen auf der Website als sichtbare `[PLATZHALTER]`. Nichts dav
 - [ ] `[WORKING_HOURS_BY_LOCATION]` (Tage + Zeiten)
 - [ ] Barrierefreiheit (optional)
 - [x] Royal Medical: Teamfoto eingebaut
-- [ ] `[DORA_PHOTO]` – Foto für Ordinanca Dora, Gjilan fehlt noch
+- [x] Ordinanca/Ortopedia Dora: Eingangsfoto eingebaut
+- [ ] Offiziellen Praxisnamen klären: Website „Ordinanca Dora“, Schild „Ortopedia Dora“
 - [ ] Exakte Google-Maps-Links
 
 ## 4. Medizinische Inhalte (Status → `approved`)
