@@ -37,11 +37,14 @@ export function Logo({
   tone = 'dark',
   animated = false,
   showTagline = true,
+  taglineHidden = false,
   className,
 }: {
   tone?: 'dark' | 'light';
   animated?: boolean;
   showTagline?: boolean;
+  /** keeps layout stable – tagline fades instead of unmounting */
+  taglineHidden?: boolean;
   className?: string;
 }) {
   return (
@@ -59,7 +62,8 @@ export function Logo({
         {showTagline && (
           <span
             className={cn(
-              'mt-1.5 hidden text-[0.5625rem] font-medium tracking-[0.24em] sm:block',
+              'mt-1.5 hidden text-[0.5625rem] font-medium tracking-[0.24em] transition-opacity duration-200 ease-[ease] sm:block',
+              taglineHidden && 'opacity-0',
               tone === 'dark' ? 'text-grey' : 'text-sand',
             )}
           >

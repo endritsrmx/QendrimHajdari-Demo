@@ -29,7 +29,7 @@ export async function PatientJourney() {
           <div aria-hidden className="absolute top-0 bottom-0 left-[7px] w-px bg-line lg:hidden">
             <div className="h-full w-full origin-top bg-slate" data-scrub-line="y" />
           </div>
-          <ol className="grid gap-12 lg:grid-cols-4 lg:gap-10" data-reveal="stagger" data-reveal-duration="0.5" data-reveal-stagger="0.15">
+          <ol className="grid gap-12 lg:grid-cols-4 lg:gap-10" data-reveal="stagger" data-reveal-duration="0.5" data-reveal-stagger="0.08">
             {STEPS.map((s) => (
               <li key={s} data-reveal-item className="relative pl-12 lg:pl-0 lg:pt-14">
                 <span aria-hidden className="absolute top-0 left-0 flex size-[15px] items-center justify-center rounded-full border border-slate bg-ivory">

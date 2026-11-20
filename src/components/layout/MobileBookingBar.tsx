@@ -39,7 +39,7 @@ export function MobileBookingBar() {
   return (
     <div
       className={cn(
-        'fixed inset-x-0 bottom-0 z-30 border-t border-line bg-ivory/95 px-4 py-3 backdrop-blur-md transition-transform duration-500 ease-[var(--ease-out-3)] lg:hidden',
+        'fixed inset-x-0 bottom-0 z-30 border-t border-line bg-ivory/95 px-4 py-3 backdrop-blur-md transition-transform duration-400 ease-[var(--ease-drawer)] lg:hidden',
         visible ? 'translate-y-0' : 'translate-y-full',
       )}
       aria-hidden={!visible}

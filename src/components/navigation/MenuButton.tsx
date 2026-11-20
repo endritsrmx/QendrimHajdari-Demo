@@ -23,14 +23,14 @@ export const MenuButton = forwardRef<
         <line
           x1="4" y1="11" x2="24" y2="11"
           stroke="currentColor" strokeWidth="1.25"
-          className={cn('origin-center transition-transform duration-500 ease-[var(--ease-out-3)]', open && 'translate-y-[3px] rotate-45')}
+          className={cn('origin-center transition-transform duration-300 ease-[var(--ease-in-out)]', open && 'translate-y-[3px] rotate-45')}
           style={{ transformBox: 'fill-box' }}
         />
         <line
           x1="8" y1="17" x2="24" y2="17"
           stroke="currentColor" strokeWidth="1.25"
           className={cn(
-            'origin-center transition-[transform] duration-500 ease-[var(--ease-out-3)] group-hover:-translate-x-1',
+            'origin-center transition-[transform] duration-300 ease-[var(--ease-in-out)] group-hover:-translate-x-1',
             open && '-translate-y-[3px] -rotate-45 scale-x-125 group-hover:translate-x-0',
           )}
           style={{ transformBox: 'fill-box' }}

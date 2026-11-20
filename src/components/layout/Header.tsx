@@ -55,18 +55,17 @@ export function Header() {
     <header id="site-header" className="fixed inset-x-0 top-0 z-50" style={{ viewTransitionName: 'site-header' }}>
       <div
         className={cn(
-          'relative z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-[var(--ease-out)]',
-          compact ? 'bg-ivory/92 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md' : 'bg-transparent',
+          'relative z-50 before:absolute before:inset-0 before:-z-10 before:bg-ivory/92 before:shadow-[0_1px_0_var(--color-line)] before:backdrop-blur-md before:transition-opacity before:duration-200 before:ease-[ease]',
+          compact ? 'before:opacity-100' : 'before:opacity-0',
         )}
       >
         <div
           className={cn(
-            'container-x flex items-center justify-between gap-6 transition-[height] duration-300 ease-[var(--ease-out)]',
-            compact ? 'h-16 lg:h-[4.5rem]' : 'h-20 lg:h-24',
+            'container-x flex h-[4.5rem] items-center justify-between gap-6 lg:h-20',
           )}
         >
           <Link href="/" aria-label={t('homeLink')} className="shrink-0" onClick={() => setOpen(false)}>
-            <Logo animated showTagline={!compact} />
+            <Logo animated taglineHidden={compact} />
           </Link>
 
           <nav aria-label={t('mainNav')} className={cn('hidden lg:block', open && 'invisible')}>
@@ -80,7 +79,7 @@ export function Header() {
                       aria-current={active ? 'page' : undefined}
                       className={cn(
                         'link-underline py-2 text-[0.8125rem] font-medium tracking-[0.06em] transition-colors',
-                        active ? 'text-slate [background-size:100%_1px]' : 'text-grey hover:text-slate',
+                        active ? 'text-slate' : 'text-grey hover:text-slate',
                       )}
                     >
                       {t(item.key)}

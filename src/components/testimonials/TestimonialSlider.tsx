@@ -22,7 +22,7 @@ export function TestimonialSlider({ items, label }: { items: { id: string; quote
         if (e.key === 'ArrowLeft') go(-1);
       }}
     >
-      <figure key={current.id} aria-live="polite" className="animate-[qh-fade_0.6s_ease-out]">
+      <figure key={current.id} aria-live="polite" className="animate-[fade-in_250ms_var(--ease-out)]">
         <blockquote className="text-h2 max-w-4xl italic">“{current.quote}”</blockquote>
         <figcaption className="text-label mt-8 text-grey">{current.attribution}</figcaption>
       </figure>

@@ -25,7 +25,7 @@ export async function LocationCard({
   return (
     <article className="group flex h-full flex-col bg-white" data-reveal-item>
       <div className="relative aspect-[4/3] overflow-hidden">
-        <div className="h-full w-full transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.03]">
+        <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.03]">
           <Placeholder token={location.imagePlaceholder} label={t('imagePlaceholder')} tone={index % 2 ? 'ivory' : 'sand'} />
         </div>
         <span className="absolute top-5 left-5 bg-ivory px-3 py-1.5 text-[0.6875rem] font-medium tracking-[0.16em] text-slate tabular-nums">

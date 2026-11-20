@@ -51,7 +51,7 @@ export function Accordion({ items, className }: { items: AccordionItem[]; classN
               role="region"
               aria-labelledby={btnId}
               className={cn(
-                'grid transition-[grid-template-rows,opacity] duration-300 ease-[var(--ease-out)]',
+                'grid transition-[grid-template-rows,opacity] duration-200 ease-[var(--ease-out)]',
                 isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
               )}
               inert={!isOpen}

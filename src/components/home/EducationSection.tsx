@@ -30,7 +30,7 @@ export async function EducationSection() {
               <li key={a.id} data-reveal-item>
                 <article className="group relative flex h-full flex-col">
                   <div className="aspect-[4/3] overflow-hidden" data-cursor="view">
-                    <div className="h-full w-full transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]">
+                    <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.04]">
                       <Illustration id={tr?.illustration ?? 'knee-consultation'} label={a.title[locale]} caption={tc('illustration')} />
                     </div>
                   </div>

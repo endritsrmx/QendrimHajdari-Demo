@@ -96,7 +96,7 @@ export function BookingFlow() {
       </ol>
 
       <div className="lg:col-span-8">
-        <div key={step} className="animate-[step-in_320ms_var(--ease-out)_both]">
+        <div key={step} className="animate-[step-in_250ms_var(--ease-out)_both]">
           <p className="text-label text-grey">{t('step', { current: step, total: 3 })}</p>
 
           {step === 1 && (

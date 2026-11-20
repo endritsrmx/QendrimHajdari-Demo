@@ -45,7 +45,8 @@ export function MenuOverlay({
       root.hidden = false;
       if (reduced) {
         gsap.set(root, { clipPath: 'inset(0% 0% 0% 0%)' });
-        gsap.set(items, { y: 0, opacity: 1 });
+        gsap.set(items, { y: 0 });
+        gsap.fromTo(root, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power2.out' });
       } else {
         gsap.fromTo(root, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: motionPresets.menu.overlay, ease: 'expo.inOut' });
         gsap.fromTo(
@@ -58,12 +59,15 @@ export function MenuOverlay({
       requestAnimationFrame(() => root.querySelector<HTMLElement>('[data-menu-item] a')?.focus());
     } else {
       if (reduced) {
-        root.hidden = true;
+        gsap.to(root, { opacity: 0, duration: 0.15, ease: 'power2.out', onComplete: () => {
+          root.hidden = true;
+          gsap.set(root, { opacity: 1 });
+        } });
       } else {
         gsap.to(root, {
           clipPath: 'inset(0% 0% 100% 0%)',
-          duration: 0.32,
-          ease: 'power3.in',
+          duration: 0.3,
+          ease: 'power3.out',
           onComplete: () => {
             root.hidden = true;
           },
@@ -127,7 +131,7 @@ export function MenuOverlay({
                       </span>
                       <span
                         className={cn(
-                          'font-serif text-[clamp(2.25rem,1.4rem+3.6vw,4.5rem)] leading-[1.05] transition-[transform,color] duration-300 ease-[var(--ease-out)] group-hover:translate-x-3',
+                          'font-serif text-[clamp(2.25rem,1.4rem+3.6vw,4.5rem)] leading-[1.05] transition-[transform,color] duration-200 ease-[ease] group-hover:translate-x-3',
                           active ? 'text-slate italic' : 'text-slate',
                         )}
                       >

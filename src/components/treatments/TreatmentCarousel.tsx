@@ -79,7 +79,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
             >
               <article className="group relative flex h-full flex-col bg-ivory">
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <div className="h-full w-full transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]">
+                  <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.04]">
                     <Illustration id={card.illustration} label={card.title} caption={t('illustration')} tone="white" />
                   </div>
                   {card.badge && (
@@ -88,7 +88,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
                     </span>
                   )}
                 </div>
-                <div className="flex flex-1 flex-col p-6 transition-transform duration-500 ease-[var(--ease-out-3)] sm:p-8 lg:group-hover:-translate-y-1">
+                <div className="flex flex-1 flex-col p-6 transition-transform duration-300 ease-[ease] sm:p-8 lg:group-hover:-translate-y-1">
                   <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">{card.number}</span>
                   <h3 className="text-h3 mt-3">{card.title}</h3>
                   <p className="mt-4 text-[0.9375rem] leading-relaxed text-grey">{card.text}</p>
@@ -114,8 +114,8 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
           </span>
           <div className="relative h-px max-w-xs flex-1 bg-line" aria-hidden>
             <div
-              className="absolute inset-y-0 left-0 bg-slate transition-[width] duration-500 ease-[var(--ease-out-3)]"
-              style={{ width: `${progress * 100}%` }}
+              className="absolute inset-0 origin-left bg-slate transition-transform duration-300 ease-[var(--ease-in-out)]"
+              style={{ transform: `scaleX(${progress})` }}
             />
           </div>
           <p id="carousel-hint" className="hidden text-[0.75rem] uppercase tracking-[0.14em] text-grey lg:block">

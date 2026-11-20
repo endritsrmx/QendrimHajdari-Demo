@@ -32,6 +32,51 @@ const num = (v: string | undefined, fallback: number) => {
   return Number.isFinite(n) ? n : fallback;
 };
 
+/** Curves from the design tokens in globals.css (--ease-out / --ease-in-out). */
+const EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)';
+const EASE_IN_OUT = 'cubic-bezier(0.77, 0, 0.175, 1)';
+
+/**
+ * Above-the-fold reveals play while the page is still loading and hydrating.
+ * They run on WAAPI (transform / opacity on the compositor) instead of GSAP's rAF loop,
+ * so they stay smooth while the main thread is busy.
+ */
+function revealWithWaapi(el: HTMLElement, type: string | undefined, delay: number): boolean {
+  const opts = (duration: number, d = 0, easing = EASE_OUT): KeyframeAnimationOptions => ({
+    duration: duration * 1000,
+    delay: (delay + d) * 1000,
+    easing,
+    fill: 'both',
+  });
+  switch (type) {
+    case 'lines':
+      el.querySelectorAll<HTMLElement>('.reveal-mask > span').forEach((line, i) =>
+        line.animate([{ transform: 'translateY(110%)' }, { transform: 'none' }], opts(P.revealLines.duration, i * P.revealLines.stagger)),
+      );
+      return true;
+    case 'image': {
+      el.animate([{ clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)' }], opts(P.revealImage.duration, 0, EASE_IN_OUT));
+      el.querySelector<HTMLElement>('[data-reveal-zoom]')?.animate(
+        [{ transform: `scale(${P.revealImage.zoomFrom})` }, { transform: 'none' }],
+        opts(P.revealImage.duration + 0.3),
+      );
+      return true;
+    }
+    case 'divider':
+      el.style.transformOrigin = 'left center';
+      el.animate([{ transform: 'scaleX(0)' }, { transform: 'none' }], opts(P.divider.duration));
+      return true;
+    case 'text':
+      el.animate([{ opacity: 0, transform: `translateY(${P.revealText.y}px)` }, { opacity: 1, transform: 'none' }], opts(P.revealText.duration));
+      return true;
+    case 'fade':
+      el.animate([{ opacity: 0, transform: `translateY(${P.fadeUp.y}px)` }, { opacity: 1, transform: 'none' }], opts(P.fadeUp.duration));
+      return true;
+    default:
+      return false; // stagger groups keep GSAP
+  }
+}
+
 function initReveals(root: ParentNode) {
   const els = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]:not([data-revealed])'));
 
@@ -42,6 +87,9 @@ function initReveals(root: ParentNode) {
     // Remove the CSS pre-hide state *before* GSAP reads computed styles (same frame → no flash),
     // otherwise GSAP would cache the CSS transform as a pixel offset.
     el.setAttribute('data-revealed', '');
+
+    const inViewAtLoad = el.getBoundingClientRect().top < window.innerHeight;
+    if (inViewAtLoad && typeof el.animate === 'function' && revealWithWaapi(el, type, delay)) return;
 
     switch (type) {
       case 'lines': {

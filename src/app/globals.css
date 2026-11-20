@@ -255,27 +255,63 @@
   }
 }
 
-/* Link underline microinteraction */
+/* Link underline microinteraction – transform (scaleX) on a pseudo-element, never background-size.
+   Draws in from the left, retracts to the right. Hover-only motion is gated by Tailwind 4 (hover: hover). */
 @utility link-underline {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s var(--ease-out-3);
-  &:hover,
-  &:focus-visible {
-    background-size: 100% 1px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 250ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+  &:focus-visible::after,
+  &[aria-current='page']::after,
+  :focus-visible > &::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover > &::after {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+  &.is-active::after {
+    transform: scaleX(1);
+    transform-origin: left center;
   }
 }
 @utility link-underline-static {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 100% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s var(--ease-out-3);
-  &:hover {
-    background-size: 0% 1px;
-    background-position: 100% 100%;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left center;
+    transition: transform 250ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      transform: scaleX(0);
+      transform-origin: right center;
+    }
   }
 }
 
@@ -337,17 +373,27 @@ html.motion [data-reveal='divider']:not([data-revealed]) {
   will-change: transform;
 }
 
+/* Reduced motion = fewer and gentler, not zero.
+   Scroll reveals, parallax, Lenis, cursor and the logo draw are already skipped (no html.motion class).
+   Remaining entrances keep their timing but drop movement – opacity only. */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-delay: 0ms !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
+  }
+  .reduce-to-fade,
+  [class*='animate-[step-in'],
+  [class*='animate-[fade-in'] {
+    animation-name: fade-in !important;
+  }
+  .pressable:active:not(:disabled) {
+    transform: none;
   }
 }
-
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
 /* ───────────────────────── Page transitions (View Transitions API) ─────────────────────────
    Progressive enhancement: browsers without support simply navigate without animation. */
 ::view-transition-old(.page) {
@@ -380,9 +426,16 @@ html.motion [data-reveal='divider']:not([data-revealed]) {
   animation: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(.page),
+  ::view-transition-old(.page) {
+    animation: fade-out 0.2s ease both;
+  }
   ::view-transition-new(.page) {
-    animation: none;
+    animation: fade-in 0.2s ease both;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
   }
 }
 

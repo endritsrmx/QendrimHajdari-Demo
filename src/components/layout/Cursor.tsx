@@ -68,7 +68,8 @@ export function Cursor() {
 
   if (!enabled) return null;
 
-  const size = { default: 'size-7', link: 'size-12', drag: 'size-20', view: 'size-20' }[mode];
+  // one 80px element scaled via transform – never animate width/height
+  const scale = { default: 0.35, link: 0.6, drag: 1, view: 1 }[mode];
   const label = mode === 'drag' ? t('drag') : mode === 'view' ? t('view') : '';
 
   return (
@@ -78,11 +79,24 @@ export function Cursor() {
       className="cursor-dot pointer-events-none fixed top-0 left-0 z-[100] opacity-0 transition-opacity duration-300"
     >
       <div
-        className={`flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border transition-[width,height,background-color,border-color] duration-300 ease-[var(--ease-out-3)] ${size} ${
-          label ? 'border-slate bg-slate text-ivory' : 'border-slate/50 bg-transparent'
-        }`}
+        className="relative -mt-10 -ml-10 flex size-20 items-center justify-center transition-transform duration-200 ease-[var(--ease-out)]"
+        style={{ transform: `scale(${scale})` }}
       >
-        {label && <span className="text-[0.625rem] font-medium uppercase tracking-[0.16em]">{label}</span>}
+        <svg viewBox="0 0 80 80" className="absolute inset-0 size-full overflow-visible">
+          <circle
+            cx="40"
+            cy="40"
+            r="39.5"
+            vectorEffect="non-scaling-stroke"
+            strokeWidth="1"
+            className={`transition-[fill,stroke] duration-200 ease-[ease] ${label ? 'fill-slate stroke-slate' : 'fill-transparent stroke-slate/50'}`}
+          />
+        </svg>
+        <span
+          className={`relative text-[0.625rem] font-medium uppercase tracking-[0.16em] text-ivory transition-opacity duration-150 ease-[ease] ${label ? 'opacity-100' : 'opacity-0'}`}
+        >
+          {label || '·'}
+        </span>
       </div>
     </div>
   );
