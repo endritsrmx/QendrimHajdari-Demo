@@ -8,6 +8,8 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Illustration } from '@/components/ui/Illustration';
+import { Photo } from '@/components/ui/Photo';
+import { media } from '@/content/media';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 import { Accordion } from '@/components/ui/Accordion';
 import { ButtonLink } from '@/components/ui/Button';
@@ -117,7 +119,13 @@ export default async function TreatmentPage({ params }: Props) {
               </div>
             </div>
             <div className="col-span-4 aspect-[4/5] overflow-hidden lg:col-span-4 lg:col-start-9" data-reveal="image" data-reveal-delay="0.2" data-reveal-start="top 100%">
-              <Illustration id={tr.illustration} label={tr.title[locale]} caption={tc('illustration')} />
+              {tr.heroPhoto ? (
+                <div className="relative h-full w-full bg-sand" data-reveal-zoom>
+                  <Photo photo={media[tr.heroPhoto]} locale={locale} priority sizes="(min-width: 1024px) 30vw, 92vw" />
+                </div>
+              ) : (
+                <Illustration id={tr.illustration} label={tr.title[locale]} caption={tc('illustration')} />
+              )}
             </div>
           </div>
         </div>

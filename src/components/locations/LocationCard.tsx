@@ -2,6 +2,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import type { PracticeLocation } from '@/config/locations';
 import { Link } from '@/i18n/navigation';
 import { Placeholder } from '@/components/ui/Placeholder';
+import { Photo } from '@/components/ui/Photo';
 import { Arrow } from '@/components/ui/Arrow';
 import { buttonClass } from '@/components/ui/Button';
 import { cn } from '@/lib/cn';
@@ -26,7 +27,13 @@ export async function LocationCard({
     <article className="group flex h-full flex-col bg-white" data-reveal-item>
       <div className="relative aspect-[4/3] overflow-hidden">
         <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.03]">
-          <Placeholder token={location.imagePlaceholder} label={t('imagePlaceholder')} tone={index % 2 ? 'ivory' : 'sand'} />
+          {location.image ? (
+            <div className="relative h-full w-full bg-sand">
+              <Photo photo={location.image} locale={locale} sizes="(min-width: 1024px) 45vw, 92vw" />
+            </div>
+          ) : (
+            <Placeholder token={location.imagePlaceholder} label={t('imagePlaceholder')} tone={index % 2 ? 'ivory' : 'sand'} />
+          )}
         </div>
         <span className="absolute top-5 left-5 bg-ivory px-3 py-1.5 text-[0.6875rem] font-medium tracking-[0.16em] text-slate tabular-nums">
           {String(index + 1).padStart(2, '0')}

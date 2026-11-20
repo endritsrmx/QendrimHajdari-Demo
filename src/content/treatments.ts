@@ -239,6 +239,7 @@ export const treatments: Treatment[] = [
     status: 'needs_medical_review',
     slug: treatmentSlugs['joint-replacement'],
     illustration: 'joint-replacement',
+    heroPhoto: 'orTeamKneeReplacement',
     title: { sq: 'Zëvendësimi i nyjeve', en: 'Joint Replacement' },
     cardText: {
       sq: 'Këshillim për pacientët me ndryshime të avancuara të nyjeve, kur masat konservative nuk mjaftojnë më.',

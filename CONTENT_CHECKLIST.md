@@ -11,7 +11,10 @@ Alle Punkte erscheinen auf der Website als sichtbare `[PLATZHALTER]`. Nichts dav
 - [ ] Vorhandenes Kundenlogo? (hat Vorrang vor der vorläufigen Wortmarke in `public/brand/`)
 
 ## 2. Arzt
-- [ ] `[PORTRAIT_DOCTOR]` – professionelles Porträt (Hero hochformatig 4:5, About 4:5, Teaser 11:12; mind. 2000 px lang, Tageslicht, gedämpfte Farben)
+- [x] Porträts eingebaut (`public/images/doctor/`, Zuordnung in `src/content/media.ts`): Hero = OP-Porträt, About = weisser Kittel, Teaser = Workshop Knieprothese
+- [ ] **Nutzungsrechte** aller gelieferten Fotos bestätigen (Fotograf/Instagram)
+- [ ] **Einwilligung der abgebildeten Personen** einholen: Kollegen auf Team-/OP-Fotos, Royal-Medical-Foto; OP-Fotos ohne erkennbare Patientendaten prüfen
+- [ ] Bestätigen, dass die Porträts Dr. Hajdari zeigen; optional höher aufgelöste Originale (≥ 2000 px) liefern
 - [ ] `[DOCTOR_BIO_APPROVED]` – Biografie SQ + EN → `doctor.bio.text`, Status `approved`
 - [ ] Werdegang: Jahre, Universitäten, Stationen (`doctor.career`)
 - [ ] `[MEDICAL_QUALIFICATIONS_VERIFIED]`, Weiterbildungen, `[MEMBERSHIPS_VERIFIED]`, `[YEARS_OF_EXPERIENCE_VERIFIED]` (optional)
@@ -23,7 +26,8 @@ Alle Punkte erscheinen auf der Website als sichtbare `[PLATZHALTER]`. Nichts dav
 - [ ] `[PHONE_NUMBER]` je Standort + zentral, `[BUSINESS_EMAIL]`
 - [ ] `[WORKING_HOURS_BY_LOCATION]` (Tage + Zeiten)
 - [ ] Barrierefreiheit (optional)
-- [ ] Praxisfotos mit Nutzungsrecht `[ROYAL_MEDICAL_PHOTO]`, `[DORA_PHOTO]`, `[PRACTICE_PHOTO_APPROVED]`
+- [x] Royal Medical: Teamfoto eingebaut
+- [ ] `[DORA_PHOTO]` – Foto für Ordinanca Dora, Gjilan fehlt noch
 - [ ] Exakte Google-Maps-Links
 
 ## 4. Medizinische Inhalte (Status → `approved`)

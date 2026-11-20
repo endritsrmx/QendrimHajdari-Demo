@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Eyebrow } from '@/components/ui/Eyebrow';
-import { Placeholder } from '@/components/ui/Placeholder';
+import { Photo } from '@/components/ui/Photo';
+import { media } from '@/content/media';
 import { Section } from '@/components/ui/Section';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 import { philosophy } from '@/content/home';
@@ -8,7 +9,6 @@ import { filterRenderable } from '@/lib/content';
 
 export async function Philosophy({ headingLevel = 2 }: { headingLevel?: 2 | 3 }) {
   const t = await getTranslations('home.philosophy');
-  const tc = await getTranslations('common');
   const locale = (await getLocale()) as 'sq' | 'en';
   const items = filterRenderable(philosophy);
   const H = headingLevel === 2 ? 'h2' : 'h3';
@@ -23,8 +23,8 @@ export async function Philosophy({ headingLevel = 2 }: { headingLevel?: 2 | 3 })
         </H>
         <div className="grid-12 mt-16 gap-y-12 lg:mt-24">
           <div className="relative col-span-4 aspect-[4/5] overflow-hidden lg:col-span-5" data-reveal="image">
-            <div className="h-full w-full" data-reveal-zoom>
-              <Placeholder token="[PRACTICE_PHOTO_APPROVED]" label={tc('imagePlaceholder')} />
+            <div className="relative h-full w-full bg-slate" data-reveal-zoom>
+              <Photo photo={media.surgeryInProgress} locale={locale} sizes="(min-width: 1024px) 40vw, 92vw" />
             </div>
           </div>
           <ol

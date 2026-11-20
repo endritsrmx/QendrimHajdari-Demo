@@ -1,4 +1,5 @@
 import type { Localized } from '@/content/types';
+import { media, type Photo } from '@/content/media';
 
 export type LocationId = 'royal-medical' | 'ordinanca-dora';
 
@@ -19,7 +20,8 @@ export interface PracticeLocation {
   mapsUrl: string;
   /** Facility affiliation confirmed by client in writing → enables MedicalClinic schema */
   verified: boolean;
-  image: string | null;
+  /** Approved practice photo – null shows a declared placeholder */
+  image: Photo | null;
   imagePlaceholder: string;
 }
 
@@ -39,7 +41,7 @@ export const locations: PracticeLocation[] = [
       process.env.NEXT_PUBLIC_ROYAL_MEDICAL_MAPS_URL ||
       'https://www.google.com/maps/search/?api=1&query=Royal+Medical+Prishtina+Kosovo',
     verified: false,
-    image: null,
+    image: media.royalMedicalTeam,
     imagePlaceholder: '[ROYAL_MEDICAL_PHOTO]',
   },
   {

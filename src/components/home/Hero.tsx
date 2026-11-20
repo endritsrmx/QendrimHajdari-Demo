@@ -1,11 +1,12 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
+import type { Locale } from '@/i18n/routing';
+import { Photo } from '@/components/ui/Photo';
+import { media } from '@/content/media';
 import { ButtonLink } from '@/components/ui/Button';
-import { Placeholder } from '@/components/ui/Placeholder';
-import { doctor } from '@/content/doctor';
 
 export async function Hero() {
   const t = await getTranslations('home.hero');
-  const tc = await getTranslations('common');
+  const locale = (await getLocale()) as Locale;
 
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-36 lg:pb-24">
@@ -45,8 +46,8 @@ export async function Hero() {
             data-reveal-start="top 100%"
           >
             <div className="absolute -inset-y-8 inset-x-0" data-parallax="30">
-              <div className="h-full w-full" data-reveal-zoom>
-                {doctor.portrait ? null : <Placeholder token="[PORTRAIT_DOCTOR]" label={tc('imagePlaceholder')} tone="ivory" />}
+              <div className="relative h-full w-full bg-sand" data-reveal-zoom>
+                <Photo photo={media.portraitOperatingRoom} locale={locale} priority sizes="(min-width: 1024px) 36vw, 92vw" />
               </div>
             </div>
           </div>

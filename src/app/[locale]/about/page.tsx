@@ -5,7 +5,8 @@ import { buildMetadata, absoluteUrl } from '@/lib/seo';
 import { breadcrumbSchema, physicianSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Eyebrow } from '@/components/ui/Eyebrow';
-import { Placeholder } from '@/components/ui/Placeholder';
+import { Photo } from '@/components/ui/Photo';
+import { media } from '@/content/media';
 import { PendingBlock } from '@/components/ui/PendingBlock';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { DoctorBio } from '@/components/home/DoctorBio';
@@ -71,8 +72,8 @@ export default async function AboutPage({ params }: Props) {
             <div className="relative col-span-4 lg:col-span-5 lg:col-start-8">
               <div aria-hidden className="absolute -top-8 -right-[var(--gutter)] -bottom-8 left-1/3 bg-sand" />
               <div className="relative aspect-[4/5] overflow-hidden" data-reveal="image" data-reveal-delay="0.2" data-reveal-start="top 100%">
-                <div className="h-full w-full" data-reveal-zoom>
-                  <Placeholder token="[PORTRAIT_DOCTOR]" label={tc('imagePlaceholder')} tone="ivory" />
+                <div className="relative h-full w-full bg-sand" data-reveal-zoom>
+                  <Photo photo={media.portraitWhiteCoat} locale={locale} priority sizes="(min-width: 1024px) 40vw, 92vw" />
                 </div>
               </div>
             </div>
@@ -119,6 +120,35 @@ export default async function AboutPage({ params }: Props) {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Clinical practice – editorial photo sequence */}
+      <section aria-labelledby="gallery-title" className="section-y bg-sand">
+        <div className="container-x">
+          <Eyebrow>{t('galleryEyebrow')}</Eyebrow>
+          <h2 id="gallery-title" className="text-h2 mt-7 max-w-[18ch]" data-reveal="text">
+            {t('galleryTitle')}
+          </h2>
+          <div className="grid-12 mt-14 gap-y-12 lg:mt-20">
+            {[
+              { photo: media.orScrubsPortrait, caption: t('captionTheatre'), cls: 'col-span-4 lg:col-span-5', ratio: 'aspect-[3/4]' },
+              { photo: media.orTeamScrubs, caption: t('captionTeam'), cls: 'col-span-4 lg:col-span-4 lg:mt-32', ratio: 'aspect-[3/4]' },
+              { photo: media.workshopKnee, caption: t('captionTraining'), cls: 'col-span-4 lg:col-span-3 lg:self-end', ratio: 'aspect-[11/12]' },
+            ].map(({ photo, caption, cls, ratio }) => (
+              <figure key={photo.src} className={cls}>
+                <div className={`relative overflow-hidden ${ratio}`} data-reveal="image">
+                  <div className="relative h-full w-full bg-sand" data-reveal-zoom>
+                    <Photo photo={photo} locale={locale} sizes="(min-width: 1024px) 34vw, 92vw" />
+                  </div>
+                </div>
+                <figcaption className="mt-4 flex items-center gap-3 text-[0.8125rem] text-grey">
+                  <span aria-hidden className="h-px w-6 bg-bronze" />
+                  {caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

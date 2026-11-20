@@ -152,10 +152,22 @@
       "title": "Your Path to Personalised Orthopaedic Care.",
       "note": "An example of how a first consultation is typically organised – not a commitment to a specific treatment.",
       "steps": {
-        "1": { "title": "Choose Your Location", "text": "Prishtina or Gjilan – select the practice that is most convenient for you." },
-        "2": { "title": "Schedule a Consultation", "text": "Book online once available, or get in touch via the contact form." },
-        "3": { "title": "Medical Assessment", "text": "History, clinical examination and, where indicated, imaging." },
-        "4": { "title": "Discuss Your Treatment Plan", "text": "Options, benefits and risks explained clearly – the decision is made together." }
+        "1": {
+          "title": "Choose Your Location",
+          "text": "Prishtina or Gjilan – select the practice that is most convenient for you."
+        },
+        "2": {
+          "title": "Schedule a Consultation",
+          "text": "Book online once available, or get in touch via the contact form."
+        },
+        "3": {
+          "title": "Medical Assessment",
+          "text": "History, clinical examination and, where indicated, imaging."
+        },
+        "4": {
+          "title": "Discuss Your Treatment Plan",
+          "text": "Options, benefits and risks explained clearly – the decision is made together."
+        }
       }
     },
     "testimonials": {
@@ -185,7 +197,12 @@
     "philosophyTitle": "Medical philosophy",
     "locationsTitle": "Where I see patients",
     "pendingVerification": "Will be added after verification.",
-    "placeholderNote": "Placeholder – content is only published after verification by the client."
+    "placeholderNote": "Placeholder – content is only published after verification by the client.",
+    "galleryEyebrow": "Clinical practice",
+    "galleryTitle": "In the operating theatre and in training.",
+    "captionTheatre": "Operating theatre",
+    "captionTeam": "Surgical team",
+    "captionTraining": "Hands-on training: knee arthroplasty"
   },
   "treatments": {
     "eyebrow": "Treatments",

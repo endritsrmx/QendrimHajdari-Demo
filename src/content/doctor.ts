@@ -11,7 +11,7 @@ export const doctor = {
     sq: ['Ortopedi', 'Traumatologji', 'Mjekësi sportive'],
     en: ['Orthopaedic Surgery', 'Trauma Surgery', 'Sports Medicine'],
   } satisfies Localized<string[]>,
-  portrait: null as string | null, // [PORTRAIT_DOCTOR]
+  portrait: '/images/doctor/portrait-operating-room.jpg' as string | null, // client-supplied – confirm usage rights
   bio: {
     status: 'draft' as ContentStatus,
     placeholder: '[DOCTOR_BIO_APPROVED]',

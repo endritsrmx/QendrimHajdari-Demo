@@ -152,10 +152,22 @@
       "title": "Rruga juaj drejt kujdesit ortopedik të personalizuar.",
       "note": "Një shembull se si organizohet zakonisht konsulta e parë – jo një zotim për një trajtim të caktuar.",
       "steps": {
-        "1": { "title": "Zgjidhni klinikën", "text": "Prishtinë apo Gjilan – zgjidhni klinikën më të përshtatshme për ju." },
-        "2": { "title": "Rezervoni konsultën", "text": "Rezervoni online sapo të jetë e mundur, ose na shkruani përmes formularit të kontaktit." },
-        "3": { "title": "Vlerësimi mjekësor", "text": "Anamneza, ekzaminimi klinik dhe, kur është e indikuar, imazheria." },
-        "4": { "title": "Diskutimi i planit të trajtimit", "text": "Mundësitë, përfitimet dhe rreziqet shpjegohen qartë – vendimi merret së bashku." }
+        "1": {
+          "title": "Zgjidhni klinikën",
+          "text": "Prishtinë apo Gjilan – zgjidhni klinikën më të përshtatshme për ju."
+        },
+        "2": {
+          "title": "Rezervoni konsultën",
+          "text": "Rezervoni online sapo të jetë e mundur, ose na shkruani përmes formularit të kontaktit."
+        },
+        "3": {
+          "title": "Vlerësimi mjekësor",
+          "text": "Anamneza, ekzaminimi klinik dhe, kur është e indikuar, imazheria."
+        },
+        "4": {
+          "title": "Diskutimi i planit të trajtimit",
+          "text": "Mundësitë, përfitimet dhe rreziqet shpjegohen qartë – vendimi merret së bashku."
+        }
       }
     },
     "testimonials": {
@@ -185,7 +197,12 @@
     "philosophyTitle": "Filozofia mjekësore",
     "locationsTitle": "Ku i pres pacientët",
     "pendingVerification": "Do të shtohet pas verifikimit.",
-    "placeholderNote": "Vend i rezervuar – përmbajtja publikohet vetëm pas verifikimit nga klienti."
+    "placeholderNote": "Vend i rezervuar – përmbajtja publikohet vetëm pas verifikimit nga klienti.",
+    "galleryEyebrow": "Praktika klinike",
+    "galleryTitle": "Në sallën e operacionit dhe në trajnime.",
+    "captionTheatre": "Salla e operacionit",
+    "captionTeam": "Ekipi kirurgjikal",
+    "captionTraining": "Trajnim praktik: artroplastika e gjurit"
   },
   "treatments": {
     "eyebrow": "Shërbimet",

@@ -29,6 +29,8 @@ export interface Treatment {
   status: ContentStatus;
   slug: Localized;
   illustration: IllustrationId;
+  /** optional approved photo for the treatment hero (key of content/media.ts) */
+  heroPhoto?: 'orTeamKneeReplacement';
   title: Localized;
   cardText: Localized;
   heroLead: Localized;
