@@ -33,9 +33,8 @@ export async function Hero() {
         </div>
 
         <div className="relative col-span-4 lg:col-span-5">
-          {/* organic composition: arch-topped portrait, offset sand plane, bronze hairline */}
+          {/* organic composition: arch-topped portrait on an offset sand plane */}
           <div aria-hidden className="absolute -top-6 -right-[var(--gutter)] bottom-16 left-[18%] bg-sand lg:-top-10" />
-          <div aria-hidden className="absolute top-[12%] -left-6 hidden h-[38%] w-px bg-bronze lg:block" />
           <div
             className="relative mx-auto aspect-[4/5] max-h-[72svh] w-full max-w-[34rem] overflow-hidden rounded-t-[999px]"
             data-reveal="image"
