@@ -72,7 +72,7 @@ export async function LocationCard({
                 <dt className="text-grey">{t('phone')}</dt>
                 <dd>
                   {location.phone ? (
-                    <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="link-underline-static">{location.phone}</a>
+                    <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="link-underline-static tap-area tabular-nums">{location.phone}</a>
                   ) : (
                     <span className="text-grey">{t('toBeConfirmed')}</span>
                   )}

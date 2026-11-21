@@ -82,14 +82,14 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
                   <div className="h-full w-full">
                     <Illustration id={card.illustration} label={card.title} caption={t('illustration')} tone="white" />
                   </div>
-                  {card.badge && (
-                    <span className="absolute top-4 left-4 inline-flex items-center gap-2 bg-white/90 px-2.5 py-1 text-[0.75rem] text-bronze-deep">
-                      <span aria-hidden className="size-1.5 rounded-full bg-bronze" />
-                      {card.badge}
-                    </span>
-                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  {card.badge && (
+                    <p className="mb-3 inline-flex items-center gap-2 text-[0.75rem] text-bronze-deep">
+                      <span aria-hidden className="size-1.5 rounded-full bg-bronze" />
+                      {card.badge}
+                    </p>
+                  )}
                   <h3 className="text-h3">{card.title}</h3>
                   <p className="mt-4 text-[0.9375rem] leading-relaxed text-grey">{card.text}</p>
                   <Link

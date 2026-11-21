@@ -35,7 +35,7 @@ export default async function ContactPage({ params }: Props) {
                 <dt className="text-label text-grey">{tc('phone')}</dt>
                 <dd className="mt-1">
                   {brand.phone ? (
-                    <a className="link-underline-static" href={`tel:${brand.phone.replace(/\s/g, '')}`}>{brand.phone}</a>
+                    <a className="link-underline-static tap-area tabular-nums" href={`tel:${brand.phone.replace(/\s/g, '')}`}>{brand.phone}</a>
                   ) : (
                     <span className="text-grey">{tc('toBeConfirmed')}</span>
                   )}

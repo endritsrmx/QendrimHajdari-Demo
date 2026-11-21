@@ -176,7 +176,7 @@ export function BookingFlow() {
                       <Arrow />
                     </Link>
                     {loc.phone && (
-                      <a href={`tel:${loc.phone.replace(/\s/g, '')}`} className="link-underline-static text-[0.9375rem] tabular-nums">
+                      <a href={`tel:${loc.phone.replace(/\s/g, '')}`} className="link-underline-static tap-area text-[0.9375rem] tabular-nums">
                         {t('callLocation', { phone: loc.phone })}
                       </a>
                     )}

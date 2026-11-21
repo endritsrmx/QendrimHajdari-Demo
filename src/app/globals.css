@@ -292,6 +292,16 @@
     transform-origin: left center;
   }
 }
+/* Invisible hit area: inline links reach a 44px touch target without changing layout */
+@utility tap-area {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -12px -4px;
+  }
+}
+
 @utility link-underline-static {
   position: relative;
   &::after {

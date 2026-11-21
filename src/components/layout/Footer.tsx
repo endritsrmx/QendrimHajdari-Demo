@@ -68,7 +68,7 @@ export async function Footer() {
             <ul className="space-y-3 text-[0.9375rem]">
               <li>
                 {brand.phone ? (
-                  <a href={`tel:${brand.phone.replace(/\s/g, '')}`} className="link-underline">{brand.phone}</a>
+                  <a href={`tel:${brand.phone.replace(/\s/g, '')}`} className="link-underline tap-area tabular-nums">{brand.phone}</a>
                 ) : (
                   <span className="text-sand">{tc('toBeConfirmed')}</span>
                 )}
@@ -77,13 +77,8 @@ export async function Footer() {
                 {brand.email ? (
                   <a href={`mailto:${brand.email}`} className="link-underline break-all">{brand.email}</a>
                 ) : (
-                  <Link href="/contact" className="link-underline">{t('writeUs')}</Link>
+                  <Link href="/contact" className="link-underline tap-area">{t('writeUs')}</Link>
                 )}
-              </li>
-              <li className="pt-2">
-                <Link href="/contact" className="group inline-flex min-h-11 items-center gap-3 text-ivory">
-                  <span className="link-underline">{tn('contact')}</span>
-                </Link>
               </li>
             </ul>
           </div>

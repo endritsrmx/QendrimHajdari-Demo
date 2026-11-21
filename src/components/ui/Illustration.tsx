@@ -113,18 +113,21 @@ export function Illustration({
 }) {
   const bg = { sand: 'bg-sand', white: 'bg-white', ivory: 'bg-hover' }[tone];
   return (
-    <figure className={cn('relative h-full w-full overflow-hidden', bg, className)}>
-      <svg
-        viewBox="0 0 400 500"
-        role="img"
-        aria-label={`${caption}: ${label}`}
-        className="h-full w-full"
-        preserveAspectRatio="xMidYMid meet"
-        data-reveal-zoom
-      >
-        <Art id={id} />
-      </svg>
-      <figcaption className="absolute bottom-4 left-4">
+    <figure className={cn('flex h-full w-full flex-col overflow-hidden', bg, className)}>
+      {/* The drawing gets its own padded area; the caption sits on its own line below and never overlaps it */}
+      <div className="relative min-h-0 flex-1 px-[10%] pt-[10%] pb-[4%]">
+        <svg
+          viewBox="0 0 400 500"
+          role="img"
+          aria-label={`${caption}: ${label}`}
+          className="absolute inset-0 m-auto h-full w-full p-[inherit]"
+          preserveAspectRatio="xMidYMid meet"
+          data-reveal-zoom
+        >
+          <Art id={id} />
+        </svg>
+      </div>
+      <figcaption className="shrink-0 px-5 pt-2 pb-5">
         <Annotation>{caption}</Annotation>
       </figcaption>
     </figure>
