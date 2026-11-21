@@ -8,7 +8,6 @@ import { site } from '@/config/site';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SkipLink } from '@/components/layout/SkipLink';
-import { Cursor } from '@/components/layout/Cursor';
 import { RouteFocus } from '@/components/layout/RouteFocus';
 import { MobileBookingBar } from '@/components/layout/MobileBookingBar';
 import { MotionProvider } from '@/components/animations/MotionProvider';
@@ -35,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 /** Client-side messages: only namespaces used by client components. */
-const CLIENT_NAMESPACES = ['nav', 'common', 'cursor', 'booking', 'contact'] as const;
+const CLIENT_NAMESPACES = ['nav', 'common', 'booking', 'contact'] as const;
 
 // Runs before paint: enables reveal states only when motion is allowed (content stays visible without JS).
 const MOTION_SCRIPT = `try{var d=document.documentElement,r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r){d.classList.add('motion')}if(/^\\/(sq|en)\\/?$/.test(location.pathname)){d.classList.add('intro-pending');var s=null;try{s=sessionStorage.getItem('qh-intro-seen')}catch(e){}if(r){d.classList.add('intro-reduced')}else if(s==='1'){d.classList.add('intro-short')}}}catch(e){}`;
@@ -73,7 +72,6 @@ export default async function LocaleLayout({
           </ViewTransition>
           <Footer />
           <MobileBookingBar />
-          <Cursor />
           <MotionProvider />
           <RouteFocus />
         </NextIntlClientProvider>

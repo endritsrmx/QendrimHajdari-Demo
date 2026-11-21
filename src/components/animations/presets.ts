@@ -9,9 +9,6 @@ export const motionPresets = {
   fadeUp: { y: 24, duration: 0.65, ease: 'power2.out' },
   stagger: { y: 24, duration: 0.65, ease: 'power2.out', stagger: 0.07 },
   divider: { duration: 0.8, ease: 'power2.out' },
-  parallax: { max: 45 },
-  cardHover: { scale: 1.02, duration: 0.3, ease: 'power2.out' },
-  buttonHover: { duration: 0.25, ease: 'power2.out', arrowShift: 6 },
   menu: { overlay: 0.5, stagger: 0.07, ease: 'power3.out' },
 } as const;
 
@@ -20,5 +17,3 @@ export type RevealType = 'fade' | 'text' | 'lines' | 'image' | 'divider' | 'stag
 export const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-export const isFinePointer = () =>
-  typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches;

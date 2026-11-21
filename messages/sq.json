@@ -198,14 +198,12 @@
     "philosophyTitle": "Filozofia mjekësore",
     "locationsTitle": "Ku i pres pacientët",
     "pendingVerification": "Do të shtohet pas verifikimit.",
-    "placeholderNote": "Vend i rezervuar – përmbajtja publikohet vetëm pas verifikimit nga klienti.",
     "galleryEyebrow": "Praktika klinike",
     "galleryTitle": "Në sallën e operacionit dhe në trajnime",
     "captionTheatre": "Salla e operacionit",
     "captionTeam": "Ekipi kirurgjikal",
     "captionTraining": "Trajnim praktik: artroplastika e gjurit",
-    "bioPending": "Prezantimi personal do të shfaqet këtu pasi të miratohet",
-    "careerPending": "Arsimimi dhe etapat e karrierës do të renditen këtu pasi të verifikohen"
+    "bioPending": "Prezantimi personal do të shfaqet këtu pasi të miratohet"
   },
   "treatments": {
     "eyebrow": "Shërbimet",
@@ -348,10 +346,6 @@
     "rights": "Të gjitha të drejtat e rezervuara.",
     "instagram": "Instagram",
     "writeUs": "Dërgoni një mesazh"
-  },
-  "cursor": {
-    "drag": "Tërhiq",
-    "view": "Shiko"
   },
   "intro": {
     "acl": "Ligamenti i kryqëzuar",

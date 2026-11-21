@@ -14,7 +14,7 @@ export async function AboutTeaser() {
     <Section labelledBy="about-title" className="pt-0">
       <div className="container-x grid items-center gap-12 lg:grid-cols-[55fr_45fr] lg:gap-20">
         <div className="relative aspect-[5/6] overflow-hidden lg:aspect-[11/12]" data-reveal="image">
-          <div className="absolute -inset-y-8 inset-x-0" data-parallax="30">
+          <div className="absolute inset-0">
             <div className="relative h-full w-full bg-sand" data-reveal-zoom>
               <Photo photo={media.workshopKnee} locale={locale} sizes="(min-width: 1024px) 50vw, 92vw" />
             </div>

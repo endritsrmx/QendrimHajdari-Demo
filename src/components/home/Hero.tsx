@@ -41,7 +41,7 @@ export async function Hero() {
             data-reveal-delay="0.3"
             data-reveal-start="top 100%"
           >
-            <div className="absolute -inset-y-8 inset-x-0" data-parallax="30">
+            <div className="absolute inset-0">
               <div className="relative h-full w-full bg-sand" data-reveal-zoom>
                 <Photo photo={media.portraitOperatingRoom} locale={locale} priority sizes="(min-width: 1024px) 36vw, 92vw" />
               </div>

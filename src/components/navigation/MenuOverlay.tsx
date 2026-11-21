@@ -134,7 +134,6 @@ export function MenuOverlay({
       hidden
       className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-ivory"
       style={{ clipPath: 'inset(0% 0% 100% 0%)' }}
-      data-lenis-prevent
     >
       <div role="dialog" aria-label={t('menu')} className="flex min-h-full flex-col">
         <div className="container-x grid flex-1 grid-cols-1 content-center gap-8 pt-24 pb-8 lg:grid-cols-12 lg:gap-12 lg:pt-28 lg:pb-12">
@@ -152,7 +151,7 @@ export function MenuOverlay({
                     >
                       <span
                         className={cn(
-                          'font-serif text-[clamp(1.75rem,min(6vh,4.4vw),4.25rem)] leading-[1.08] transition-[transform,color] duration-200 ease-[ease] group-hover:translate-x-3',
+                          'font-serif text-[clamp(1.75rem,min(6vh,4.4vw),4.25rem)] leading-[1.08] transition-colors duration-200 ease-[ease] group-hover:text-bronze-deep',
                           active ? 'text-bronze-deep' : 'text-slate',
                         )}
                       >

@@ -29,7 +29,7 @@ export async function LocationCard({
   return (
     <article className="group flex h-full flex-col bg-white" data-reveal-item>
       <div className="relative aspect-[4/3] overflow-hidden">
-        <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.03]">
+        <div className="h-full w-full">
           {location.image ? (
             <div className="relative h-full w-full bg-sand">
               <Photo photo={location.image} locale={locale} priority={priority} sizes="(min-width: 1024px) 45vw, 92vw" />

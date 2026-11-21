@@ -198,14 +198,12 @@
     "philosophyTitle": "Medical philosophy",
     "locationsTitle": "Where I see patients",
     "pendingVerification": "Will be added after verification.",
-    "placeholderNote": "Placeholder – content is only published after verification by the client.",
     "galleryEyebrow": "Clinical practice",
     "galleryTitle": "In the operating theatre and in training",
     "captionTheatre": "Operating theatre",
     "captionTeam": "Surgical team",
     "captionTraining": "Hands-on training: knee arthroplasty",
-    "bioPending": "A personal introduction will appear here once it has been approved",
-    "careerPending": "Education and career milestones will be listed here once they have been verified"
+    "bioPending": "A personal introduction will appear here once it has been approved"
   },
   "treatments": {
     "eyebrow": "Treatments",
@@ -348,10 +346,6 @@
     "rights": "All rights reserved.",
     "instagram": "Instagram",
     "writeUs": "Send a message"
-  },
-  "cursor": {
-    "drag": "Drag",
-    "view": "View"
   },
   "intro": {
     "acl": "Cruciate ligament",

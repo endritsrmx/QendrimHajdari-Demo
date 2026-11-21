@@ -64,7 +64,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
         ref={emblaRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        data-cursor="drag"
+       
         aria-describedby="carousel-hint"
       >
         <div className="flex gap-5 lg:gap-8">
@@ -79,7 +79,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
             >
               <article className="group relative flex h-full flex-col bg-ivory">
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.04]">
+                  <div className="h-full w-full">
                     <Illustration id={card.illustration} label={card.title} caption={t('illustration')} tone="white" />
                   </div>
                   {card.badge && (
@@ -89,7 +89,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
                     </span>
                   )}
                 </div>
-                <div className="flex flex-1 flex-col p-6 transition-transform duration-300 ease-[ease] sm:p-8 lg:group-hover:-translate-y-1">
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <h3 className="text-h3">{card.title}</h3>
                   <p className="mt-4 text-[0.9375rem] leading-relaxed text-grey">{card.text}</p>
                   <Link

@@ -1,30 +1,16 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
-import { motionPresets as P, prefersReducedMotion, isFinePointer } from './presets';
+import { motionPresets as P, prefersReducedMotion } from './presets';
 
 gsap.registerPlugin(ScrollTrigger);
 
-declare global {
-  interface Window {
-    __lenis?: Lenis;
-  }
-}
-
-/** Stop / resume smooth scrolling (used by the fullscreen menu & dialogs). */
+/** Lock / release page scroll (fullscreen menu, intro). Native scrolling only – no scroll-jacking. */
 export function setScrollLocked(locked: boolean) {
-  const lenis = typeof window !== 'undefined' ? window.__lenis : undefined;
-  if (locked) {
-    lenis?.stop();
-    document.documentElement.style.overflow = 'hidden';
-  } else {
-    lenis?.start();
-    document.documentElement.style.overflow = '';
-  }
+  document.documentElement.style.overflow = locked ? 'hidden' : '';
 }
 
 const num = (v: string | undefined, fallback: number) => {
@@ -89,6 +75,9 @@ function initReveals(root: ParentNode) {
     el.setAttribute('data-revealed', '');
 
     const inViewAtLoad = el.getBoundingClientRect().top < window.innerHeight;
+    // One orchestrated entrance for the first screen only. Further down, content is simply there –
+    // no fade-and-slide on every section. Image masks are the single exception (editorial moment).
+    if (!inViewAtLoad && type !== 'image') return;
     if (inViewAtLoad && typeof el.animate === 'function' && revealWithWaapi(el, type, delay)) return;
 
     switch (type) {
@@ -166,22 +155,6 @@ function initReveals(root: ParentNode) {
   });
 }
 
-function initParallax(root: ParentNode) {
-  if (!isFinePointer() || window.innerWidth < 1024) return; // no heavy parallax on mobile
-  root.querySelectorAll<HTMLElement>('[data-parallax]').forEach((el) => {
-    const amount = Math.min(num(el.dataset.parallax, 30), P.parallax.max);
-    gsap.fromTo(
-      el,
-      { y: -amount / 2 },
-      {
-        y: amount / 2,
-        ease: 'none',
-        scrollTrigger: { trigger: el.parentElement ?? el, start: 'top bottom', end: 'bottom top', scrub: true },
-      },
-    );
-  });
-}
-
 function initScrubLines(root: ParentNode) {
   root.querySelectorAll<HTMLElement>('[data-scrub-line]').forEach((el) => {
     const axis = el.dataset.scrubLine === 'y' ? 'scaleY' : 'scaleX';
@@ -203,33 +176,11 @@ function initScrubLines(root: ParentNode) {
 }
 
 /**
- * Initialises Lenis (desktop only), scroll reveals, parallax and scroll-linked lines.
+ * First-screen entrance, image mask reveals on scroll and the scroll-linked journey line.
  * Re-runs on every route change and cleans up all ScrollTriggers.
  */
 export function MotionProvider() {
   const pathname = usePathname();
-  const lenisRef = useRef<Lenis | null>(null);
-
-  // Lenis smooth scrolling – desktop fine pointers only, never with reduced motion
-  useEffect(() => {
-    if (prefersReducedMotion() || !isFinePointer()) return;
-    const lenis = new Lenis({ duration: 1.05, smoothWheel: true });
-    lenisRef.current = lenis;
-    window.__lenis = lenis;
-    // intro still playing → keep smooth scroll locked until it releases it
-    if (document.documentElement.classList.contains('intro-pending')) lenis.stop();
-    document.documentElement.classList.add('lenis');
-    lenis.on('scroll', ScrollTrigger.update);
-    const raf = (time: number) => lenis.raf(time * 1000);
-    gsap.ticker.add(raf);
-    gsap.ticker.lagSmoothing(0);
-    return () => {
-      gsap.ticker.remove(raf);
-      lenis.destroy();
-      delete window.__lenis;
-      document.documentElement.classList.remove('lenis');
-    };
-  }, []);
 
   useEffect(() => {
     if (prefersReducedMotion()) {
@@ -241,7 +192,6 @@ export function MotionProvider() {
     const run = () => {
       ctx = gsap.context(() => {
         initReveals(document);
-        initParallax(document);
         initScrubLines(document);
       });
     };
