@@ -202,7 +202,7 @@ test('intro: first visit plays fully, counts to 100, then hands over to the hero
   await expect(page.locator('html')).toHaveClass(/intro-pending/);
   await expect(page.locator('.qh-intro')).toBeVisible();
   await expect(page.locator('[data-label="acl"]')).toHaveText(/Ligamenti i kryqëzuar|LKA/);
-  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 9000 });
+  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 12000 });
   await expect(page.locator('html')).not.toHaveClass(/intro-pending/);
   await expect(page.locator('#main-content')).toBeFocused();
   await expect(page.locator('#site-header')).toHaveCSS('opacity', '1');
@@ -214,7 +214,7 @@ test('intro: first visit plays fully, counts to 100, then hands over to the hero
 
 test('intro: second visit in the same session gets the short version', async ({ page }) => {
   await page.goto('/en');
-  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 9000 });
+  await expect(page.locator('.qh-intro')).toHaveCount(0, { timeout: 12000 });
   const t0 = Date.now();
   await page.reload();
   await expect(page.locator('html')).toHaveClass(/intro-short/);

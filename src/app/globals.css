@@ -669,9 +669,11 @@ html.intro-pending #site-header {
   color: var(--color-grey);
   opacity: 0;
 }
-.qh-intro__label--acl { left: 96%; top: 59.2%; margin-left: 10px; color: var(--color-bronze-deep); }
-.qh-intro__label--men { left: 96%; top: 88.1%; margin-left: 10px; }
-.qh-intro__label--cart { right: 97.6%; top: 61.5%; margin-right: 10px; }
+/* label anchors = leader-line ends in the SVG (viewBox 90 0 250 520):
+   ACL ends at x 96 / y 304 (left), cartilage at x 330 / y 362, meniscus at x 330 / y 458 (right) */
+.qh-intro__label--acl { right: 97.6%; top: 58.46%; margin-right: 10px; color: var(--color-bronze-deep); }
+.qh-intro__label--cart { left: 96%; top: 69.62%; margin-left: 10px; }
+.qh-intro__label--men { left: 96%; top: 88.08%; margin-left: 10px; }
 .qh-intro__short { display: none; }
 
 .qh-intro__line {
@@ -699,8 +701,7 @@ html.intro-pending #site-header {
 @media (max-width: 640px) {
   html.intro-pending .qh-intro { --split: 84%; }
   .qh-intro__stage { height: min(40vh, 300px); }
-  .qh-intro__label--minor,
-  .qh-intro .k-leader--minor { display: none; }
+  .qh-intro__label { font-size: 12px; }
   .qh-intro__long { display: none; }
   .qh-intro__short { display: inline; }
 }

@@ -26,10 +26,11 @@ gsap.registerPlugin(CustomEase);
 export const INTRO_SESSION_KEY = 'qh-intro-seen';
 
 const CONFIG = {
-  drawSpeed: 0.7, // 1 = original tempo, lower = slower
-  minLoad: 3.2, // counter reaches 100 no earlier than this (s)
-  maxLoad: 5.0, // …and no later than ≈ this (s)
-  holdAtFull: 0.8, // pause at 100 % before the stage opens (s)
+  drawSpeed: 0.5, // 1 = original tempo, lower = slower (drawing ends ≈ 4.1 s)
+  minLoad: 4.4, // counter reaches 100 no earlier than this (s)
+  maxLoad: 6.5, // …and no later than ≈ this (s)
+  holdAtFull: 1.2, // pause at 100 % so the finished drawing + labels can be read (s)
+  transitionSpeed: 0.8, // tempo of the opening into the hero (1 = 1.3 s, 0.8 ≈ 1.6 s)
   shortVersion: 0.6,
 };
 
@@ -147,6 +148,7 @@ export function IntroLoader({ labels }: { labels: IntroLabels }) {
     // PHASE 4 – transition into the hero
     const transition = () => {
       const tl = gsap.timeline({ onComplete: finish });
+      tl.timeScale(CONFIG.transitionSpeed);
       tl.to(root.querySelectorAll('[data-intro-count], [data-label], [data-leader]'), { opacity: 0, y: -6, duration: 0.3, ease: 'power3.out' }, 0)
         .set(line, { transformOrigin: '50% 50%' }, 0)
         .to(line, { scaleX: fullScale(), duration: 0.7, ease: 'expo.inOut' }, 0)
@@ -183,7 +185,7 @@ export function IntroLoader({ labels }: { labels: IntroLabels }) {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       const gate = easeOut(Math.min(1, t / CONFIG.minLoad));
-      const real = loaded ? 1 : 0.88 * (1 - Math.exp(-t / 1.2));
+      const real = loaded ? 1 : 0.88 * (1 - Math.exp(-t / 1.6));
       const goal = Math.min(gate, real);
       const smoothed = p + (goal - p) * (1 - Math.exp(-dt * 8));
       p = Math.max(p, Math.min(goal, Math.max(smoothed, p + 0.3 * dt)));
@@ -242,19 +244,19 @@ export function IntroLoader({ labels }: { labels: IntroLabels }) {
             <path className="k-cart" data-draw data-group="cart" d="M178 416 C200 413 222 413 246 415" />
             <path className="k-cart" data-draw data-group="cart" d="M268 262 C264 284 265 308 272 324" />
             {/* leaders */}
-            <path className="k-leader" data-leader data-draw id="qh-lead-acl" d="M204 388 L268 308 L330 308" />
-            <path className="k-leader k-leader--minor" data-leader data-draw id="qh-lead-men" d="M252 406 L300 458 L330 458" />
-            <path className="k-leader k-leader--minor" data-leader data-draw id="qh-lead-cart" d="M150 368 L116 320 L96 320" />
+            <path className="k-leader" data-leader data-draw id="qh-lead-acl" d="M186 370 L128 304 L96 304" />
+            <path className="k-leader" data-leader data-draw id="qh-lead-men" d="M252 406 L300 458 L330 458" />
+            <path className="k-leader" data-leader data-draw id="qh-lead-cart" d="M262 362 L330 362" />
           </svg>
         </div>
         <span className="qh-intro__label qh-intro__label--acl" data-label="acl">
           <span className="qh-intro__long">{labels.acl}</span>
           <span className="qh-intro__short">{labels.aclShort}</span>
         </span>
-        <span className="qh-intro__label qh-intro__label--men qh-intro__label--minor" data-label="men">
+        <span className="qh-intro__label qh-intro__label--men" data-label="men">
           {labels.meniscus}
         </span>
-        <span className="qh-intro__label qh-intro__label--cart qh-intro__label--minor" data-label="cart">
+        <span className="qh-intro__label qh-intro__label--cart" data-label="cart">
           {labels.cartilage}
         </span>
       </div>
