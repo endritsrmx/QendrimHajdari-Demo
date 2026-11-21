@@ -37,9 +37,10 @@ export default async function LocationsPage({ params }: Props) {
       <PageHero eyebrow={t('eyebrow')} title={t('title')} lead={t('lead')} crumbs={[{ label: tn('locations') }]} />
       <section aria-label={tn('locations')} className="bg-ivory pb-[var(--section-y)]">
         <div className="container-x">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-8" data-reveal="stagger" data-reveal-duration="0.8">
+          {/* main content above the fold – rendered immediately (no reveal) so it can paint as LCP */}
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
             {locations.map((l, i) => (
-              <LocationCard key={l.id} location={l} index={i} detailed headingLevel={2} />
+              <LocationCard key={l.id} location={l} index={i} detailed headingLevel={2} priority={i === 0} />
             ))}
           </div>
           <MedicalNotice className="mt-20 max-w-3xl" />

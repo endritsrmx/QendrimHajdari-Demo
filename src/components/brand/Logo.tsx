@@ -57,7 +57,7 @@ export function Logo({
             tone === 'dark' ? 'text-slate' : 'text-ivory',
           )}
         >
-          QENDRIM HAJDARI
+          QËNDRIM HAJDARI
         </span>
         {showTagline && (
           <span

@@ -1,53 +1,53 @@
 {
   "meta": {
-    "siteName": "Dr. Qendrim Hajdari – Orthopaedic & Trauma Surgery",
+    "siteName": "Dr. Qëndrim Hajdari – Orthopaedic & Trauma Surgery",
     "home": {
-      "title": "Dr. Qendrim Hajdari | Orthopaedic & Trauma Surgery | Prishtina & Gjilan",
-      "description": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine. Consultations at Royal Medical, Prishtina and Ordinanca Dora, Gjilan."
+      "title": "Dr. Qëndrim Hajdari | Orthopaedic & Trauma Surgery | Prishtina & Gjilan",
+      "description": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine. Consultations at Royal Medical, Prishtina and Ortopedia Dora, Gjilan."
     },
     "about": {
-      "title": "About | Dr. Qendrim Hajdari | Orthopaedic Care",
-      "description": "Meet Dr. Qendrim Hajdari – orthopaedic and trauma surgery, dedicated to patient-centred decisions."
+      "title": "About | Dr. Qëndrim Hajdari | Orthopaedic Care",
+      "description": "Meet Dr. Qëndrim Hajdari – orthopaedic and trauma surgery, dedicated to patient-centred decisions."
     },
     "treatments": {
-      "title": "Treatments | Dr. Qendrim Hajdari | Orthopaedic Care",
+      "title": "Treatments | Dr. Qëndrim Hajdari | Orthopaedic Care",
       "description": "Overview of orthopaedic topics: ACL and meniscus injuries, joint replacement, sports medicine, orthopaedic trauma and knee and joint conditions."
     },
-    "treatmentSuffix": "Dr. Qendrim Hajdari | Orthopaedic Care",
+    "treatmentSuffix": "Dr. Qëndrim Hajdari | Orthopaedic Care",
     "locations": {
-      "title": "Locations | Dr. Qendrim Hajdari | Prishtina & Gjilan",
-      "description": "Orthopaedic consultations at two locations: Royal Medical in Prishtina and Ordinanca Dora in Gjilan, Kosovo."
+      "title": "Locations | Dr. Qëndrim Hajdari | Prishtina & Gjilan",
+      "description": "Orthopaedic consultations at two locations: Royal Medical in Prishtina and Ortopedia Dora in Gjilan, Kosovo."
     },
     "results": {
-      "title": "Results | Dr. Qendrim Hajdari",
+      "title": "Results | Dr. Qëndrim Hajdari",
       "description": "Case information – not yet published."
     },
     "testimonials": {
-      "title": "Patient Experiences | Dr. Qendrim Hajdari",
+      "title": "Patient Experiences | Dr. Qëndrim Hajdari",
       "description": "Patient experiences – published only with documented consent."
     },
     "faq": {
-      "title": "FAQ | Dr. Qendrim Hajdari | Orthopaedic Care",
+      "title": "FAQ | Dr. Qëndrim Hajdari | Orthopaedic Care",
       "description": "Frequently asked questions about orthopaedic consultations, booking and preparation."
     },
     "contact": {
-      "title": "Contact | Dr. Qendrim Hajdari",
+      "title": "Contact | Dr. Qëndrim Hajdari",
       "description": "Get in touch about an orthopaedic consultation in Prishtina or Gjilan."
     },
     "book": {
-      "title": "Book an Appointment | Dr. Qendrim Hajdari",
-      "description": "Book an orthopaedic consultation at Royal Medical, Prishtina or Ordinanca Dora, Gjilan."
+      "title": "Book an Appointment | Dr. Qëndrim Hajdari",
+      "description": "Book an orthopaedic consultation at Royal Medical, Prishtina or Ortopedia Dora, Gjilan."
     },
     "privacy": {
-      "title": "Privacy Policy | Dr. Qendrim Hajdari",
+      "title": "Privacy Policy | Dr. Qëndrim Hajdari",
       "description": "Information on how personal data is processed on this website."
     },
     "legal": {
-      "title": "Legal Information | Dr. Qendrim Hajdari",
+      "title": "Legal Information | Dr. Qëndrim Hajdari",
       "description": "Legal information and medical disclaimer."
     },
     "notFound": {
-      "title": "Page not found | Dr. Qendrim Hajdari"
+      "title": "Page not found | Dr. Qëndrim Hajdari"
     }
   },
   "nav": {
@@ -59,7 +59,7 @@
     "testimonials": "Patient Experiences",
     "faq": "FAQ",
     "contact": "Contact",
-    "book": "Book Appointment",
+    "book": "Book appointment",
     "privacy": "Privacy",
     "legal": "Legal Information",
     "menu": "Menu",
@@ -72,18 +72,18 @@
     "switchTo": "Switch language to {language}",
     "skip": "Skip to content",
     "breadcrumb": "Breadcrumb",
-    "homeLink": "Qendrim Hajdari – home"
+    "homeLink": "Qëndrim Hajdari – home"
   },
   "common": {
-    "bookConsultation": "Book a Consultation",
-    "bookAppointment": "Book an Appointment",
-    "exploreTreatments": "Explore Treatments",
-    "exploreTreatment": "Explore Treatment",
+    "bookConsultation": "Book a consultation",
+    "bookAppointment": "Book an appointment",
+    "exploreTreatments": "Explore treatments",
+    "exploreTreatment": "Read more",
     "learnMore": "Learn more",
     "readArticle": "Read article",
-    "getDirections": "Get Directions",
-    "bookAtLocation": "Book at This Location",
-    "meetDoctor": "Meet the Doctor",
+    "getDirections": "Get directions",
+    "bookAtLocation": "Book at this location",
+    "meetDoctor": "Meet the doctor",
     "minRead": "{minutes} min read",
     "imagePlaceholder": "Image placeholder",
     "illustration": "Schematic illustration",
@@ -108,86 +108,87 @@
     "dragHint": "Drag or use the arrow keys",
     "backToTop": "Back to top",
     "notPublished": "Not published",
-    "kosovo": "Kosovo"
+    "kosovo": "Kosovo",
+    "addressPending": "Address to be confirmed"
   },
   "home": {
     "hero": {
-      "eyebrow": "Orthopaedic & Trauma Surgery",
+      "eyebrow": "Orthopaedic and trauma surgery",
       "line1": "Precision in care.",
-      "line2": "Confidence in movement.",
+      "line2": "Confidence in movement",
       "sub": "Orthopaedic and trauma surgery, with a focus on knee injuries, joint care and sports medicine.",
-      "primary": "Book a Consultation",
-      "secondary": "Explore Treatments",
-      "locations": "Prishtina · Gjilan",
+      "primary": "Book a consultation",
+      "secondary": "Explore treatments",
+      "locations": "Consultations in Prishtina and Gjilan",
       "scroll": "Scroll"
     },
     "trust": {
       "eyebrow": "A personal approach to orthopaedic care",
-      "title": "Focused on your mobility and wellbeing.",
+      "title": "Focused on your mobility and wellbeing",
       "text": "Every orthopaedic question deserves time and a clear explanation. The aim is to understand your symptoms precisely, explain the possible options transparently and reach decisions together that fit your everyday life, your activity and your goals."
     },
     "about": {
       "eyebrow": "About the doctor",
-      "title": "Meet Dr. Qendrim Hajdari",
+      "title": "Meet Dr. Qëndrim Hajdari",
       "subtitle": "Dedicated to orthopaedic care and patient-centred decisions."
     },
     "treatments": {
       "eyebrow": "Treatment expertise",
-      "title": "Specialised Care for Every Step Forward.",
+      "title": "Specialised care for every step forward",
       "lead": "Topic areas within orthopaedics, trauma surgery and sports medicine. The specific treatment spectrum is confirmed individually.",
       "all": "All treatments",
       "carouselLabel": "Treatment areas"
     },
     "philosophy": {
-      "eyebrow": "Medical philosophy",
-      "title": "Every Patient. Every Movement. Every Decision Matters."
+      "eyebrow": "How decisions are made",
+      "title": "Every patient. Every movement. Every decision matters"
     },
     "locations": {
       "eyebrow": "Locations",
-      "title": "Care Across Two Locations.",
+      "title": "Care across two locations",
       "lead": "Consultations in Prishtina and Gjilan. Choose the location that suits you best."
     },
     "journey": {
       "eyebrow": "Patient journey",
-      "title": "Your Path to Personalised Orthopaedic Care.",
+      "title": "Your path to personalised orthopaedic care",
       "note": "An example of how a first consultation is typically organised – not a commitment to a specific treatment.",
       "steps": {
         "1": {
-          "title": "Choose Your Location",
+          "title": "Choose your location",
           "text": "Prishtina or Gjilan – select the practice that is most convenient for you."
         },
         "2": {
-          "title": "Schedule a Consultation",
+          "title": "Schedule a consultation",
           "text": "Book online once available, or get in touch via the contact form."
         },
         "3": {
-          "title": "Medical Assessment",
+          "title": "Medical assessment",
           "text": "History, clinical examination and, where indicated, imaging."
         },
         "4": {
-          "title": "Discuss Your Treatment Plan",
+          "title": "Discuss your treatment plan",
           "text": "Options, benefits and risks explained clearly – the decision is made together."
         }
       }
     },
     "testimonials": {
       "eyebrow": "Patient experiences",
-      "title": "In their own words."
+      "title": "In their own words"
     },
     "education": {
       "eyebrow": "Patient education",
-      "title": "Understanding Your Orthopaedic Health."
+      "title": "Understanding your orthopaedic health"
     },
     "cta": {
-      "title": "Your Next Step Starts with a Conversation.",
+      "title": "Your next step starts with a conversation",
       "sub": "Schedule an orthopaedic consultation at your preferred location.",
-      "button": "Book an Appointment"
+      "button": "Book an appointment"
     }
   },
   "about": {
     "eyebrow": "About",
-    "title": "Dr. Qendrim Hajdari",
-    "lead": "Orthopaedic and trauma surgery with a focus on knee injuries, joint care and sports medicine.",
+    "title": "Dr. Qëndrim Hajdari",
+    "lead": "Orthopaedic and trauma surgery, with a focus on knee injuries, joint care and sports medicine",
     "introTitle": "Personal introduction",
     "careerTitle": "Medical career",
     "educationTitle": "Education",
@@ -199,14 +200,16 @@
     "pendingVerification": "Will be added after verification.",
     "placeholderNote": "Placeholder – content is only published after verification by the client.",
     "galleryEyebrow": "Clinical practice",
-    "galleryTitle": "In the operating theatre and in training.",
+    "galleryTitle": "In the operating theatre and in training",
     "captionTheatre": "Operating theatre",
     "captionTeam": "Surgical team",
-    "captionTraining": "Hands-on training: knee arthroplasty"
+    "captionTraining": "Hands-on training: knee arthroplasty",
+    "bioPending": "A personal introduction will appear here once it has been approved",
+    "careerPending": "Education and career milestones will be listed here once they have been verified"
   },
   "treatments": {
     "eyebrow": "Treatments",
-    "title": "Orthopaedic care, explained clearly.",
+    "title": "Orthopaedic care, explained clearly",
     "lead": "An overview of the main topic areas. Each page offers general information – an individual assessment always comes first.",
     "spectrumNote": "These are topic areas. The specific surgical services offered are confirmed before publication.",
     "sections": {
@@ -227,7 +230,7 @@
   },
   "locations": {
     "eyebrow": "Locations",
-    "title": "Two practices. One standard of care.",
+    "title": "Two practices, one standard of care",
     "lead": "Each location is configured independently – addresses, hours and online booking are shown once confirmed.",
     "mapNote": "Maps open in an external service. No map data is loaded on this website before you click.",
     "contactLocation": "Contact this location"
@@ -254,7 +257,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Get in touch.",
+    "title": "Get in touch",
     "lead": "For questions about consultations and appointments. Please do not send detailed medical information or documents via this form.",
     "direct": "Direct contact",
     "form": {
@@ -289,7 +292,7 @@
   },
   "booking": {
     "eyebrow": "Online booking",
-    "title": "Book an Appointment",
+    "title": "Book an appointment",
     "lead": "Choose a location and appointment type. Available times come directly from the practice calendar.",
     "step": "Step {current} of {total}",
     "steps": {
@@ -299,7 +302,7 @@
     },
     "chooseLocation": "Choose your location",
     "chooseType": "Choose an appointment type",
-    "consultation": "Orthopaedic Consultation",
+    "consultation": "Orthopaedic consultation",
     "consultationText": "First consultation or second opinion on an orthopaedic question.",
     "change": "Change",
     "continue": "Continue",
@@ -317,7 +320,8 @@
     "successTitle": "Your booking has been received",
     "successText": "The confirmation and calendar invitation are sent by email from the booking service.",
     "timezoneNote": "All times are shown in your time zone; the practice operates on Kosovo time (CET/CEST).",
-    "selected": "Selected"
+    "selected": "Selected",
+    "callLocation": "or call {phone}"
   },
   "privacy": {
     "eyebrow": "Privacy",
@@ -331,7 +335,7 @@
   },
   "notFound": {
     "eyebrow": "404",
-    "title": "This page could not be found.",
+    "title": "This page could not be found",
     "text": "The page may have moved or no longer exists.",
     "home": "Back to home"
   },
@@ -342,7 +346,8 @@
     "contact": "Contact",
     "follow": "Follow",
     "rights": "All rights reserved.",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "writeUs": "Send a message"
   },
   "cursor": {
     "drag": "Drag",

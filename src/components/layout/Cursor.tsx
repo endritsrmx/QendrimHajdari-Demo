@@ -93,7 +93,7 @@ export function Cursor() {
           />
         </svg>
         <span
-          className={`relative text-[0.625rem] font-medium uppercase tracking-[0.16em] text-ivory transition-opacity duration-150 ease-[ease] ${label ? 'opacity-100' : 'opacity-0'}`}
+          className={`relative text-[0.625rem] font-medium text-ivory transition-opacity duration-150 ease-[ease] ${label ? 'opacity-100' : 'opacity-0'}`}
         >
           {label || '·'}
         </span>

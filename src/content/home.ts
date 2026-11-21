@@ -5,7 +5,7 @@ export const philosophy: { number: string; status: ContentStatus; title: Localiz
   {
     number: '01',
     status: 'needs_medical_review',
-    title: { sq: 'Vlerësim individual', en: 'Individual Assessment' },
+    title: { sq: 'Vlerësim individual', en: 'Individual assessment' },
     text: {
       sq: 'Çdo konsultë fillon me dëgjim: ankesat, historia mjekësore, aktiviteti dhe qëllimet personale formojnë bazën e vlerësimit.',
       en: 'Every consultation begins with listening: symptoms, medical history, activity and personal goals form the basis of the assessment.',
@@ -14,7 +14,7 @@ export const philosophy: { number: string; status: ContentStatus; title: Localiz
   {
     number: '02',
     status: 'needs_medical_review',
-    title: { sq: 'Trajtim i bazuar në dëshmi', en: 'Evidence-Informed Treatment' },
+    title: { sq: 'Trajtim i bazuar në dëshmi', en: 'Evidence-informed treatment' },
     text: {
       sq: 'Rekomandimet orientohen nga njohuritë aktuale mjekësore dhe gjithmonë peshohen sipas situatës individuale.',
       en: 'Recommendations are guided by current medical knowledge and always weighed against the individual situation.',
@@ -23,7 +23,7 @@ export const philosophy: { number: string; status: ContentStatus; title: Localiz
   {
     number: '03',
     status: 'needs_medical_review',
-    title: { sq: 'Plan i personalizuar rikuperimi', en: 'Personalised Recovery Planning' },
+    title: { sq: 'Plan i personalizuar rikuperimi', en: 'Personalised recovery planning' },
     text: {
       sq: 'Rikuperimi planifikohet hap pas hapi dhe përshtatet sipas progresit – pa premtime për afate të garantuara.',
       en: 'Recovery is planned step by step and adjusted to progress – without promises of guaranteed timelines.',
@@ -40,14 +40,14 @@ export const pillars: { title: Localized; text: Localized }[] = [
     },
   },
   {
-    title: { sq: 'Traumatologji', en: 'Trauma Surgery' },
+    title: { sq: 'Traumatologji', en: 'Trauma surgery' },
     text: {
       sq: 'Kujdes për frakturat dhe lëndimet e sistemit lëvizës pas aksidenteve.',
       en: 'Care for fractures and musculoskeletal injuries following accidents.',
     },
   },
   {
-    title: { sq: 'Mjekësi sportive', en: 'Sports Medicine' },
+    title: { sq: 'Mjekësi sportive', en: 'Sports medicine' },
     text: {
       sq: 'Diagnostikim, trajtim dhe rikthim i strukturuar në aktivitet pas lëndimeve sportive.',
       en: 'Diagnosis, treatment and a structured return to activity after sports injuries.',

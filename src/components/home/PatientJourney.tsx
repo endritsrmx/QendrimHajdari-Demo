@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Section } from '@/components/ui/Section';
 
 const STEPS = ['1', '2', '3', '4'] as const;
@@ -11,8 +10,7 @@ export async function PatientJourney() {
       <div className="container-x">
         <div className="grid-12 items-end gap-y-6">
           <div className="col-span-4 lg:col-span-8">
-            <Eyebrow>{t('eyebrow')}</Eyebrow>
-            <h2 id="journey-title" className="text-h2 mt-7 max-w-[20ch]" data-reveal="text">
+            <h2 id="journey-title" className="text-h2 max-w-[20ch]" data-reveal="text">
               {t('title')}
             </h2>
           </div>
@@ -35,7 +33,7 @@ export async function PatientJourney() {
                 <span aria-hidden className="absolute top-0 left-0 flex size-[15px] items-center justify-center rounded-full border border-slate bg-ivory">
                   <span className="size-[5px] rounded-full bg-bronze" />
                 </span>
-                <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">0{s}</span>
+                <span className="text-[0.75rem] font-medium text-bronze-deep tabular-nums">0{s}</span>
                 <h3 className="text-h3 mt-3">{t(`steps.${s}.title`)}</h3>
                 <p className="mt-3 max-w-xs text-[0.9375rem] text-grey">{t(`steps.${s}.text`)}</p>
               </li>

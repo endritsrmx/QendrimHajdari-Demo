@@ -8,7 +8,6 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { PageHero } from '@/components/layout/PageHero';
 import { Illustration } from '@/components/ui/Illustration';
 import { StatusBadge } from '@/components/ui/StatusBadge';
-import { Arrow } from '@/components/ui/Arrow';
 import { MedicalNotice } from '@/components/ui/MedicalNotice';
 import { BookingCta } from '@/components/home/BookingCta';
 import { treatments } from '@/content/treatments';
@@ -57,18 +56,14 @@ export default async function TreatmentsPage({ params }: Props) {
                       <Illustration id={tr.illustration} label={tr.title[locale]} caption={tc('illustration')} />
                     </div>
                   </div>
-                  <div className="mt-7 flex items-center justify-between gap-4">
-                    <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">{tr.number}</span>
-                    <StatusBadge status={tr.status} />
-                  </div>
-                  <h2 className="text-h3 mt-3">{tr.title[locale]}</h2>
+                  <h2 className="text-h3 mt-7">{tr.title[locale]}</h2>
                   <p className="mt-4 text-[0.9375rem] text-grey">{tr.cardText[locale]}</p>
+                  <StatusBadge status={tr.status} className="mt-4" />
                   <Link
                     href={{ pathname: '/treatments/[slug]', params: { slug: tr.slug[locale] } }}
-                    className="mt-auto inline-flex min-h-11 items-center gap-3 pt-6 text-[0.8125rem] font-medium uppercase tracking-[0.14em] after:absolute after:inset-0 after:content-['']"
+                    className="mt-auto inline-flex min-h-11 items-center gap-3 pt-6 text-[0.8125rem] font-medium after:absolute after:inset-0 after:content-['']"
                   >
                     <span className="link-underline">{tc('exploreTreatment')}</span>
-                    <Arrow />
                   </Link>
                 </article>
               </li>

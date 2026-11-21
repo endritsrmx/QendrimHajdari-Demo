@@ -65,7 +65,7 @@ export function BookingFlow() {
                 <div className="flex items-baseline gap-4">
                   <span
                     className={cn(
-                      'text-[0.75rem] font-medium tracking-[0.16em] tabular-nums transition-colors duration-200',
+                      'text-[0.75rem] font-medium tabular-nums transition-colors duration-200',
                       active ? 'text-slate' : done ? 'text-bronze-deep' : 'text-grey/70',
                     )}
                   >
@@ -150,7 +150,6 @@ export function BookingFlow() {
               </div>
               <div className="mt-10 flex flex-wrap gap-3">
                 <button type="button" onClick={() => setStep(1)} className={buttonClass('secondary')}>
-                  <Arrow direction="left" />
                   {t('back')}
                 </button>
                 <button type="button" disabled={!type} onClick={() => setStep(3)} className={buttonClass('primary')}>
@@ -169,13 +168,19 @@ export function BookingFlow() {
 
               {!calLink ? (
                 <div className="mt-10 border border-dashed border-bronze-deep/50 bg-white p-8 lg:p-10" data-testid="booking-not-configured">
-                  <p className="text-label text-bronze-deep">[BOOKING_PROVIDER_ACCOUNT]</p>
-                  <h3 className="text-h3 mt-4">{t('notConfiguredTitle')}</h3>
+                  <h3 className="text-h3">{t('notConfiguredTitle')}</h3>
                   <p className="mt-4 max-w-xl text-grey">{t('notConfiguredText', { location: loc.name })}</p>
-                  <Link href="/contact" className={buttonClass('primary', 'mt-8')}>
-                    {t('alternative')}
-                    <Arrow />
-                  </Link>
+                  <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+                    <Link href="/contact" className={buttonClass('primary')}>
+                      {t('alternative')}
+                      <Arrow />
+                    </Link>
+                    {loc.phone && (
+                      <a href={`tel:${loc.phone.replace(/\s/g, '')}`} className="link-underline-static text-[0.9375rem] tabular-nums">
+                        {t('callLocation', { phone: loc.phone })}
+                      </a>
+                    )}
+                  </div>
                 </div>
               ) : !consent ? (
                 <div className="mt-10 bg-white p-8 lg:p-10" data-testid="booking-consent">
@@ -237,7 +242,6 @@ export function BookingFlow() {
               )}
 
               <button type="button" onClick={() => setStep(2)} className={buttonClass('text', 'mt-8')}>
-                <Arrow direction="left" />
                 <span className="link-underline pb-0.5">{t('back')}</span>
               </button>
             </section>

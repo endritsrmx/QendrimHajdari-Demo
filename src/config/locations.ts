@@ -46,12 +46,12 @@ export const locations: PracticeLocation[] = [
   },
   {
     id: 'ordinanca-dora',
-    name: 'Ordinanca Dora',
+    name: 'Ortopedia Dora',
     city: { sq: 'Gjilan', en: 'Gjilan' },
     country: { sq: 'Kosovë', en: 'Kosovo' },
     address: process.env.NEXT_PUBLIC_DORA_ADDRESS || null,
     addressPlaceholder: '[DORA_ADDRESS]',
-    phone: process.env.NEXT_PUBLIC_DORA_PHONE || null,
+    phone: process.env.NEXT_PUBLIC_DORA_PHONE || '+383 45 592 399', // from the practice sign
     email: null,
     hours: null,
     accessibility: null,

@@ -51,14 +51,14 @@ test('root redirects to Albanian by default', async ({ page }) => {
 
 test('unknown pages and locale codes show a 404', async ({ page }) => {
   expect((await page.goto('/en/does-not-exist'))?.status()).toBe(404);
-  await expect(page.getByText('This page could not be found.')).toBeVisible();
+  await expect(page.getByText('This page could not be found')).toBeVisible();
   expect((await page.goto('/de/about'))?.status()).toBe(404);
   expect((await page.goto('/en/treatments/demtimet-e-acl'))?.status()).toBe(404);
 });
 
 test('metadata: canonical + hreflang for translated treatment slugs', async ({ page }) => {
   await page.goto('/en/treatments/acl-injuries');
-  await expect(page).toHaveTitle(/ACL Injuries \| Dr\. Qendrim Hajdari \| Orthopaedic Care/);
+  await expect(page).toHaveTitle(/ACL injuries \| Dr\. Qëndrim Hajdari \| Orthopaedic Care/);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/en\/treatments\/acl-injuries$/);
   await expect(page.locator('link[hreflang="sq"]')).toHaveAttribute('href', /\/sq\/sherbimet\/demtimet-e-acl$/);
   await expect(page.locator('link[hreflang="x-default"]')).toHaveCount(1);
@@ -105,17 +105,17 @@ test('menu navigation works', async ({ page }) => {
 
 test('location card pre-selects the booking location', async ({ page }) => {
   await page.goto('/en/locations');
-  await page.getByRole('link', { name: 'Book at This Location' }).nth(1).click();
+  await page.getByRole('link', { name: 'Book at this location' }).nth(1).click();
   await expect(page).toHaveURL(/book-appointment\?location=ordinanca-dora/);
   await expect(page.getByText('Step 2 of 3')).toBeVisible();
-  await expect(page.locator('main').getByText('Ordinanca Dora, Gjilan')).toBeVisible();
+  await expect(page.locator('main').getByText('Ortopedia Dora, Gjilan')).toBeVisible();
 });
 
 test('booking without provider shows an honest state and no fake slots', async ({ page }) => {
   await page.goto('/en/book-appointment');
   await page.locator('main').getByText('Royal Medical').click();
   await page.getByRole('button', { name: /Continue/ }).click();
-  await page.locator('main').getByText('Orthopaedic Consultation').click();
+  await page.locator('main').getByText('Orthopaedic consultation').click();
   await page.getByRole('button', { name: /Continue/ }).click();
   await expect(page.getByTestId('booking-not-configured')).toBeVisible();
   await expect(page.locator('iframe')).toHaveCount(0);

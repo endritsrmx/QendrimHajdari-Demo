@@ -1,4 +1,4 @@
-# Dr. Qendrim Hajdari – Website
+# Dr. Qëndrim Hajdari – Website
 
 > **Demo-Deployment:** `.env.production` aktiviert Vorschau-Inhalte und `noindex`. Für den echten Livegang die Datei entfernen bzw. die Variablen im Hosting überschreiben.
 

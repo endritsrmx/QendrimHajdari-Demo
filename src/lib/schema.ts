@@ -20,6 +20,7 @@ export function physicianSchema(locale: Locale, url: string) {
         ? ['Ortopedi', 'Traumatologji', 'Mjekësi sportive', 'Dëmtimet e gjurit']
         : ['Orthopaedic surgery', 'Trauma surgery', 'Sports medicine', 'Knee injuries'],
     sameAs: [brand.social.instagram],
+    ...(brand.phone && { telephone: brand.phone }),
     ...(clinics.length > 0 && {
       workLocation: clinics.map((c) => ({ '@id': `${site.url}/#clinic-${c.id}` })),
     }),

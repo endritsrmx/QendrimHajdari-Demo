@@ -1,5 +1,6 @@
 import type { IllustrationId } from '@/content/types';
 import { cn } from '@/lib/cn';
+import { Annotation } from './Annotation';
 
 /**
  * Original schematic line illustrations (not anatomically exact – declared as illustrations).
@@ -123,8 +124,8 @@ export function Illustration({
       >
         <Art id={id} />
       </svg>
-      <figcaption className="absolute bottom-3 left-3 text-[0.625rem] font-medium uppercase tracking-[0.16em] text-grey">
-        {caption}
+      <figcaption className="absolute bottom-4 left-4">
+        <Annotation>{caption}</Annotation>
       </figcaption>
     </figure>
   );

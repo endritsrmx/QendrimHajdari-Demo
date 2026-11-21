@@ -42,7 +42,7 @@ export function Placeholder({
       />
       <Monogram className="absolute top-1/2 left-1/2 size-[22%] max-h-40 max-w-40 min-w-14 -translate-x-1/2 -translate-y-1/2 opacity-25" tone={tone === 'slate' ? 'light' : 'dark'} />
       <span className="m-4 inline-flex flex-col gap-0.5 bg-white/70 px-3 py-2 font-mono text-[0.6875rem] tracking-wide text-slate backdrop-blur-sm sm:m-5">
-        <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-grey">{label}</span>
+        <span className="font-sans text-[0.625rem] text-grey">{label}</span>
         {token}
       </span>
     </div>

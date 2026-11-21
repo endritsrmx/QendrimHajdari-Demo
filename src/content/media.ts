@@ -19,8 +19,8 @@ export const media = {
     width: 1440,
     height: 1920,
     alt: {
-      sq: 'Dr. Qendrim Hajdari në sallën e operacionit',
-      en: 'Dr. Qendrim Hajdari in the operating room',
+      sq: 'Dr. Qëndrim Hajdari në sallën e operacionit',
+      en: 'Dr. Qëndrim Hajdari in the operating room',
     },
     position: '50% 30%',
   },
@@ -29,8 +29,8 @@ export const media = {
     width: 960,
     height: 1280,
     alt: {
-      sq: 'Dr. Qendrim Hajdari me mantel të bardhë mjekësor',
-      en: 'Dr. Qendrim Hajdari in a white medical coat',
+      sq: 'Dr. Qëndrim Hajdari me mantel të bardhë mjekësor',
+      en: 'Dr. Qëndrim Hajdari in a white medical coat',
     },
     position: '50% 35%',
   },
@@ -39,8 +39,8 @@ export const media = {
     width: 1020,
     height: 1113,
     alt: {
-      sq: 'Dr. Qendrim Hajdari gjatë një trajnimi praktik për protezën e gjurit',
-      en: 'Dr. Qendrim Hajdari during a hands-on knee arthroplasty training',
+      sq: 'Dr. Qëndrim Hajdari gjatë një trajnimi praktik për protezën e gjurit',
+      en: 'Dr. Qëndrim Hajdari during a hands-on knee arthroplasty training',
     },
     position: '50% 30%',
   },

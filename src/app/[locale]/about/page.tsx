@@ -4,10 +4,9 @@ import type { Locale } from '@/i18n/routing';
 import { buildMetadata, absoluteUrl } from '@/lib/seo';
 import { breadcrumbSchema, physicianSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Photo } from '@/components/ui/Photo';
+import { Annotation } from '@/components/ui/Annotation';
 import { media } from '@/content/media';
-import { PendingBlock } from '@/components/ui/PendingBlock';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { DoctorBio } from '@/components/home/DoctorBio';
 import { Philosophy } from '@/components/home/Philosophy';
@@ -28,13 +27,12 @@ export default async function AboutPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations('about');
   const tn = await getTranslations('nav');
-  const tc = await getTranslations('common');
 
-  const listSections: { title: string; items: string[] | null; token: string }[] = [
-    { title: t('educationTitle'), items: doctor.education?.map((e) => `${e.title} – ${e.institution} (${e.year})`) ?? null, token: '[MEDICAL_QUALIFICATIONS_VERIFIED]' },
-    { title: t('qualificationsTitle'), items: doctor.qualifications, token: '[MEDICAL_QUALIFICATIONS_VERIFIED] · [PROFESSIONAL_LICENSE]' },
-    { title: t('trainingTitle'), items: doctor.furtherTraining, token: '[FURTHER_TRAINING_VERIFIED]' },
-    { title: t('membershipsTitle'), items: doctor.memberships, token: '[MEMBERSHIPS_VERIFIED]' },
+  const listSections: { title: string; items: string[] | null }[] = [
+    { title: t('educationTitle'), items: doctor.education?.map((e) => `${e.title} – ${e.institution} (${e.year})`) ?? null },
+    { title: t('qualificationsTitle'), items: doctor.qualifications },
+    { title: t('trainingTitle'), items: doctor.furtherTraining },
+    { title: t('membershipsTitle'), items: doctor.memberships },
   ];
 
   return (
@@ -57,13 +55,9 @@ export default async function AboutPage({ params }: Props) {
           </div>
           <div className="grid-12 mt-14 items-end gap-y-12 lg:mt-20">
             <div className="col-span-4 lg:col-span-6">
-              <p className="text-label flex items-center gap-4 text-grey" data-reveal="fade" data-reveal-start="top 100%">
-                <span aria-hidden className="h-px w-8 bg-bronze" />
-                {t('eyebrow')}
-              </p>
-              <h1 id="page-title" className="text-display mt-7" data-reveal="lines" data-reveal-delay="0.1" data-reveal-start="top 100%">
-                <span className="reveal-mask"><span>Dr. Qendrim</span></span>
-                <span className="reveal-mask"><span className="italic">Hajdari</span></span>
+              <h1 id="page-title" className="text-display" data-reveal="lines" data-reveal-delay="0.1" data-reveal-start="top 100%">
+                <span className="reveal-mask"><span>Dr. Qëndrim</span></span>
+                <span className="reveal-mask"><span>Hajdari</span></span>
               </h1>
               <p className="text-lead mt-8 max-w-lg text-grey" data-reveal="fade" data-reveal-delay="0.4" data-reveal-start="top 100%">
                 {t('lead')}
@@ -85,25 +79,21 @@ export default async function AboutPage({ params }: Props) {
       <section aria-labelledby="intro-title" className="section-y bg-white">
         <div className="container-x grid-12 gap-y-8">
           <div className="col-span-4 lg:col-span-4">
-            <Eyebrow>{t('introTitle')}</Eyebrow>
-            <h2 id="intro-title" className="sr-only">{t('introTitle')}</h2>
+            <h2 id="intro-title" className="text-h2" data-reveal="text">{t('introTitle')}</h2>
           </div>
-          <div className="col-span-4 lg:col-span-7 lg:col-start-6" data-reveal="fade">
-            <p className="text-h3 italic text-slate">{tc('meetDoctor')}</p>
-            <div className="mt-8">
-              <DoctorBio />
-            </div>
+          <div className="col-span-4 self-end lg:col-span-7 lg:col-start-6" data-reveal="fade">
+            <DoctorBio />
           </div>
         </div>
       </section>
 
-      {/* 3 · Medical career – vertical timeline */}
+      {/* 3 · Medical career – vertical timeline (shown once verified entries exist; until then the
+             qualification blocks below already state that details follow after verification) */}
+      {doctor.careerVerified && (
       <section aria-labelledby="career-title" className="section-y bg-ivory">
         <div className="container-x grid-12 gap-y-10">
           <div className="col-span-4 lg:col-span-4">
-            <Eyebrow>{t('careerTitle')}</Eyebrow>
-            <h2 id="career-title" className="text-h2 mt-7" data-reveal="text">{t('careerTitle')}</h2>
-            <p className="mt-6 text-[0.9375rem] text-grey">{t('placeholderNote')}</p>
+            <h2 id="career-title" className="text-h2" data-reveal="text">{t('careerTitle')}</h2>
           </div>
           <ol className="relative col-span-4 lg:col-span-7 lg:col-start-6" data-scrub-trigger data-reveal="stagger">
             <div aria-hidden className="absolute top-2 bottom-2 left-[7px] w-px bg-line">
@@ -114,7 +104,7 @@ export default async function AboutPage({ params }: Props) {
                 <span aria-hidden className="absolute top-1.5 left-0 flex size-[15px] items-center justify-center rounded-full border border-slate bg-ivory">
                   <span className="size-[5px] rounded-full bg-bronze" />
                 </span>
-                <code className="text-[0.8125rem] text-bronze-deep">{c.year}</code>
+                <p className="text-[0.8125rem] text-grey tabular-nums">{c.year}</p>
                 <h3 className="text-h3 mt-2 break-words">{c.title}</h3>
                 <p className="mt-2 text-grey">{c.institution}</p>
               </li>
@@ -122,12 +112,12 @@ export default async function AboutPage({ params }: Props) {
           </ol>
         </div>
       </section>
+      )}
 
       {/* Clinical practice – editorial photo sequence */}
       <section aria-labelledby="gallery-title" className="section-y bg-sand">
         <div className="container-x">
-          <Eyebrow>{t('galleryEyebrow')}</Eyebrow>
-          <h2 id="gallery-title" className="text-h2 mt-7 max-w-[18ch]" data-reveal="text">
+          <h2 id="gallery-title" className="text-h2 max-w-[18ch]" data-reveal="text">
             {t('galleryTitle')}
           </h2>
           <div className="grid-12 mt-14 gap-y-12 lg:mt-20">
@@ -142,9 +132,8 @@ export default async function AboutPage({ params }: Props) {
                     <Photo photo={photo} locale={locale} sizes="(min-width: 1024px) 34vw, 92vw" />
                   </div>
                 </div>
-                <figcaption className="mt-4 flex items-center gap-3 text-[0.8125rem] text-grey">
-                  <span aria-hidden className="h-px w-6 bg-bronze" />
-                  {caption}
+                <figcaption className="mt-4">
+                  <Annotation>{caption}</Annotation>
                 </figcaption>
               </figure>
             ))}
@@ -166,7 +155,7 @@ export default async function AboutPage({ params }: Props) {
                   ))}
                 </ul>
               ) : (
-                <PendingBlock className="mt-5" token={s.token} note={t('pendingVerification')} />
+                <p className="mt-4 text-grey">{t('pendingVerification')}</p>
               )}
             </div>
           ))}

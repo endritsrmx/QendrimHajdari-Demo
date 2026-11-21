@@ -5,7 +5,6 @@ import { locations } from '@/config/locations';
 import { brand } from '@/config/brand';
 import { Logo } from '@/components/brand/Logo';
 import { LanguageSwitcher } from '@/components/navigation/LanguageSwitcher';
-import { Arrow } from '@/components/ui/Arrow';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
 
 export async function Footer() {
@@ -54,7 +53,7 @@ export async function Footer() {
                 <li key={l.id}>
                   <p className="text-ivory">{l.name}</p>
                   <p className="text-sand">
-                    {l.address ?? <span className="font-mono text-[0.75rem]">{l.addressPlaceholder}</span>}
+                    {l.address ?? tc('addressPending')}
                   </p>
                   <p className="text-sand">
                     {l.city[locale]}, {l.country[locale]}
@@ -71,20 +70,19 @@ export async function Footer() {
                 {brand.phone ? (
                   <a href={`tel:${brand.phone.replace(/\s/g, '')}`} className="link-underline">{brand.phone}</a>
                 ) : (
-                  <span className="font-mono text-[0.75rem] text-sand">[PHONE_NUMBER]</span>
+                  <span className="text-sand">{tc('toBeConfirmed')}</span>
                 )}
               </li>
               <li>
                 {brand.email ? (
                   <a href={`mailto:${brand.email}`} className="link-underline break-all">{brand.email}</a>
                 ) : (
-                  <span className="font-mono text-[0.75rem] text-sand">[BUSINESS_EMAIL]</span>
+                  <Link href="/contact" className="link-underline">{t('writeUs')}</Link>
                 )}
               </li>
               <li className="pt-2">
                 <Link href="/contact" className="group inline-flex min-h-11 items-center gap-3 text-ivory">
                   <span className="link-underline">{tn('contact')}</span>
-                  <Arrow />
                 </Link>
               </li>
             </ul>

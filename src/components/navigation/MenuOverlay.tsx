@@ -129,7 +129,7 @@ export function MenuOverlay({
         <div className="container-x grid flex-1 grid-cols-1 gap-12 pt-28 pb-10 lg:grid-cols-12 lg:pt-36">
           <nav aria-label={t('mainNav')} className="lg:col-span-8">
             <ol className="flex flex-col">
-              {menuNav.map((item, i) => {
+              {menuNav.map((item) => {
                 const active = pathname === item.href;
                 return (
                   <li key={item.href} data-menu-item className="border-b border-line first:border-t">
@@ -137,15 +137,12 @@ export function MenuOverlay({
                       href={item.href}
                       onClick={onClose}
                       aria-current={active ? 'page' : undefined}
-                      className="group flex items-baseline gap-5 py-3 sm:gap-8 sm:py-4"
+                      className="group flex items-baseline py-3 sm:py-4"
                     >
-                      <span className="w-8 text-[0.75rem] font-medium tracking-[0.14em] text-grey tabular-nums">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
                       <span
                         className={cn(
                           'font-serif text-[clamp(2.25rem,1.4rem+3.6vw,4.5rem)] leading-[1.05] transition-[transform,color] duration-200 ease-[ease] group-hover:translate-x-3',
-                          active ? 'text-slate italic' : 'text-slate',
+                          active ? 'text-bronze-deep' : 'text-slate',
                         )}
                       >
                         {t(item.key)}

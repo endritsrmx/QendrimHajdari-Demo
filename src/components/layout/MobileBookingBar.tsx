@@ -47,7 +47,7 @@ export function MobileBookingBar() {
     >
       <Link
         href="/book-appointment"
-        className="group flex min-h-12 w-full items-center justify-center gap-4 bg-slate text-[0.8125rem] font-medium uppercase tracking-[0.14em] text-white"
+        className="group flex min-h-12 w-full items-center justify-center gap-4 bg-slate text-[0.8125rem] font-medium text-white"
       >
         {t('bookConsultation')}
         <Arrow />

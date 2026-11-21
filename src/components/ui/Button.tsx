@@ -6,7 +6,7 @@ import { Arrow } from './Arrow';
 type Variant = 'primary' | 'secondary' | 'light' | 'text';
 
 const base =
-  'pressable group inline-flex min-h-12 items-center justify-center gap-4 text-[0.8125rem] font-medium uppercase tracking-[0.14em] disabled:cursor-not-allowed disabled:opacity-50';
+  'pressable group inline-flex min-h-12 items-center justify-center gap-3 text-[0.9375rem] font-medium disabled:cursor-not-allowed disabled:opacity-50';
 
 const variants: Record<Variant, string> = {
   primary:
@@ -15,7 +15,7 @@ const variants: Record<Variant, string> = {
     'px-7 py-3.5 text-slate shadow-[inset_0_0_0_1px_var(--color-slate)] hover:bg-slate hover:text-white',
   light:
     'bg-ivory px-7 py-3.5 text-slate hover:bg-sand hover:shadow-[inset_0_0_0_1px_var(--color-bronze)]',
-  text: 'min-h-11 gap-3 px-0 text-slate',
+  text: 'min-h-11 gap-2 px-0 text-slate',
 };
 
 export const buttonClass = (variant: Variant = 'primary', className?: string) =>
@@ -25,7 +25,7 @@ type LinkProps = ComponentProps<typeof Link>;
 
 export function ButtonLink({
   variant = 'primary',
-  arrow = true,
+  arrow,
   className,
   children,
   ...props
@@ -33,7 +33,7 @@ export function ButtonLink({
   return (
     <Link {...props} className={buttonClass(variant, className)}>
       <span className={variant === 'text' ? 'link-underline pb-0.5' : undefined}>{children}</span>
-      {arrow && <Arrow />}
+      {(arrow ?? variant === 'primary') && <Arrow />}
     </Link>
   );
 }

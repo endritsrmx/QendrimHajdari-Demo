@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 type Href = ComponentProps<typeof Link>['href'];
 
 export async function PageHero({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   eyebrow,
   title,
   lead,
@@ -27,11 +28,7 @@ export async function PageHero({
         </div>
         <div className="grid-12 mt-14 gap-y-10 lg:mt-20">
           <div className="col-span-4 lg:col-span-8">
-            <p className="text-label flex items-center gap-4 text-grey" data-reveal="fade" data-reveal-start="top 100%">
-              <span aria-hidden className="h-px w-8 bg-bronze" />
-              {eyebrow}
-            </p>
-            <h1 id="page-title" className="text-h1 mt-7" data-reveal="lines" data-reveal-delay="0.1" data-reveal-start="top 100%">
+            <h1 id="page-title" className="text-h1" data-reveal="lines" data-reveal-delay="0.1" data-reveal-start="top 100%">
               <span className="reveal-mask">
                 <span>{title}</span>
               </span>

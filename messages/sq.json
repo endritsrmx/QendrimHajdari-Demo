@@ -1,53 +1,53 @@
 {
   "meta": {
-    "siteName": "Dr. Qendrim Hajdari – Ortopedi dhe Traumatologji",
+    "siteName": "Dr. Qëndrim Hajdari – Ortopedi dhe Traumatologji",
     "home": {
-      "title": "Dr. Qendrim Hajdari | Ortopedi dhe Traumatologji | Prishtinë dhe Gjilan",
-      "description": "Kujdes ortopedik dhe traumatologjik, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive. Konsulta në Royal Medical, Prishtinë dhe Ordinanca Dora, Gjilan."
+      "title": "Dr. Qëndrim Hajdari | Ortopedi dhe Traumatologji | Prishtinë dhe Gjilan",
+      "description": "Kujdes ortopedik dhe traumatologjik, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive. Konsulta në Royal Medical, Prishtinë dhe Ortopedia Dora, Gjilan."
     },
     "about": {
-      "title": "Rreth meje | Dr. Qendrim Hajdari | Kujdes ortopedik",
-      "description": "Njihuni me Dr. Qendrim Hajdari – ortopedi dhe traumatologji, me vendime të përqendruara te pacienti."
+      "title": "Rreth meje | Dr. Qëndrim Hajdari | Kujdes ortopedik",
+      "description": "Njihuni me Dr. Qëndrim Hajdari – ortopedi dhe traumatologji, me vendime të përqendruara te pacienti."
     },
     "treatments": {
-      "title": "Shërbimet | Dr. Qendrim Hajdari | Kujdes ortopedik",
+      "title": "Shërbimet | Dr. Qëndrim Hajdari | Kujdes ortopedik",
       "description": "Përmbledhje e fushave ortopedike: dëmtimet e ACL dhe të meniskut, zëvendësimi i nyjeve, mjekësia sportive, traumatologjia dhe sëmundjet e gjurit."
     },
-    "treatmentSuffix": "Dr. Qendrim Hajdari | Kujdes ortopedik",
+    "treatmentSuffix": "Dr. Qëndrim Hajdari | Kujdes ortopedik",
     "locations": {
-      "title": "Klinikat | Dr. Qendrim Hajdari | Prishtinë dhe Gjilan",
-      "description": "Konsulta ortopedike në dy lokacione: Royal Medical në Prishtinë dhe Ordinanca Dora në Gjilan."
+      "title": "Klinikat | Dr. Qëndrim Hajdari | Prishtinë dhe Gjilan",
+      "description": "Konsulta ortopedike në dy lokacione: Royal Medical në Prishtinë dhe Ortopedia Dora në Gjilan."
     },
     "results": {
-      "title": "Rezultatet | Dr. Qendrim Hajdari",
+      "title": "Rezultatet | Dr. Qëndrim Hajdari",
       "description": "Informacione për raste – ende të papublikuara."
     },
     "testimonials": {
-      "title": "Përvojat e pacientëve | Dr. Qendrim Hajdari",
+      "title": "Përvojat e pacientëve | Dr. Qëndrim Hajdari",
       "description": "Përvojat e pacientëve – publikohen vetëm me pëlqim të dokumentuar."
     },
     "faq": {
-      "title": "Pyetjet e shpeshta | Dr. Qendrim Hajdari",
+      "title": "Pyetjet e shpeshta | Dr. Qëndrim Hajdari",
       "description": "Pyetje të shpeshta për konsultat ortopedike, rezervimin dhe përgatitjen."
     },
     "contact": {
-      "title": "Kontakt | Dr. Qendrim Hajdari",
+      "title": "Kontakt | Dr. Qëndrim Hajdari",
       "description": "Na kontaktoni për një konsultë ortopedike në Prishtinë ose Gjilan."
     },
     "book": {
-      "title": "Rezervo termin | Dr. Qendrim Hajdari",
-      "description": "Rezervoni një konsultë ortopedike në Royal Medical, Prishtinë ose Ordinanca Dora, Gjilan."
+      "title": "Rezervo termin | Dr. Qëndrim Hajdari",
+      "description": "Rezervoni një konsultë ortopedike në Royal Medical, Prishtinë ose Ortopedia Dora, Gjilan."
     },
     "privacy": {
-      "title": "Politika e privatësisë | Dr. Qendrim Hajdari",
+      "title": "Politika e privatësisë | Dr. Qëndrim Hajdari",
       "description": "Informacion mbi përpunimin e të dhënave personale në këtë faqe."
     },
     "legal": {
-      "title": "Informacione ligjore | Dr. Qendrim Hajdari",
+      "title": "Informacione ligjore | Dr. Qëndrim Hajdari",
       "description": "Informacione ligjore dhe shënim mjekësor."
     },
     "notFound": {
-      "title": "Faqja nuk u gjet | Dr. Qendrim Hajdari"
+      "title": "Faqja nuk u gjet | Dr. Qëndrim Hajdari"
     }
   },
   "nav": {
@@ -72,13 +72,13 @@
     "switchTo": "Ndrysho gjuhën në {language}",
     "skip": "Kalo te përmbajtja",
     "breadcrumb": "Shtegu i navigimit",
-    "homeLink": "Qendrim Hajdari – ballina"
+    "homeLink": "Qëndrim Hajdari – ballina"
   },
   "common": {
     "bookConsultation": "Rezervo një konsultë",
     "bookAppointment": "Rezervo një termin",
     "exploreTreatments": "Shiko shërbimet",
-    "exploreTreatment": "Shiko shërbimin",
+    "exploreTreatment": "Lexo më shumë",
     "learnMore": "Mëso më shumë",
     "readArticle": "Lexo artikullin",
     "getDirections": "Udhëzimet për të ardhur",
@@ -108,48 +108,49 @@
     "dragHint": "Tërhiqni ose përdorni shigjetat e tastierës",
     "backToTop": "Kthehu lart",
     "notPublished": "E papublikuar",
-    "kosovo": "Kosovë"
+    "kosovo": "Kosovë",
+    "addressPending": "Adresa do të konfirmohet"
   },
   "home": {
     "hero": {
-      "eyebrow": "Ortopedi dhe Traumatologji",
+      "eyebrow": "Ortopedi dhe traumatologji",
       "line1": "Kujdes me përkushtim.",
-      "line2": "Lëvizje me besim.",
+      "line2": "Lëvizje me besim",
       "sub": "Kujdes ortopedik dhe traumatologjik, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive.",
       "primary": "Rezervo një konsultë",
       "secondary": "Shiko shërbimet",
-      "locations": "Prishtinë · Gjilan",
+      "locations": "Konsulta në Prishtinë dhe Gjilan",
       "scroll": "Lëviz poshtë"
     },
     "trust": {
       "eyebrow": "Qasje personale ndaj kujdesit ortopedik",
-      "title": "Në fokus: lëvizshmëria dhe mirëqenia juaj.",
+      "title": "Në fokus: lëvizshmëria dhe mirëqenia juaj",
       "text": "Çdo pyetje ortopedike meriton kohë dhe një shpjegim të qartë. Qëllimi është të kuptojmë saktë ankesat tuaja, të shpjegojmë me transparencë mundësitë dhe të marrim së bashku vendime që i përshtaten jetës, aktivitetit dhe qëllimeve tuaja."
     },
     "about": {
       "eyebrow": "Rreth mjekut",
-      "title": "Njihuni me Dr. Qendrim Hajdari",
+      "title": "Njihuni me Dr. Qëndrim Hajdari",
       "subtitle": "I përkushtuar ndaj kujdesit ortopedik dhe vendimeve të përqendruara te pacienti."
     },
     "treatments": {
       "eyebrow": "Fushat e trajtimit",
-      "title": "Kujdes i specializuar për çdo hap përpara.",
+      "title": "Kujdes i specializuar për çdo hap përpara",
       "lead": "Fusha tematike në ortopedi, traumatologji dhe mjekësi sportive. Gama konkrete e trajtimeve konfirmohet individualisht.",
       "all": "Të gjitha shërbimet",
       "carouselLabel": "Fushat e trajtimit"
     },
     "philosophy": {
-      "eyebrow": "Filozofia mjekësore",
-      "title": "Çdo pacient. Çdo lëvizje. Çdo vendim ka rëndësi."
+      "eyebrow": "Si merren vendimet",
+      "title": "Çdo pacient. Çdo lëvizje. Çdo vendim ka rëndësi"
     },
     "locations": {
       "eyebrow": "Klinikat",
-      "title": "Kujdes në dy lokacione.",
+      "title": "Kujdes në dy lokacione",
       "lead": "Konsulta në Prishtinë dhe Gjilan. Zgjidhni lokacionin që ju përshtatet më mirë."
     },
     "journey": {
       "eyebrow": "Rruga e pacientit",
-      "title": "Rruga juaj drejt kujdesit ortopedik të personalizuar.",
+      "title": "Rruga juaj drejt kujdesit ortopedik të personalizuar",
       "note": "Një shembull se si organizohet zakonisht konsulta e parë – jo një zotim për një trajtim të caktuar.",
       "steps": {
         "1": {
@@ -172,22 +173,22 @@
     },
     "testimonials": {
       "eyebrow": "Përvojat e pacientëve",
-      "title": "Me fjalët e tyre."
+      "title": "Me fjalët e tyre"
     },
     "education": {
       "eyebrow": "Informim për pacientët",
-      "title": "Të kuptojmë shëndetin tuaj ortopedik."
+      "title": "Të kuptojmë shëndetin tuaj ortopedik"
     },
     "cta": {
-      "title": "Hapi juaj i radhës fillon me një bisedë.",
+      "title": "Hapi juaj i radhës fillon me një bisedë",
       "sub": "Rezervoni një konsultë ortopedike në klinikën që preferoni.",
       "button": "Rezervo një termin"
     }
   },
   "about": {
     "eyebrow": "Rreth meje",
-    "title": "Dr. Qendrim Hajdari",
-    "lead": "Ortopedi dhe traumatologji, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive.",
+    "title": "Dr. Qëndrim Hajdari",
+    "lead": "Ortopedi dhe traumatologji, me fokus në dëmtimet e gjurit, trajtimin e nyjeve dhe mjekësinë sportive",
     "introTitle": "Prezantim personal",
     "careerTitle": "Rruga profesionale",
     "educationTitle": "Arsimimi",
@@ -199,14 +200,16 @@
     "pendingVerification": "Do të shtohet pas verifikimit.",
     "placeholderNote": "Vend i rezervuar – përmbajtja publikohet vetëm pas verifikimit nga klienti.",
     "galleryEyebrow": "Praktika klinike",
-    "galleryTitle": "Në sallën e operacionit dhe në trajnime.",
+    "galleryTitle": "Në sallën e operacionit dhe në trajnime",
     "captionTheatre": "Salla e operacionit",
     "captionTeam": "Ekipi kirurgjikal",
-    "captionTraining": "Trajnim praktik: artroplastika e gjurit"
+    "captionTraining": "Trajnim praktik: artroplastika e gjurit",
+    "bioPending": "Prezantimi personal do të shfaqet këtu pasi të miratohet",
+    "careerPending": "Arsimimi dhe etapat e karrierës do të renditen këtu pasi të verifikohen"
   },
   "treatments": {
     "eyebrow": "Shërbimet",
-    "title": "Kujdes ortopedik, i shpjeguar qartë.",
+    "title": "Kujdes ortopedik, i shpjeguar qartë",
     "lead": "Një përmbledhje e fushave kryesore. Çdo faqe ofron informacion të përgjithshëm – vlerësimi individual vjen gjithmonë i pari.",
     "spectrumNote": "Këto janë fusha tematike. Shërbimet konkrete kirurgjikale konfirmohen para publikimit.",
     "sections": {
@@ -227,7 +230,7 @@
   },
   "locations": {
     "eyebrow": "Klinikat",
-    "title": "Dy klinika. Një standard kujdesi.",
+    "title": "Dy klinika. Një standard kujdesi",
     "lead": "Çdo lokacion konfigurohet veçmas – adresat, oraret dhe rezervimi online shfaqen pasi të konfirmohen.",
     "mapNote": "Hartat hapen në një shërbim të jashtëm. Asnjë e dhënë harte nuk ngarkohet në këtë faqe para se të klikoni.",
     "contactLocation": "Kontaktoni këtë klinikë"
@@ -254,7 +257,7 @@
   },
   "contact": {
     "eyebrow": "Kontakt",
-    "title": "Na kontaktoni.",
+    "title": "Na kontaktoni",
     "lead": "Për pyetje rreth konsultave dhe termineve. Ju lutemi mos dërgoni informacione të detajuara mjekësore apo dokumente përmes këtij formulari.",
     "direct": "Kontakt i drejtpërdrejtë",
     "form": {
@@ -317,7 +320,8 @@
     "successTitle": "Rezervimi juaj u pranua",
     "successText": "Konfirmimi dhe ftesa në kalendar dërgohen me email nga shërbimi i rezervimeve.",
     "timezoneNote": "Të gjitha oraret shfaqen në zonën tuaj kohore; klinika punon sipas orës së Kosovës (CET/CEST).",
-    "selected": "E zgjedhur"
+    "selected": "E zgjedhur",
+    "callLocation": "ose telefononi {phone}"
   },
   "privacy": {
     "eyebrow": "Privatësia",
@@ -331,7 +335,7 @@
   },
   "notFound": {
     "eyebrow": "404",
-    "title": "Kjo faqe nuk u gjet.",
+    "title": "Kjo faqe nuk u gjet",
     "text": "Faqja mund të jetë zhvendosur ose nuk ekziston më.",
     "home": "Kthehu në ballinë"
   },
@@ -342,7 +346,8 @@
     "contact": "Kontakt",
     "follow": "Na ndiqni",
     "rights": "Të gjitha të drejtat e rezervuara.",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "writeUs": "Dërgoni një mesazh"
   },
   "cursor": {
     "drag": "Tërhiq",

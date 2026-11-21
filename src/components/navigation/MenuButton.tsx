@@ -18,7 +18,7 @@ export const MenuButton = forwardRef<
       aria-label={label}
       className={cn('group inline-flex min-h-11 min-w-11 items-center justify-center gap-3 text-slate', className)}
     >
-      <span className="hidden text-[0.75rem] font-medium uppercase tracking-[0.16em] lg:inline">{text}</span>
+      <span className="hidden text-[0.75rem] font-medium lg:inline">{text}</span>
       <svg viewBox="0 0 28 28" className="size-7" aria-hidden>
         <line
           x1="4" y1="11" x2="24" y2="11"

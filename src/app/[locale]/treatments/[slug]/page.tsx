@@ -13,7 +13,6 @@ import { media } from '@/content/media';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 import { Accordion } from '@/components/ui/Accordion';
 import { ButtonLink } from '@/components/ui/Button';
-import { Arrow } from '@/components/ui/Arrow';
 import { MedicalNotice } from '@/components/ui/MedicalNotice';
 import { BookingCta } from '@/components/home/BookingCta';
 import { treatments, getTreatmentBySlug, getTreatmentById } from '@/content/treatments';
@@ -105,7 +104,6 @@ export default async function TreatmentPage({ params }: Props) {
           <div className="grid-12 mt-14 items-end gap-y-12 lg:mt-20">
             <div className="col-span-4 lg:col-span-7">
               <div className="flex flex-wrap items-center gap-4" data-reveal="fade" data-reveal-start="top 100%">
-                <span className="text-label text-grey">{tn('treatments')} · {tr.number}</span>
                 <StatusBadge status={tr.status} />
               </div>
               <h1 id="page-title" className="text-h1 mt-7 hyphens-auto break-words" lang={locale} data-reveal="lines" data-reveal-delay="0.1" data-reveal-start="top 100%">
@@ -159,7 +157,7 @@ export default async function TreatmentPage({ params }: Props) {
                 <Block id="symptoms" title={t('sections.symptoms')}><List items={tr.symptoms[locale]} /></Block>
                 <Block id="diagnostics" title={t('sections.diagnostics')}><List items={tr.diagnostics[locale]} /></Block>
                 <Block id="conservative" title={t('sections.conservative')}><List items={tr.conservative[locale]} /></Block>
-                <Block id="operative" title={t('sections.operative')} note={`${t('operativeNote')} [SURGICAL_PROCEDURE_DETAILS_APPROVED]`}>
+                <Block id="operative" title={t('sections.operative')} note={t('operativeNote')}>
                   <List items={tr.operative[locale]} />
                 </Block>
                 <Block id="aftercare" title={t('sections.aftercare')} note={t('aftercareNote')}><p>{tr.aftercare[locale]}</p></Block>
@@ -191,11 +189,7 @@ export default async function TreatmentPage({ params }: Props) {
                     href={{ pathname: '/treatments/[slug]', params: { slug: r.slug[locale] } }}
                     className="group flex items-center justify-between gap-6 py-7 transition-colors hover:bg-hover lg:px-4"
                   >
-                    <span className="flex items-baseline gap-6">
-                      <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">{r.number}</span>
-                      <span className="text-h3">{r.title[locale]}</span>
-                    </span>
-                    <Arrow />
+                    <span className="text-h3">{r.title[locale]}</span>
                   </Link>
                 </li>
               ))}

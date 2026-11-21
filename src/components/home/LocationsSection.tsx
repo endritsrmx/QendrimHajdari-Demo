@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Section } from '@/components/ui/Section';
 import { LocationCard } from '@/components/locations/LocationCard';
 import { locations } from '@/config/locations';
@@ -11,8 +10,7 @@ export async function LocationsSection() {
       <div className="container-x">
         <div className="grid-12 items-end gap-y-6">
           <div className="col-span-4 lg:col-span-7">
-            <Eyebrow>{t('eyebrow')}</Eyebrow>
-            <h2 id="locations-title" className="text-h2 mt-7" data-reveal="text">
+            <h2 id="locations-title" className="text-h2" data-reveal="text">
               {t('title')}
             </h2>
           </div>

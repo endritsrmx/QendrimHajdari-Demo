@@ -16,9 +16,6 @@ export async function DoctorBio() {
     );
   }
   return (
-    <div className="border border-dashed border-bronze-deep/50 bg-white/60 p-6">
-      <code className="text-[0.8125rem] text-bronze-deep">{doctor.bio.placeholder}</code>
-      <p className="mt-2 text-[0.875rem] text-grey">{t('placeholderNote')}</p>
-    </div>
+    <p className="text-lead text-grey">{t('bioPending')}</p>
   );
 }

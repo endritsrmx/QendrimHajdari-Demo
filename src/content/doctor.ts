@@ -5,7 +5,7 @@ import type { ContentStatus, Localized } from './types';
  * NEVER add invented education, experience, awards, certifications or surgery numbers.
  */
 export const doctor = {
-  name: 'Qendrim Hajdari', // VERIFY spelling "Qëndrim"
+  name: 'Qëndrim Hajdari', // VERIFY spelling "Qëndrim"
   title: 'Dr.', // VERIFY official professional title
   specialties: {
     sq: ['Ortopedi', 'Traumatologji', 'Mjekësi sportive'],
@@ -17,12 +17,14 @@ export const doctor = {
     placeholder: '[DOCTOR_BIO_APPROVED]',
     text: null as Localized<string[]> | null,
   },
+  /** Set to true once the timeline below contains verified entries (then it renders as a vertical timeline). */
+  careerVerified: false,
   /** Vertical career timeline – years and institutions remain placeholders until verified. */
   career: [
     { year: '[YEAR]', title: '[MEDICAL_DEGREE_VERIFIED]', institution: '[UNIVERSITY_VERIFIED]' },
     { year: '[YEAR]', title: '[RESIDENCY_ORTHOPAEDICS_TRAUMA_VERIFIED]', institution: '[INSTITUTION_VERIFIED]' },
     { year: '[YEAR]', title: '[SPECIALIST_QUALIFICATION_VERIFIED]', institution: '[INSTITUTION_VERIFIED]' },
-    { year: '[YEAR]', title: '[CURRENT_POSITION_VERIFIED]', institution: 'Royal Medical / Ordinanca Dora' },
+    { year: '[YEAR]', title: '[CURRENT_POSITION_VERIFIED]', institution: 'Royal Medical / Ortopedia Dora' },
   ],
   education: null as null | { title: string; institution: string; year: string }[], // [MEDICAL_QUALIFICATIONS_VERIFIED]
   qualifications: null as null | string[], // [MEDICAL_QUALIFICATIONS_VERIFIED]

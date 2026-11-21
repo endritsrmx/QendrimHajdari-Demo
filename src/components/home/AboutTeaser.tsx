@@ -2,7 +2,6 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { Photo } from '@/components/ui/Photo';
 import { media } from '@/content/media';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ButtonLink } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
 import { DoctorBio } from '@/components/home/DoctorBio';
@@ -22,11 +21,10 @@ export async function AboutTeaser() {
           </div>
         </div>
         <div>
-          <Eyebrow>{t('eyebrow')}</Eyebrow>
-          <h2 id="about-title" className="text-h2 mt-7" data-reveal="text">
+          <h2 id="about-title" className="text-h2" data-reveal="text">
             {t('title')}
           </h2>
-          <p className="text-h3 mt-6 italic text-grey" data-reveal="fade">
+          <p className="text-lead mt-6 text-grey" data-reveal="fade">
             {t('subtitle')}
           </p>
           <div className="mt-8" data-reveal="fade">

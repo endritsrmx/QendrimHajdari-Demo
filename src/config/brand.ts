@@ -1,15 +1,16 @@
 export const brand = {
-  /** VERIFY: exact spelling incl. "Qëndrim" and official professional title. */
-  name: 'Qendrim Hajdari',
-  displayName: 'Dr. Qendrim Hajdari',
-  wordmark: 'QENDRIM HAJDARI',
+  /** Spelling as on the Gjilan practice sign (Ortopedia Dora). VERIFY official professional title. */
+  name: 'Qëndrim Hajdari',
+  displayName: 'Dr. Qëndrim Hajdari',
+  wordmark: 'QËNDRIM HAJDARI',
   monogram: 'QH',
   tagline: 'Orthopaedic & Trauma Surgery',
   social: {
     instagram: 'https://www.instagram.com/dr.qendrimhajdari',
   },
   /** [PHONE_NUMBER] / [BUSINESS_EMAIL] – set via env once verified */
-  phone: process.env.NEXT_PUBLIC_PRACTICE_PHONE || '',
+  /** From the Gjilan practice sign: "Dr. Qëndrim Hajdari, Ortoped, +383 45 592 399" */
+  phone: process.env.NEXT_PUBLIC_PRACTICE_PHONE || '+383 45 592 399',
   email: process.env.NEXT_PUBLIC_PRACTICE_EMAIL || '',
   colors: {
     ivory: '#F7F4EE',

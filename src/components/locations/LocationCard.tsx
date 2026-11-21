@@ -12,11 +12,14 @@ export async function LocationCard({
   index,
   detailed = false,
   headingLevel = 3,
+  priority = false,
 }: {
   location: PracticeLocation;
   index: number;
   detailed?: boolean;
   headingLevel?: 2 | 3;
+  /** first card above the fold on the locations page = LCP image */
+  priority?: boolean;
 }) {
   const t = await getTranslations('common');
   const tl = await getTranslations('locations');
@@ -29,26 +32,23 @@ export async function LocationCard({
         <div className="h-full w-full transition-transform duration-300 ease-[ease] group-hover:scale-[1.03]">
           {location.image ? (
             <div className="relative h-full w-full bg-sand">
-              <Photo photo={location.image} locale={locale} sizes="(min-width: 1024px) 45vw, 92vw" />
+              <Photo photo={location.image} locale={locale} priority={priority} sizes="(min-width: 1024px) 45vw, 92vw" />
             </div>
           ) : (
             <Placeholder token={location.imagePlaceholder} label={t('imagePlaceholder')} tone={index % 2 ? 'ivory' : 'sand'} />
           )}
         </div>
-        <span className="absolute top-5 left-5 bg-ivory px-3 py-1.5 text-[0.6875rem] font-medium tracking-[0.16em] text-slate tabular-nums">
-          {String(index + 1).padStart(2, '0')}
-        </span>
       </div>
       <div className="flex flex-1 flex-col p-7 sm:p-10">
         <p className="text-label text-grey">
           {location.city[locale]}, {location.country[locale]}
         </p>
-        <H className="text-h3 mt-3 uppercase tracking-[0.04em]">{location.name}</H>
+        <H className="text-h3 mt-2">{location.name}</H>
 
         <dl className="mt-8 grid gap-5 border-t border-line pt-7 text-[0.9375rem]">
           <div className="grid grid-cols-[7.5rem_1fr] gap-4">
             <dt className="text-grey">{t('address')}</dt>
-            <dd>{location.address ?? <code className="break-all text-[0.8125rem] text-bronze-deep">{location.addressPlaceholder}</code>}</dd>
+            <dd>{location.address ?? <span className="text-grey">{t('toBeConfirmed')}</span>}</dd>
           </div>
           <div className="grid grid-cols-[7.5rem_1fr] gap-4">
             <dt className="text-grey">{t('hours')}</dt>
@@ -62,7 +62,7 @@ export async function LocationCard({
                   ))}
                 </ul>
               ) : (
-                <code className="break-all text-[0.8125rem] text-bronze-deep">[WORKING_HOURS_BY_LOCATION]</code>
+                <span className="text-grey">{t('toBeConfirmed')}</span>
               )}
             </dd>
           </div>
@@ -74,7 +74,7 @@ export async function LocationCard({
                   {location.phone ? (
                     <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="link-underline-static">{location.phone}</a>
                   ) : (
-                    <code className="break-all text-[0.8125rem] text-bronze-deep">[PHONE_NUMBER]</code>
+                    <span className="text-grey">{t('toBeConfirmed')}</span>
                   )}
                 </dd>
               </div>

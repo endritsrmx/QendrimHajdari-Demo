@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Dr. Qendrim Hajdari – Orthopaedic & Trauma Surgery',
+    name: 'Dr. Qëndrim Hajdari – Orthopaedic & Trauma Surgery',
     short_name: 'Dr. Hajdari',
     start_url: '/sq',
     display: 'browser',

@@ -31,7 +31,7 @@ export default async function TestimonialsPage({ params }: Props) {
           {items.length > 0 ? (
             <TestimonialSlider label={t('title')} items={items.map((x) => ({ id: x.id, quote: x.quote[l], attribution: x.attribution[l] }))} />
           ) : (
-            <p className="text-h3 max-w-3xl italic text-grey">{t('empty')}</p>
+            <p className="text-h3 max-w-3xl text-grey">{t('empty')}</p>
           )}
         </div>
       </section>

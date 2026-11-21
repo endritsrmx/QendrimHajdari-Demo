@@ -39,8 +39,8 @@ export async function TestimonialsSection() {
             />
           ) : (
             <div className="border border-dashed border-bronze-deep/50 p-8 lg:p-12">
-              <p className="text-label text-bronze-deep">{tc('notPublished')} · [PATIENT_TESTIMONIAL_APPROVED]</p>
-              <p className="text-h3 mt-4 max-w-3xl text-grey italic">{tt('empty')}</p>
+              <p className="text-label text-bronze-deep">{tc('notPublished')}</p>
+              <p className="text-h3 mt-4 max-w-3xl text-grey">{tt('empty')}</p>
               <p className="mt-4 max-w-2xl text-[0.9375rem] text-grey">{tt('lead')}</p>
             </div>
           )}

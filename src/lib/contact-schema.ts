@@ -1,5 +1,8 @@
 import { z } from 'zod';
 
+// No runtime code generation (new Function) – keeps the strict Content Security Policy clean.
+z.config({ jitless: true });
+
 export const LOCATION_VALUES = ['royal-medical', 'ordinanca-dora', 'no-preference'] as const;
 
 /**

@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: Props) {
                   {brand.phone ? (
                     <a className="link-underline-static" href={`tel:${brand.phone.replace(/\s/g, '')}`}>{brand.phone}</a>
                   ) : (
-                    <code className="text-[0.8125rem] text-bronze-deep">[PHONE_NUMBER]</code>
+                    <span className="text-grey">{tc('toBeConfirmed')}</span>
                   )}
                 </dd>
               </div>
@@ -47,7 +47,7 @@ export default async function ContactPage({ params }: Props) {
                   {brand.email ? (
                     <a className="link-underline-static" href={`mailto:${brand.email}`}>{brand.email}</a>
                   ) : (
-                    <code className="text-[0.8125rem] text-bronze-deep">[BUSINESS_EMAIL]</code>
+                    <span className="text-grey">{tc('toBeConfirmed')}</span>
                   )}
                 </dd>
               </div>
@@ -55,7 +55,7 @@ export default async function ContactPage({ params }: Props) {
                 <div key={l.id} className="border-t border-line pt-6">
                   <dt className="font-medium">{l.name}</dt>
                   <dd className="mt-1 text-grey">
-                    {l.address ?? <code className="text-[0.8125rem] text-bronze-deep">{l.addressPlaceholder}</code>}
+                    {l.address ?? tc('addressPending')}
                     <br />
                     {l.city[locale]}, {l.country[locale]}
                   </dd>

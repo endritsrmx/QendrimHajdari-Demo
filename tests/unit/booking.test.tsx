@@ -20,7 +20,7 @@ const bookingModule = await import('@/config/booking');
 async function goToStep3(user: ReturnType<typeof userEvent.setup>, location = 'Royal Medical') {
   await user.click(screen.getByText(location));
   await user.click(screen.getByRole('button', { name: /continue/i }));
-  await user.click(screen.getByText('Orthopaedic Consultation'));
+  await user.click(screen.getByText('Orthopaedic consultation'));
   await user.click(screen.getByRole('button', { name: /continue/i }));
 }
 
@@ -46,7 +46,7 @@ describe('BookingFlow', () => {
     const { BookingFlow } = await import('@/components/booking/BookingFlow');
     renderWithIntl(<BookingFlow />);
     expect(screen.getByText('Step 2 of 3')).toBeInTheDocument();
-    expect(screen.getByText('Ordinanca Dora, Gjilan')).toBeInTheDocument();
+    expect(screen.getByText('Ortopedia Dora, Gjilan')).toBeInTheDocument();
   });
 
   it('requires consent before loading the provider, then handles loading, error and success', async () => {

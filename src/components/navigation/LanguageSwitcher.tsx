@@ -28,7 +28,7 @@ export function LanguageSwitcher({ tone = 'dark', className }: { tone?: 'dark' |
   };
 
   return (
-    <ul className={cn('flex items-center gap-1 text-[0.75rem] font-medium tracking-[0.14em]', className)} aria-label={t('language')}>
+    <ul className={cn('flex items-center gap-1 text-[0.75rem] font-medium', className)} aria-label={t('language')}>
       {locales.map((l, i) => {
         const active = l === locale;
         return (

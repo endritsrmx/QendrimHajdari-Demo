@@ -23,7 +23,7 @@ export function TestimonialSlider({ items, label }: { items: { id: string; quote
       }}
     >
       <figure key={current.id} aria-live="polite" className="animate-[fade-in_250ms_var(--ease-out)]">
-        <blockquote className="text-h2 max-w-4xl italic">“{current.quote}”</blockquote>
+        <blockquote className="text-h2 max-w-4xl">“{current.quote}”</blockquote>
         <figcaption className="text-label mt-8 text-grey">{current.attribution}</figcaption>
       </figure>
       {items.length > 1 && (
@@ -31,7 +31,7 @@ export function TestimonialSlider({ items, label }: { items: { id: string; quote
           <button type="button" onClick={() => go(-1)} aria-label={t('previous')} className="group inline-flex size-12 items-center justify-center rounded-full border border-slate">
             <Arrow direction="left" className="w-5" />
           </button>
-          <span className="text-[0.75rem] tabular-nums tracking-[0.14em]">{t('slideOf', { current: i + 1, total: items.length })}</span>
+          <span className="text-[0.75rem] tabular-nums">{t('slideOf', { current: i + 1, total: items.length })}</span>
           <button type="button" onClick={() => go(1)} aria-label={t('next')} className="group inline-flex size-12 items-center justify-center rounded-full border border-slate">
             <Arrow className="w-5" />
           </button>

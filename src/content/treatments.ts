@@ -16,7 +16,7 @@ export const treatments: Treatment[] = [
     illustration: 'acl',
     title: {
       sq: 'Dëmtimet e ligamentit të kryqëzuar anterior',
-      en: 'ACL Injuries',
+      en: 'ACL injuries',
     },
     cardText: {
       sq: 'Vlerësim dhe trajtim i dëmtimeve të ligamentit të kryqëzuar anterior, shpesh pas lëvizjeve të shpejta rrotulluese në sport.',
@@ -134,7 +134,7 @@ export const treatments: Treatment[] = [
     status: 'needs_medical_review',
     slug: treatmentSlugs['meniscus'],
     illustration: 'meniscus',
-    title: { sq: 'Dëmtimet e meniskut', en: 'Meniscus Injuries' },
+    title: { sq: 'Dëmtimet e meniskut', en: 'Meniscus injuries' },
     cardText: {
       sq: 'Diagnostikim dhe këshillim për dëmtimet e meniskut – nga lëndimet sportive deri te ndryshimet degjenerative.',
       en: 'Diagnosis and guidance for meniscus injuries – from sports-related tears to degenerative changes.',
@@ -240,7 +240,7 @@ export const treatments: Treatment[] = [
     slug: treatmentSlugs['joint-replacement'],
     illustration: 'joint-replacement',
     heroPhoto: 'orTeamKneeReplacement',
-    title: { sq: 'Zëvendësimi i nyjeve', en: 'Joint Replacement' },
+    title: { sq: 'Zëvendësimi i nyjeve', en: 'Joint replacement' },
     cardText: {
       sq: 'Këshillim për pacientët me ndryshime të avancuara të nyjeve, kur masat konservative nuk mjaftojnë më.',
       en: 'Guidance for patients with advanced joint changes when conservative measures are no longer sufficient.',
@@ -345,7 +345,7 @@ export const treatments: Treatment[] = [
     status: 'needs_medical_review',
     slug: treatmentSlugs['sports'],
     illustration: 'sports',
-    title: { sq: 'Mjekësia sportive', en: 'Sports Medicine' },
+    title: { sq: 'Mjekësia sportive', en: 'Sports medicine' },
     cardText: {
       sq: 'Kujdes për lëndimet sportive dhe këshillim për një rikthim të sigurt dhe të strukturuar në aktivitet.',
       en: 'Care for sports injuries and guidance towards a safe, structured return to activity.',
@@ -444,7 +444,7 @@ export const treatments: Treatment[] = [
     status: 'needs_medical_review',
     slug: treatmentSlugs['trauma'],
     illustration: 'trauma',
-    title: { sq: 'Traumatologjia ortopedike', en: 'Orthopaedic Trauma' },
+    title: { sq: 'Traumatologjia ortopedike', en: 'Orthopaedic trauma' },
     cardText: {
       sq: 'Vlerësim dhe trajtim i lëndimeve të kockave dhe nyjeve pas aksidenteve ose rrëzimeve.',
       en: 'Assessment and treatment of bone and joint injuries following accidents or falls.',
@@ -547,7 +547,7 @@ export const treatments: Treatment[] = [
     illustration: 'knee-consultation',
     title: {
       sq: 'Sëmundjet e gjurit dhe nyjeve',
-      en: 'Knee & Joint Conditions',
+      en: 'Knee and joint conditions',
     },
     cardText: {
       sq: 'Konsultë për dhimbje të gjurit dhe nyjeve, me vlerësim të kujdesshëm dhe shpjegim të qartë të mundësive.',

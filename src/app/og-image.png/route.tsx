@@ -19,7 +19,7 @@ export async function GET() {
             <path d="M33.5 33.5 41 41" stroke="#B49C7C" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontFamily: 'Cormorant', fontSize: 34, letterSpacing: 8 }}>QENDRIM HAJDARI</div>
+            <div style={{ fontFamily: 'Cormorant', fontSize: 34, letterSpacing: 8 }}>QËNDRIM HAJDARI</div>
             <div style={{ fontFamily: 'Manrope', fontSize: 14, letterSpacing: 4, color: '#555D58', marginTop: 6 }}>ORTHOPAEDIC &amp; TRAUMA SURGERY</div>
           </div>
         </div>
@@ -29,7 +29,7 @@ export async function GET() {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontFamily: 'Manrope', fontSize: 18, letterSpacing: 4, color: '#555D58' }}>
           <div style={{ width: 48, height: 1, background: '#B49C7C' }} />
-          PRISHTINA · GJILAN · KOSOVO
+          Prishtina and Gjilan, Kosovo
         </div>
       </div>
     ),

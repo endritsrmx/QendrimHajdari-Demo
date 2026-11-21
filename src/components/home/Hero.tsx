@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { Photo } from '@/components/ui/Photo';
+import { Annotation } from '@/components/ui/Annotation';
 import { media } from '@/content/media';
 import { ButtonLink } from '@/components/ui/Button';
 
@@ -12,16 +13,12 @@ export async function Hero() {
     <section aria-labelledby="hero-title" data-intro-hero className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-36 lg:pb-24">
       <div className="container-x grid-12 min-h-[calc(90svh-9rem)] items-center gap-y-12">
         <div className="col-span-4 lg:col-span-7 lg:pr-8">
-          <p className="text-label flex items-center gap-4 text-grey" data-reveal="fade">
-            <span aria-hidden className="h-px w-10 bg-bronze" />
-            {t('eyebrow')}
-          </p>
-          <h1 id="hero-title" className="text-display mt-8 text-slate" data-reveal="lines" data-reveal-delay="0.15" data-reveal-start="top 100%">
+          <h1 id="hero-title" className="text-display text-slate" data-reveal="lines" data-reveal-delay="0.15" data-reveal-start="top 100%">
             <span className="reveal-mask">
               <span>{t('line1')}</span>
             </span>
             <span className="reveal-mask">
-              <span className="italic text-slate-soft">{t('line2')}</span>
+              <span>{t('line2')}</span>
             </span>
           </h1>
           <p className="text-lead mt-8 max-w-xl text-grey" data-reveal="fade" data-reveal-delay="0.55" data-reveal-start="top 100%">
@@ -51,10 +48,9 @@ export async function Hero() {
               </div>
             </div>
           </div>
-          <p className="relative mt-5 flex items-center justify-end gap-3 text-[0.75rem] uppercase tracking-[0.18em] text-grey" data-reveal="fade" data-reveal-delay="0.9" data-reveal-start="top 100%">
-            <span aria-hidden className="h-px w-6 bg-bronze" />
-            {t('locations')}
-          </p>
+          <div className="relative mt-5 flex justify-end" data-reveal="fade" data-reveal-delay="0.9" data-reveal-start="top 100%">
+            <Annotation>{t('locations')}</Annotation>
+          </div>
         </div>
       </div>
     </section>

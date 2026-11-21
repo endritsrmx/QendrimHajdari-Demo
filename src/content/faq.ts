@@ -46,8 +46,8 @@ export const generalFaq: FaqItem[] = [
       en: 'Are consultations available in English?',
     },
     answer: {
-      sq: '[LANGUAGES_SPOKEN_VERIFIED] – gjuhët e konsultës do të konfirmohen.',
-      en: '[LANGUAGES_SPOKEN_VERIFIED] – consultation languages to be confirmed.',
+      sq: 'Gjuhët e konsultës do të konfirmohen së shpejti.', // [LANGUAGES_SPOKEN_VERIFIED]
+      en: 'The languages available for consultations will be confirmed shortly.', // [LANGUAGES_SPOKEN_VERIFIED]
     },
   },
   {

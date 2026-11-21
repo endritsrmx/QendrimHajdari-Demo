@@ -67,9 +67,9 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
         data-cursor="drag"
         aria-describedby="carousel-hint"
       >
-        <ul className="flex gap-5 lg:gap-8">
+        <div className="flex gap-5 lg:gap-8">
           {cards.map((card, i) => (
-            <li
+            <div
               key={card.id}
               role="group"
               aria-roledescription="slide"
@@ -83,33 +83,32 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
                     <Illustration id={card.illustration} label={card.title} caption={t('illustration')} tone="white" />
                   </div>
                   {card.badge && (
-                    <span className="absolute top-4 right-4 border border-dashed border-bronze-deep/60 bg-white/80 px-2 py-1 text-[0.625rem] font-medium uppercase tracking-[0.12em] text-bronze-deep">
+                    <span className="absolute top-4 left-4 inline-flex items-center gap-2 bg-white/90 px-2.5 py-1 text-[0.75rem] text-bronze-deep">
+                      <span aria-hidden className="size-1.5 rounded-full bg-bronze" />
                       {card.badge}
                     </span>
                   )}
                 </div>
                 <div className="flex flex-1 flex-col p-6 transition-transform duration-300 ease-[ease] sm:p-8 lg:group-hover:-translate-y-1">
-                  <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">{card.number}</span>
-                  <h3 className="text-h3 mt-3">{card.title}</h3>
+                  <h3 className="text-h3">{card.title}</h3>
                   <p className="mt-4 text-[0.9375rem] leading-relaxed text-grey">{card.text}</p>
                   <Link
                     href={{ pathname: '/treatments/[slug]', params: { slug: card.slug } }}
-                    className="mt-auto inline-flex min-h-11 items-center gap-3 pt-6 text-[0.8125rem] font-medium uppercase tracking-[0.14em] text-slate after:absolute after:inset-0 after:content-['']"
+                    className="mt-auto inline-flex min-h-11 items-center gap-3 pt-6 text-[0.8125rem] font-medium text-slate after:absolute after:inset-0 after:content-['']"
                     draggable={false}
                   >
                     <span className="link-underline">{t('exploreTreatment')}</span>
-                    <Arrow />
                   </Link>
                 </div>
               </article>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       <div className="mt-10 flex items-center justify-between gap-6">
         <div className="flex flex-1 items-center gap-6">
-          <span className="text-[0.75rem] font-medium tracking-[0.14em] text-slate tabular-nums">
+          <span className="text-[0.75rem] font-medium text-slate tabular-nums">
             {String(index + 1).padStart(2, '0')} / {String(Math.max(snaps, 1)).padStart(2, '0')}
           </span>
           <div className="relative h-px max-w-xs flex-1 bg-line" aria-hidden>
@@ -118,7 +117,7 @@ export function TreatmentCarousel({ cards, label }: { cards: CarouselCard[]; lab
               style={{ transform: `scaleX(${progress})` }}
             />
           </div>
-          <p id="carousel-hint" className="hidden text-[0.75rem] uppercase tracking-[0.14em] text-grey lg:block">
+          <p id="carousel-hint" className="hidden text-[0.75rem] text-grey lg:block">
             {t('dragHint')}
           </p>
         </div>

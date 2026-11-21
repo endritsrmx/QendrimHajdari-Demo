@@ -13,8 +13,8 @@ export const privacySections: LegalSection[] = [
   {
     title: { sq: 'Përgjegjësi për përpunimin', en: 'Data controller' },
     body: {
-      sq: ['[CONTROLLER_NAME_AND_ADDRESS] · [BUSINESS_EMAIL] · [PHONE_NUMBER]'],
-      en: ['[CONTROLLER_NAME_AND_ADDRESS] · [BUSINESS_EMAIL] · [PHONE_NUMBER]'],
+      sq: ['[CONTROLLER_NAME_AND_ADDRESS], [BUSINESS_EMAIL], +383 45 592 399'],
+      en: ['[CONTROLLER_NAME_AND_ADDRESS], [BUSINESS_EMAIL], +383 45 592 399'],
     },
   },
   {
@@ -74,8 +74,8 @@ export const legalSections: LegalSection[] = [
   {
     title: { sq: 'Ofruesi', en: 'Provider' },
     body: {
-      sq: ['Dr. Qendrim Hajdari [OFFICIAL_TITLE_VERIFIED] · [PRACTICE_LEGAL_ENTITY] · [ADDRESS] · [BUSINESS_EMAIL]'],
-      en: ['Dr. Qendrim Hajdari [OFFICIAL_TITLE_VERIFIED] · [PRACTICE_LEGAL_ENTITY] · [ADDRESS] · [BUSINESS_EMAIL]'],
+      sq: ['Dr. Qëndrim Hajdari [OFFICIAL_TITLE_VERIFIED] · [PRACTICE_LEGAL_ENTITY] · [ADDRESS] · [BUSINESS_EMAIL]'],
+      en: ['Dr. Qëndrim Hajdari [OFFICIAL_TITLE_VERIFIED] · [PRACTICE_LEGAL_ENTITY] · [ADDRESS] · [BUSINESS_EMAIL]'],
     },
   },
   {

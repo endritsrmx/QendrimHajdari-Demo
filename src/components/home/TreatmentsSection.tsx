@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ButtonLink } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
 import { TreatmentCarousel } from '@/components/treatments/TreatmentCarousel';
@@ -25,8 +24,7 @@ export async function TreatmentsSection() {
       <div className="container-x">
         <div className="grid-12 items-end gap-y-8">
           <div className="col-span-4 lg:col-span-8">
-            <Eyebrow>{t('eyebrow')}</Eyebrow>
-            <h2 id="treatments-title" className="text-h1 mt-7 max-w-[16ch]" data-reveal="text">
+            <h2 id="treatments-title" className="text-h1 max-w-[16ch]" data-reveal="text">
               {t('title')}
             </h2>
           </div>

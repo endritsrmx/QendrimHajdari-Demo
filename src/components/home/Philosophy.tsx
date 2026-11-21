@@ -18,7 +18,7 @@ export async function Philosophy({ headingLevel = 2 }: { headingLevel?: 2 | 3 })
     <Section labelledBy="philosophy-title">
       <div className="container-x">
         <Eyebrow>{t('eyebrow')}</Eyebrow>
-        <H id="philosophy-title" className="text-h1 mt-7 max-w-[18ch]" data-reveal="text">
+        <H id="philosophy-title" className="text-h1 mt-4 max-w-[18ch]" data-reveal="text">
           {t('title')}
         </H>
         <div className="grid-12 mt-16 gap-y-12 lg:mt-24">
@@ -37,8 +37,7 @@ export async function Philosophy({ headingLevel = 2 }: { headingLevel?: 2 | 3 })
             {items.map((p) => (
               <li key={p.number} data-reveal-item className="relative border-l border-line py-8 pl-8 lg:pl-12">
                 <span aria-hidden className="absolute top-8 -left-px h-10 w-px bg-bronze" />
-                <span className="text-[0.75rem] font-medium tracking-[0.16em] text-bronze-deep tabular-nums">{p.number}</span>
-                <Hi className="text-h3 mt-3">{p.title[locale]}</Hi>
+                <Hi className="text-h3">{p.title[locale]}</Hi>
                 <p className="mt-4 max-w-md text-grey">{p.text[locale]}</p>
                 <StatusBadge status={p.status} className="mt-4" />
               </li>

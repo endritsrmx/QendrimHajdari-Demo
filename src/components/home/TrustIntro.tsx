@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Section } from '@/components/ui/Section';
 import { pillars } from '@/content/home';
 
@@ -11,8 +10,7 @@ export async function TrustIntro() {
       <div className="container-x">
         <div className="grid-12 gap-y-8">
           <div className="col-span-4 lg:col-span-6">
-            <Eyebrow>{t('eyebrow')}</Eyebrow>
-            <h2 id="trust-title" className="text-h2 mt-7" data-reveal="text">
+            <h2 id="trust-title" className="text-h2" data-reveal="text">
               {t('title')}
             </h2>
           </div>
@@ -24,10 +22,7 @@ export async function TrustIntro() {
           {pillars.map((p, i) => (
             <div key={i} data-reveal-item>
               <div className="h-px w-full bg-line" data-reveal="divider" />
-              <div className="mt-7 flex items-baseline gap-5">
-                <span className="text-[0.75rem] font-medium tracking-[0.14em] text-bronze-deep tabular-nums">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+              <div className="mt-7">
                 <div>
                   <h3 className="text-h3">{p.title[locale]}</h3>
                   <p className="mt-3 max-w-sm text-grey">{p.text[locale]}</p>

@@ -40,7 +40,7 @@ export default async function ResultsPage({ params }: Props) {
           <div className="border border-dashed border-bronze-deep/50 bg-white/60 p-8 lg:p-12">
             <p className="text-label text-bronze-deep">{tc('notPublished')}</p>
             <p className="mt-5 text-grey">{t('notice')}</p>
-            <p className="mt-8 text-h3 italic text-grey">{t('empty')}</p>
+            <p className="mt-8 text-h3 text-grey">{t('empty')}</p>
           </div>
           <MedicalNotice className="mt-14" />
         </div>
